@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(Read:*)",
+      "WebFetch(domain:www.angi.com)",
+      "Bash(gh auth:*)"
+    ]
+  }
+}
