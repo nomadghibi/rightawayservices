@@ -176,61 +176,72 @@ export const services: Service[] = [
           'We can apply primer to the repaired areas to prepare them for painting. For touch-up painting of the repaired sections or full wall repainting, ask about our interior painting services when you book your drywall repair.',
       },
     ],
-    relatedServices: ['home-repairs', 'interior-painting-touchups', 'handyman-services'],
+    relatedServices: ['home-repairs', 'painting-services', 'handyman-services'],
     metaTitle: 'Drywall Repair in Palm Bay & Melbourne, FL | Right Away Services LLC',
     metaDescription:
       'Expert drywall patching and repair in Palm Bay, Melbourne, and the Space Coast. Right Away Services LLC fixes holes, cracks, and water damage — seamlessly.',
   },
   {
-    slug: 'interior-painting-touchups',
-    name: 'Interior Painting Touch-Ups',
-    tagline: 'Freshen up your walls without a full repaint.',
+    slug: 'painting-services',
+    name: 'Painting Services',
+    tagline: 'Interior and exterior painting for homes across the Space Coast.',
     shortDescription:
-      'Professional interior painting touch-up services for homes and rentals across Palm Bay, Melbourne, and the Space Coast. Fix scuffs, marks, and patched areas without repainting entire rooms.',
+      'Professional interior and exterior painting services for homes and rentals across Palm Bay, Melbourne, and the Space Coast. From full room repaints to exterior coats, touch-ups, and cabinet painting.',
     longDescription:
-      'Walls take a beating over time — scuffs from furniture, marks near light switches, chips at corners, and patched sections that need blending in. A full repaint isn\'t always necessary or practical. Right Away Services LLC provides targeted interior painting touch-up services to restore your walls to a clean, consistent finish. This is particularly valuable for rental property turnovers, pre-sale prep, or simply refreshing walls after repairs. We match existing colors as closely as possible and apply paint with care so touched-up areas don\'t stand out.',
+      'Right Away Services LLC provides professional painting services for homeowners, landlords, and property managers throughout Florida\'s Space Coast. Whether you need a full interior repaint, an exterior coat to protect and refresh your home, kitchen cabinet painting, or targeted touch-ups after repairs, Jamel and his crew deliver clean, high-quality results every time. We prep surfaces properly, use quality materials, protect your flooring and furniture, and clean up completely when the job is done. Our reviews consistently highlight our attention to detail, fair pricing, and professional approach — and we\'re proud of every project we complete.',
     commonProblems: [
-      'Scuffs and marks from furniture or daily use',
-      'Paint around light switches, door frames, and corners',
-      'Previously patched sections that need color-matching',
-      'Faded or discolored spots',
-      'Minor stains that have been cleaned but left visible',
+      'Interior walls with scuffs, marks, fading, or patched areas needing a fresh coat',
+      'Exterior paint that is peeling, fading, or weathering from Florida\'s heat and humidity',
+      'Kitchen cabinets that look dated and need a color refresh',
+      'Trim, doors, and accent areas that need a clean, uniform finish',
+      'Rental units needing paint freshened between tenants',
+      'Homes being prepared for sale that need walls and exterior looking their best',
     ],
     whatWeOffer: [
-      'Targeted wall and ceiling touch-ups',
-      'Color-matching for existing paint',
-      'Post-repair painting over patched drywall',
-      'Trim and baseboard touch-ups',
+      'Full interior room painting',
+      'Exterior home and structure painting',
+      'Kitchen and bathroom cabinet painting',
+      'Ceiling painting',
+      'Trim, baseboard, and door painting',
+      'Stucco painting and repair prep',
+      'Pool deck and porch painting',
+      'Interior painting touch-ups and color matching',
       'Rental turnover paint freshening',
-      'Pre-sale cosmetic paint fixes',
+      'Pre-sale cosmetic paint work',
     ],
     whoItsFor: [
-      'Landlords preparing a rental for the next tenant',
-      'Homeowners fixing walls after drywall repairs',
-      'Home sellers wanting walls to look fresh before listing',
-      'Anyone with visible marks, scuffs, or inconsistencies',
+      'Homeowners wanting to refresh interior rooms or repaint their home\'s exterior',
+      'Landlords preparing rentals for new tenants',
+      'Home sellers wanting walls and exterior looking their best before listing',
+      'Anyone wanting kitchen cabinets updated without full replacement',
+      'Property managers maintaining the appearance of residential units',
     ],
     faqs: [
       {
+        question: 'Do you do full exterior painting, not just touch-ups?',
+        answer:
+          'Yes — exterior painting is one of our primary services. We handle full exterior repaints including walls, trim, doors, shutters, and more. We prep surfaces properly, addressing stucco issues and weathered areas before applying paint for a long-lasting finish.',
+      },
+      {
+        question: 'Can you paint kitchen cabinets?',
+        answer:
+          'Yes. Cabinet painting is a popular service that dramatically updates a kitchen without the cost of replacement. We clean and prep cabinet surfaces thoroughly, apply the appropriate primer, and finish with durable paint in your chosen color.',
+      },
+      {
         question: 'Can you match paint colors if I don\'t have the original paint?',
         answer:
-          'We can often work with paint you have on hand. If you don\'t have leftover paint, we recommend taking a chip or sample to a local paint store for a color match. We can also help with basic color matching for common shades.',
+          'Yes. We can work with paint you have on hand, or help color-match existing walls using paint store tools. For touch-ups, we\'ll be upfront about how well the match will blend given the age and condition of existing paint.',
       },
       {
-        question: 'Will touch-ups blend in perfectly?',
+        question: 'Do you handle the prep work — moving furniture, covering floors?',
         answer:
-          'Touch-up painting blends best on newer or recently painted walls. On older walls where paint has faded unevenly, there may be some visible variation. We\'ll be honest with you about what to expect before starting.',
-      },
-      {
-        question: 'Do you do full room painting?',
-        answer:
-          'Our focus is on touch-ups and small area painting to complement repair work. For full room repaints, we can discuss the scope during your estimate.',
+          'Yes. We move and cover furniture, protect flooring, remove switch plates and outlet covers, and clean up fully when the job is done. Multiple reviews from our customers specifically highlight our care with their property.',
       },
     ],
     relatedServices: ['drywall-repair', 'home-repairs', 'property-maintenance'],
-    metaTitle: 'Interior Painting Touch-Ups in Palm Bay & Melbourne, FL | Right Away Services LLC',
+    metaTitle: 'Painting Services in Palm Bay & Melbourne, FL | Right Away Services LLC',
     metaDescription:
-      'Professional interior painting touch-up services in Palm Bay, Melbourne, and the Space Coast. Fix scuffs, marks, and patched walls without a full repaint.',
+      'Interior and exterior painting services in Palm Bay, Melbourne, and the Space Coast. Right Away Services LLC handles full repaints, cabinet painting, touch-ups, and more.',
   },
   {
     slug: 'door-and-window-repairs',

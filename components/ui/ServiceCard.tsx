@@ -9,7 +9,7 @@ const serviceIcons: Record<string, string> = {
   'handyman-services': '🔧',
   'home-repairs': '🏠',
   'drywall-repair': '🪣',
-  'interior-painting-touchups': '🎨',
+  'painting-services': '🎨',
   'door-and-window-repairs': '🚪',
   'fixture-installation': '💡',
   'ceiling-fan-installation': '🌀',

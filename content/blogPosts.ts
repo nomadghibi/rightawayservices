@@ -103,7 +103,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-03-28',
     category: 'Florida Home Maintenance',
     readTime: '6 min read',
-    relatedServices: ['drywall-repair', 'interior-painting-touchups', 'fixture-installation'],
+    relatedServices: ['drywall-repair', 'painting-services', 'fixture-installation'],
     relatedAreas: ['melbourne-fl', 'palm-bay-fl', 'satellite-beach-fl'],
     content: [
       {
@@ -184,7 +184,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-04-05',
     category: 'Home Selling Prep',
     readTime: '6 min read',
-    relatedServices: ['home-repairs', 'drywall-repair', 'interior-painting-touchups', 'handyman-services'],
+    relatedServices: ['home-repairs', 'drywall-repair', 'painting-services', 'handyman-services'],
     relatedAreas: ['melbourne-fl', 'west-melbourne-fl', 'viera-fl', 'rockledge-fl'],
     content: [
       {
