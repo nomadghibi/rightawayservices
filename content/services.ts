@@ -506,6 +506,68 @@ export const services: Service[] = [
     metaDescription:
       'Reliable property maintenance and rental turnover services for landlords and property managers in Palm Bay, Melbourne, and the Space Coast.',
   },
+  {
+    slug: 'bathroom-remodeling',
+    name: 'Bathroom Remodeling',
+    tagline: 'Transform your bathroom with professional remodeling across the Space Coast.',
+    shortDescription:
+      'Bathroom remodeling services in Palm Bay, Melbourne, and the Space Coast. From vanity and fixture upgrades to full bathroom renovations, Right Away Services LLC handles it all.',
+    longDescription:
+      'A bathroom remodel is one of the highest-return improvements a homeowner can make — and Right Away Services LLC delivers the quality and professionalism to do it right. Whether you want to update an outdated vanity, retile a shower, replace fixtures throughout, or completely gut and renovate a bathroom from the floor up, Jamel and his crew bring the same meticulous attention to detail they\'re known for across all their work. We serve homeowners, landlords refreshing rental units, and property managers preparing properties for new tenants throughout Palm Bay, Melbourne, and surrounding Space Coast communities.',
+    commonProblems: [
+      'Outdated bathrooms that feel worn, cramped, or dated',
+      'Damaged or moldy tile in showers and around tubs',
+      'Old vanities, sinks, and fixtures that need replacing',
+      'Poor lighting that makes bathrooms feel dark and uninviting',
+      'Rental bathrooms that need updating to attract quality tenants',
+      'Water damage or deterioration behind walls or under flooring',
+    ],
+    whatWeOffer: [
+      'Full bathroom gut and renovation',
+      'Vanity and sink replacement',
+      'Toilet replacement and installation',
+      'Shower and tub surround tile work',
+      'Shower enclosure and door installation',
+      'Bathroom flooring installation',
+      'Light fixture and exhaust fan replacement',
+      'Mirror and medicine cabinet installation',
+      'Towel bar, toilet paper holder, and accessory installation',
+      'Drywall repair and painting in bathroom spaces',
+    ],
+    whoItsFor: [
+      'Homeowners wanting to modernize an outdated bathroom',
+      'Landlords upgrading rental bathrooms to attract better tenants',
+      'Home sellers wanting bathrooms to impress buyers',
+      'Property managers handling unit renovations',
+      'Anyone dealing with bathroom damage, mold, or deterioration',
+    ],
+    faqs: [
+      {
+        question: 'Do you handle full bathroom renovations or just repairs?',
+        answer:
+          'Both. We handle everything from targeted repairs and fixture replacements to complete bathroom gut-and-renovate projects. Whatever the scope, we\'ll give you a clear estimate before starting any work.',
+      },
+      {
+        question: 'Can you replace just a vanity or toilet without a full remodel?',
+        answer:
+          'Absolutely. Single-fixture replacements are a common request. We can swap out a vanity, toilet, light fixture, or shower hardware without touching the rest of the bathroom.',
+      },
+      {
+        question: 'Do you do tile work in showers and on floors?',
+        answer:
+          'Yes. Tile installation and replacement in showers, tub surrounds, and bathroom floors is part of our remodeling services. We can also replace damaged or missing grout and recaulk shower and tub areas.',
+      },
+      {
+        question: 'How long does a bathroom remodel take?',
+        answer:
+          'It depends on the scope. A vanity swap or fixture update might take a single day. A full bathroom renovation typically takes several days to a week or more. We\'ll give you a realistic timeline during your estimate so you can plan accordingly.',
+      },
+    ],
+    relatedServices: ['fixture-installation', 'home-repairs', 'painting-services'],
+    metaTitle: 'Bathroom Remodeling in Palm Bay & Melbourne, FL | Right Away Services LLC',
+    metaDescription:
+      'Professional bathroom remodeling in Palm Bay, Melbourne, and the Space Coast. Right Away Services LLC handles full renovations, vanity replacements, tile work, and more.',
+  },
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {
