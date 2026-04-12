@@ -629,6 +629,68 @@ export const services: Service[] = [
     metaDescription:
       'Professional fence installation and repair in Palm Bay, Melbourne, and the Space Coast. Wood, vinyl, chain link, and gate repairs — Right Away Services LLC.',
   },
+  {
+    slug: 'roof-leak-repair',
+    name: 'Roof Leak Repair',
+    tagline: 'Fast, reliable roof leak repairs for Space Coast homes.',
+    shortDescription:
+      'Roof leak detection and repair in Palm Bay, Melbourne, and the Space Coast. Right Away Services LLC patches leaks, replaces damaged shingles, and seals problem areas before water damage gets worse.',
+    longDescription:
+      'A roof leak in Florida is never something to wait on. What starts as a small drip can quickly lead to damaged drywall, mold growth, and structural deterioration — especially given the heat, humidity, and heavy rain the Space Coast sees year-round. Right Away Services LLC provides roof leak repair services for homeowners and property managers throughout Palm Bay, Melbourne, and surrounding communities. We locate the source of the leak, make targeted repairs, and seal vulnerable areas to stop water intrusion. From missing or damaged shingles to flashing issues and pipe boot failures, we handle the repairs that keep water out of your home.',
+    commonProblems: [
+      'Active leaks during or after rainstorms',
+      'Water stains on ceilings or interior walls from an ongoing slow leak',
+      'Missing, cracked, or curled shingles from age or storm damage',
+      'Damaged or deteriorated flashing around chimneys, vents, or skylights',
+      'Failed pipe boot seals around plumbing penetrations',
+      'Storm damage causing immediate roof vulnerability',
+      'Flat roof ponding or membrane issues',
+    ],
+    whatWeOffer: [
+      'Roof leak detection and source identification',
+      'Shingle repair and replacement',
+      'Flashing repair and re-sealing',
+      'Pipe boot and vent seal replacement',
+      'Flat roof patching and sealing',
+      'Fascia and soffit repair related to roof leaks',
+      'Storm damage roof repair',
+      'Emergency tarping to prevent further damage',
+      'Follow-up interior drywall repair from water damage',
+    ],
+    whoItsFor: [
+      'Homeowners with an active or suspected roof leak',
+      'Landlords dealing with tenant-reported roof leaks',
+      'Property managers handling post-storm damage',
+      'Anyone with water stains on ceilings that need diagnosing',
+      'Homeowners whose roof was damaged by wind or debris',
+    ],
+    faqs: [
+      {
+        question: 'How do I know if I have a roof leak?',
+        answer:
+          'Common signs include water stains or discoloration on ceilings and walls, damp spots in the attic, missing or visibly damaged shingles, or dripping during or after rain. If you notice any of these, it\'s best to have it looked at promptly — leaks typically get worse over time.',
+      },
+      {
+        question: 'Can you do the interior repair too after a leak?',
+        answer:
+          'Yes. Once the roof is repaired and watertight, we can also handle the interior follow-up work — patching water-damaged drywall, priming, and painting — so your ceiling and walls look right again.',
+      },
+      {
+        question: 'Do you handle emergency roof repairs after storms?',
+        answer:
+          'Yes. After a storm, we can provide emergency tarping to protect your home from further water intrusion, followed by proper repairs. Contact us as soon as possible after storm damage — the sooner we address it, the less secondary damage occurs.',
+      },
+      {
+        question: 'Do you replace full roofs or only do repairs?',
+        answer:
+          'Our focus is on targeted leak repairs, patch work, and storm damage repair. For a full roof replacement, we can assess your situation and let you know whether repair or replacement is the right call for your specific roof.',
+      },
+    ],
+    relatedServices: ['home-repairs', 'drywall-repair', 'property-maintenance'],
+    metaTitle: 'Roof Leak Repair in Palm Bay & Melbourne, FL | Right Away Services LLC',
+    metaDescription:
+      'Roof leak repair in Palm Bay, Melbourne, and the Space Coast. Right Away Services LLC fixes leaks, damaged shingles, flashing, and storm damage before water causes bigger problems.',
+  },
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {
