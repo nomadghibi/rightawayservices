@@ -152,6 +152,17 @@ export function Footer() {
             </Link>
           </div>
         </div>
+        <div className="mt-4 text-center text-xs text-blue-400">
+          Designed by:{' '}
+          <a
+            href="https://reliablewebstudio.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            reliablewebstudio.com
+          </a>
+        </div>
       </div>
     </footer>
   )
