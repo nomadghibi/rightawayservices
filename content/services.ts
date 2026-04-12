@@ -568,6 +568,67 @@ export const services: Service[] = [
     metaDescription:
       'Professional bathroom remodeling in Palm Bay, Melbourne, and the Space Coast. Right Away Services LLC handles full renovations, vanity replacements, tile work, and more.',
   },
+  {
+    slug: 'fence-installation-and-repair',
+    name: 'Fence Installation & Repair',
+    tagline: 'New fence installs and repairs for homes across the Space Coast.',
+    shortDescription:
+      'Professional fence installation and repair in Palm Bay, Melbourne, and the Space Coast. Wood, vinyl, chain link, and privacy fencing installed and repaired by Right Away Services LLC.',
+    longDescription:
+      'A fence adds privacy, security, and curb appeal to any property — and Right Away Services LLC installs and repairs fences throughout Florida\'s Space Coast. Whether you need a brand-new fence for your backyard, a section replaced after storm damage, a gate rehung, or rotted posts swapped out, Jamel and his crew handle the work properly from the ground up. Florida\'s weather is tough on fences — heat, humidity, and storm season take a toll — so timely repairs and quality installation make a real difference in how long your fence lasts.',
+    commonProblems: [
+      'Rotted or damaged fence posts and panels from Florida weather',
+      'Storm damage leaving sections leaning or collapsed',
+      'Gates that won\'t latch, sag, or are off their hinges',
+      'Old or weathered fencing that needs replacing',
+      'New homes or properties needing a fence installed for the first time',
+      'Rental properties needing fence repairs before tenant move-in',
+    ],
+    whatWeOffer: [
+      'Wood fence installation (privacy, picket, split rail)',
+      'Vinyl fence installation',
+      'Chain link fence installation',
+      'Fence panel and post replacement',
+      'Gate installation and repair',
+      'Storm damage fence repair',
+      'Rotted post replacement',
+      'Fence staining and painting',
+      'Partial fence section replacement',
+    ],
+    whoItsFor: [
+      'Homeowners wanting to add privacy or security to their yard',
+      'Property owners replacing storm-damaged or deteriorated fencing',
+      'Landlords repairing or replacing fencing between tenants',
+      'New homeowners installing a fence for pets, kids, or privacy',
+      'Anyone with a sagging gate or damaged fence section that needs fixing',
+    ],
+    faqs: [
+      {
+        question: 'What types of fencing do you install?',
+        answer:
+          'We install wood privacy fences, picket fences, vinyl fencing, and chain link fencing. Wood and vinyl are the most popular choices for residential properties on the Space Coast. We\'ll help you choose the right material for your needs and budget.',
+      },
+      {
+        question: 'Can you repair just a section of my fence instead of replacing the whole thing?',
+        answer:
+          'Yes — partial repairs and section replacements are very common. If only part of your fence is damaged, we can replace just those panels or posts and match the existing style as closely as possible.',
+      },
+      {
+        question: 'Do you repair fence gates?',
+        answer:
+          'Yes. Gate repairs are one of our most frequent fence calls — sagging gates, gates that won\'t latch, broken hinges, and gates knocked off track by wind. We also install new gates if you need one added to an existing fence.',
+      },
+      {
+        question: 'How does Florida weather affect fences?',
+        answer:
+          'Florida\'s heat, humidity, and storm season accelerate wear on all fence types. Wood fences are especially susceptible to rot and insect damage. Vinyl holds up better to moisture but can be damaged in high winds. Regular inspection and prompt repairs extend the life of any fence significantly.',
+      },
+    ],
+    relatedServices: ['home-repairs', 'property-maintenance', 'handyman-services'],
+    metaTitle: 'Fence Installation & Repair in Palm Bay & Melbourne, FL | Right Away Services LLC',
+    metaDescription:
+      'Professional fence installation and repair in Palm Bay, Melbourne, and the Space Coast. Wood, vinyl, chain link, and gate repairs — Right Away Services LLC.',
+  },
 ]
 
 export function getServiceBySlug(slug: string): Service | undefined {

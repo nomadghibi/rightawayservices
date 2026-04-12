@@ -16,6 +16,7 @@ const serviceIcons: Record<string, string> = {
   'furniture-assembly': '🪑',
   'property-maintenance': '🔑',
   'bathroom-remodeling': '🚿',
+  'fence-installation-and-repair': '🪧',
 }
 
 export function ServiceCard({ service }: ServiceCardProps) {
