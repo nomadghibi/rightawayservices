@@ -12,6 +12,7 @@ import { CTABand } from '@/components/sections/CTABand'
 import { TrustBadges } from '@/components/ui/TrustBadges'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { buildFAQSchema } from '@/lib/schema/faq'
+import { highIntentHandymanLinks, localTrustSignals, priorityAreaSlugs } from '@/content/localSeo'
 
 export const metadata: Metadata = buildMetadata({
   title: `Handyman Services in Palm Bay & Melbourne, FL | ${siteConfig.name}`,
@@ -21,6 +22,7 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const homeFaqs = faqs.slice(0, 6)
+const priorityAreas = serviceAreas.filter((area) => priorityAreaSlugs.includes(area.slug))
 
 const whyChooseUs = [
   {
@@ -113,8 +115,77 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Local SEO */}
       <section className="py-16 px-4 bg-off-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mb-10">
+            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+              Local handyman help
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-4">
+              Handyman Services Near You in Palm Bay, Melbourne, and Brevard County
+            </h2>
+            <p className="text-slate-gray leading-relaxed">
+              When homeowners search for a handyman near me on the Space Coast, they usually need a real local
+              company that can handle the repair without a long wait. Right Away Services LLC helps with home
+              repairs, drywall patching, ceiling fan installation, fixture replacement, painting touch-ups, and
+              rental property punch lists throughout Palm Bay, Melbourne, West Melbourne, Rockledge, Viera, and
+              nearby Brevard County communities.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-10">
+            {localTrustSignals.map((signal) => (
+              <div key={signal.title} className="bg-white border border-gray-200 rounded-lg p-5">
+                <h3 className="font-semibold text-navy mb-2">{signal.title}</h3>
+                <p className="text-sm text-slate-gray leading-relaxed">{signal.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold text-navy mb-4">High-demand local handyman work</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {highIntentHandymanLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="block bg-white border border-gray-200 rounded-lg p-4 hover:border-service-blue transition-colors"
+                  >
+                    <span className="font-semibold text-service-blue">{item.label}</span>
+                    <span className="block text-sm text-slate-gray mt-2 leading-relaxed">{item.description}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-navy mb-4">Primary local service areas</h3>
+              <div className="bg-white border border-gray-200 rounded-lg p-5">
+                <p className="text-slate-gray text-sm leading-relaxed mb-4">
+                  These are core local pages for people looking for handyman services in their city or nearby
+                  community.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {priorityAreas.map((area) => (
+                    <Link
+                      key={area.slug}
+                      href={`/service-areas/${area.slug}`}
+                      className="text-service-blue font-medium hover:underline"
+                    >
+                      Handyman services in {area.name}, {area.state}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-3">

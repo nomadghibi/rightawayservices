@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 import { serviceAreas } from '@/content/serviceAreas'
+import { highIntentHandymanLinks, priorityAreaSlugs } from '@/content/localSeo'
 import { AreaCard } from '@/components/ui/AreaCard'
 import { CTABand } from '@/components/sections/CTABand'
+import { SchemaScript } from '@/components/seo/SchemaScript'
+import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
 
 export const metadata: Metadata = buildMetadata({
   title: `Handyman Service Areas on Florida's Space Coast | ${siteConfig.name}`,
@@ -11,9 +15,18 @@ export const metadata: Metadata = buildMetadata({
   path: '/service-areas',
 })
 
+const priorityAreas = serviceAreas.filter((area) => priorityAreaSlugs.includes(area.slug))
+
 export default function ServiceAreasPage() {
   return (
     <>
+      <SchemaScript
+        schema={buildBreadcrumbSchema([
+          { name: 'Home', url: '/' },
+          { name: 'Service Areas', url: '/service-areas' },
+        ])}
+      />
+
       <section className="bg-navy text-white py-14 px-4">
         <div className="max-w-7xl mx-auto">
           <nav aria-label="Breadcrumb" className="text-sm text-blue-300 mb-4">
@@ -41,7 +54,50 @@ export default function ServiceAreasPage() {
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-off-white">
+      <section className="py-14 px-4 bg-off-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mb-8">
+            <h2 className="text-2xl font-bold text-navy mb-4">
+              Local Handyman Coverage for Brevard County Homes
+            </h2>
+            <p className="text-slate-gray leading-relaxed">
+              Right Away Services LLC serves the local handyman searches that matter most across the Space Coast:
+              home repairs, drywall repair, ceiling fan installation, fixture installation, property maintenance,
+              and punch-list work for homeowners, landlords, and property managers.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-white border border-gray-200 rounded-lg p-5">
+              <h3 className="font-semibold text-navy mb-4">Most requested cities</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {priorityAreas.map((area) => (
+                  <Link
+                    key={area.slug}
+                    href={`/service-areas/${area.slug}`}
+                    className="text-service-blue font-medium hover:underline"
+                  >
+                    Handyman in {area.name}, {area.state}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-5">
+              <h3 className="font-semibold text-navy mb-4">Popular handyman services</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {highIntentHandymanLinks.map((item) => (
+                  <Link key={item.href} href={item.href} className="text-service-blue font-medium hover:underline">
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-4 bg-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-navy mb-4">Don&rsquo;t See Your Community?</h2>
           <p className="text-slate-gray leading-relaxed mb-6">

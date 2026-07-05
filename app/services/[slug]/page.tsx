@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { services, getServiceBySlug, getRelatedServices } from '@/content/services'
+import { serviceAreas } from '@/content/serviceAreas'
+import { priorityAreaSlugs } from '@/content/localSeo'
 import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 import { buildServiceSchema } from '@/lib/schema/service'
 import { buildFAQSchema } from '@/lib/schema/faq'
@@ -34,6 +36,7 @@ export default function ServicePage({ params }: Props) {
   if (!service) notFound()
 
   const relatedServices = getRelatedServices(service.relatedServices)
+  const priorityAreas = serviceAreas.filter((area) => priorityAreaSlugs.includes(area.slug))
 
   const breadcrumbs = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -163,6 +166,51 @@ export default function ServicePage({ params }: Props) {
                   View all service areas →
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Local service coverage */}
+      <section className="py-14 px-4 bg-off-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mb-8">
+            <h2 className="text-2xl font-bold text-navy mb-4">
+              {service.name} Across Palm Bay, Melbourne, and Brevard County
+            </h2>
+            <p className="text-slate-gray leading-relaxed">
+              Right Away Services LLC provides {service.name.toLowerCase()} for homeowners, landlords, and property
+              managers throughout the Space Coast. Customers call us for local handyman help in Palm Bay, Melbourne,
+              West Melbourne, Rockledge, Viera, Suntree, and nearby Brevard County communities.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-5">
+              <h3 className="font-semibold text-navy mb-4">Find this service near you</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {priorityAreas.map((area) => (
+                  <Link
+                    key={area.slug}
+                    href={`/service-areas/${area.slug}`}
+                    className="text-service-blue font-medium hover:underline"
+                  >
+                    {service.name} in {area.name}, {area.state}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-5">
+              <h3 className="font-semibold text-navy mb-4">Common local requests</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {service.whatWeOffer.slice(0, 6).map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-slate-gray">
+                    <span className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0 mt-2" aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

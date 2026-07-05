@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { buildLocalBusinessSchema } from '@/lib/schema/localBusiness'
+import { buildWebsiteSchema } from '@/lib/schema/website'
 import { siteConfig } from '@/lib/seo/metadata'
 
 const inter = Inter({
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={inter.variable}>
       <head>
         <SchemaScript schema={buildLocalBusinessSchema()} />
+        <SchemaScript schema={buildWebsiteSchema()} />
       </head>
       <body>
         <Header />

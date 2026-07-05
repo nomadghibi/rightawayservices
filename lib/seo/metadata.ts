@@ -2,8 +2,10 @@ import type { Metadata } from 'next'
 
 export const siteConfig = {
   name: 'Right Away Services LLC',
+  legalName: 'Right Away Services LLC',
   url: 'https://rightawayservices.com',
   phone: '(321) 557-7426',
+  phoneE164: '+13215577426',
   phoneHref: 'tel:+13215577426',
   email: 'hello@rightawayservices.com',
   address: {
@@ -36,16 +38,21 @@ export function buildMetadata({
   noIndex?: boolean
 }): Metadata {
   const url = `${siteConfig.url}${path}`
+  const titleSuffix = ` | ${siteConfig.name}`
+  const pageTitle = title.endsWith(titleSuffix)
+    ? title.slice(0, -titleSuffix.length)
+    : title
+  const fullTitle = `${pageTitle}${titleSuffix}`
 
   return {
-    title,
+    title: pageTitle,
     description,
     metadataBase: new URL(siteConfig.url),
     alternates: {
       canonical: url,
     },
     openGraph: {
-      title,
+      title: fullTitle,
       description,
       url,
       siteName: siteConfig.name,
@@ -54,7 +61,7 @@ export function buildMetadata({
     },
     twitter: {
       card: 'summary',
-      title,
+      title: fullTitle,
       description,
     },
     robots: noIndex

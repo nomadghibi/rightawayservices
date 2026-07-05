@@ -6,6 +6,7 @@ import { services } from '@/content/services'
 import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 import { buildFAQSchema } from '@/lib/schema/faq'
 import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
+import { buildServiceAreaSchema } from '@/lib/schema/serviceArea'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { ServiceCard } from '@/components/ui/ServiceCard'
 import { AreaCard } from '@/components/ui/AreaCard'
@@ -46,6 +47,7 @@ export default function ServiceAreaPage({ params }: Props) {
   return (
     <>
       <SchemaScript schema={buildFAQSchema(area.faqs)} />
+      <SchemaScript schema={buildServiceAreaSchema(area, areaServices)} />
       <SchemaScript schema={breadcrumbs} />
 
       {/* Hero */}
@@ -162,9 +164,41 @@ export default function ServiceAreaPage({ params }: Props) {
         </div>
       </section>
 
+      <section className="py-14 px-4 bg-off-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mb-8">
+            <h2 className="text-2xl font-bold text-navy mb-4">
+              Handyman Services Near {area.name}
+            </h2>
+            <p className="text-slate-gray leading-relaxed">
+              Homeowners and landlords in {area.name} call Right Away Services LLC for the everyday repair work
+              that keeps Florida properties in good shape. These local service links help match common {area.name}
+              searches with the specific work we handle.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {areaServices.map((service) => (
+              <Link
+                key={service.slug}
+                href={`/services/${service.slug}`}
+                className="block bg-white border border-gray-200 rounded-lg p-5 hover:border-service-blue transition-colors"
+              >
+                <span className="font-semibold text-service-blue">
+                  {service.name} in {area.name}, {area.state}
+                </span>
+                <span className="block text-sm text-slate-gray mt-2 leading-relaxed">
+                  {service.shortDescription}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services for this area */}
       {areaServices.length > 0 && (
-        <section className="py-16 px-4 bg-off-white">
+        <section className="py-16 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl font-bold text-navy mb-3">
               Services We Offer in {area.name}
