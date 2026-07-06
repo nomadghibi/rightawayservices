@@ -242,6 +242,406 @@ export const blogPosts: BlogPost[] = [
       'See the best home repairs to make before listing a house in Palm Bay, FL, including drywall, paint, fixtures, doors, and pre-sale punch-list work.',
   },
   {
+    slug: 'florida-humidity-damage-drywall-doors-paint-fixtures',
+    title: 'Florida Humidity Damage: Drywall, Doors, Paint, and Fixtures',
+    excerpt:
+      'Florida humidity affects more than comfort. It can cause drywall cracks, sticky doors, peeling paint, and corroded fixtures. Here is what to watch for at home.',
+    date: '2026-05-06',
+    category: 'Florida Home Maintenance',
+    readTime: '7 min read',
+    relatedServices: ['drywall-repair', 'painting-services', 'door-and-window-repairs', 'fixture-installation'],
+    relatedAreas: ['palm-bay-fl', 'melbourne-fl', 'satellite-beach-fl'],
+    content: [
+      {
+        type: 'paragraph',
+        text: "Florida humidity is not just uncomfortable. Over time, it changes how homes wear down. In Palm Bay and across the Space Coast, heat and moisture can show up as cracked drywall seams, sticky doors, peeling paint, and fixtures that corrode faster than they should.",
+      },
+      {
+        type: 'paragraph',
+        text: "A lot of homeowners see these problems as isolated annoyances, but they often come from the same source: moisture movement, seasonal expansion, and the coastal environment. The sooner you spot the pattern, the easier it is to stop minor damage from spreading.",
+      },
+      {
+        type: 'heading',
+        text: 'Drywall Problems Caused by Humidity',
+      },
+      {
+        type: 'paragraph',
+        text: "Drywall can swell, crack, stain, or soften when humidity is high or when moisture gets into the wall cavity. In Florida homes, you may notice nail pops, seam cracks, or bubbling near bathrooms, kitchens, and window areas. These are not always major structural issues, but they do tell you something is changing behind the surface.",
+      },
+      {
+        type: 'heading',
+        text: 'Doors That Stick or Swell',
+      },
+      {
+        type: 'paragraph',
+        text: "When humidity rises, wood doors and frames can expand. A door that closes perfectly in January may drag or stick by July. In Palm Bay homes, this is a common seasonal complaint, especially on older interior doors and exterior doors that take direct heat and moisture.",
+      },
+      {
+        type: 'heading',
+        text: 'Paint and Fixture Wear',
+      },
+      {
+        type: 'list',
+        items: [
+          'Paint that blisters, peels, or bubbles near windows or bathrooms',
+          'Trim or baseboards with visible water staining',
+          'Towel bars, hinges, and cabinet hardware with rust or corrosion',
+          'Light fixtures that show oxidation or moisture damage',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: "A local example: a Melbourne home with a small roof leak may first show damage as a faint drywall stain or a door that starts sticking in the hallway. Fixing the visible symptom without checking the moisture source usually means the problem returns later.",
+      },
+      {
+        type: 'cta',
+        text: 'If humidity is damaging your Palm Bay home, Right Away Services LLC can help with drywall repair, door adjustments, painting touch-ups, and fixture replacement.',
+      },
+    ],
+    metaTitle: 'Florida Humidity Damage: Drywall, Doors, Paint, and Fixtures | Right Away Services LLC',
+    metaDescription:
+      'Learn how Florida humidity damages drywall, doors, paint, and fixtures in Palm Bay homes and what repairs help stop the damage from spreading.',
+  },
+  {
+    slug: 'rental-turnover-repair-checklist-palm-bay-landlords',
+    title: 'Rental Turnover Repair Checklist for Palm Bay Landlords',
+    excerpt:
+      'Turnovers move faster when landlords have a clear repair checklist. Use this Palm Bay rental turnover guide to prepare units between tenants.',
+    date: '2026-05-13',
+    category: 'Landlord Tips',
+    readTime: '6 min read',
+    relatedServices: ['property-maintenance', 'home-repairs', 'drywall-repair', 'painting-services'],
+    relatedAreas: ['palm-bay-fl', 'melbourne-fl', 'west-melbourne-fl'],
+    content: [
+      {
+        type: 'paragraph',
+        text: "Rental turnover is a race against time. When a tenant moves out, Palm Bay landlords usually have a short window to repair damage, freshen the unit, and get it ready for the next renter. The best way to stay on schedule is with a simple, repeatable repair checklist.",
+      },
+      {
+        type: 'paragraph',
+        text: "The checklist should focus on three things: safety, appearance, and functionality. If the unit looks clean, the doors and fixtures work, and the major cosmetic problems are handled, you are much more likely to attract good tenants quickly.",
+      },
+      {
+        type: 'heading',
+        text: 'Core Turnover Repair Checklist',
+      },
+      {
+        type: 'list',
+        items: [
+          'Patch holes, dents, and damaged drywall',
+          'Touch up or repaint scuffed walls',
+          'Repair sticking doors, loose handles, and damaged trim',
+          'Replace broken light fixtures, fans, or hardware',
+          'Check caulk, grout, and seals in kitchens and bathrooms',
+          'Confirm all appliances, switches, and outlets are functioning',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'What Palm Bay Landlords Should Prioritize',
+      },
+      {
+        type: 'paragraph',
+        text: "In Palm Bay, rental units often need a mix of cosmetic repairs and practical fixes. A bedroom wall patch may be a quick win, but a broken fan, damaged trim, or stained bathroom ceiling can make the unit feel neglected. Landlords should focus on the items renters will see immediately during a showing.",
+      },
+      {
+        type: 'paragraph',
+        text: "For example, if a unit has three small drywall patches and one outdated ceiling fan, it is usually smarter to complete all of those items in one visit rather than scheduling separate trades. That keeps the unit moving toward market-ready faster.",
+      },
+      {
+        type: 'cta',
+        text: 'Need turnover repairs in Palm Bay or nearby Brevard County communities? Right Away Services LLC helps landlords handle punch lists, cosmetic repairs, and small maintenance jobs efficiently.',
+      },
+    ],
+    metaTitle: 'Rental Turnover Repair Checklist for Palm Bay Landlords | Right Away Services LLC',
+    metaDescription:
+      'Use this Palm Bay rental turnover repair checklist to prepare units quickly between tenants with drywall, paint, doors, fixtures, and maintenance work.',
+  },
+  {
+    slug: 'interior-vs-exterior-painting-florida-weather',
+    title: 'Interior vs Exterior Painting in Florida Weather',
+    excerpt:
+      'Florida weather affects interior and exterior paint differently. Learn when to paint, what to expect, and which projects need the most planning.',
+    date: '2026-05-20',
+    category: 'Painting Advice',
+    readTime: '7 min read',
+    relatedServices: ['painting-services', 'drywall-repair', 'property-maintenance'],
+    relatedAreas: ['palm-bay-fl', 'melbourne-fl', 'indialantic-fl'],
+    content: [
+      {
+        type: 'paragraph',
+        text: "Painting in Florida is not the same as painting in a dry climate. Humidity, temperature swings, afternoon storms, and salt air all affect how paint dries and how long it lasts. That is why interior painting and exterior painting need different timing and different prep work.",
+      },
+      {
+        type: 'paragraph',
+        text: "For homeowners in Palm Bay and Melbourne, the right approach is to think about paint as both appearance and protection. Interior paint mainly improves the look and feel of a room, while exterior paint has to stand up to heat, rain, and sun.",
+      },
+      {
+        type: 'heading',
+        text: 'Interior Painting in Florida',
+      },
+      {
+        type: 'list',
+        items: [
+          'Can usually be done year-round with proper ventilation',
+          'Needs wall prep for drywall patches, scuffs, and stains',
+          'Often pairs well with trim and fixture updates',
+          'Benefits from moisture-resistant products in bathrooms and kitchens',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'Exterior Painting in Florida',
+      },
+      {
+        type: 'list',
+        items: [
+          'Should be scheduled around dry weather windows',
+          'Requires extra prep for stucco, caulk, and peeling surfaces',
+          'Needs durable coatings that handle UV exposure and humidity',
+          'Often lasts longer when underlying repairs are handled first',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: "A common Florida example is a home in Palm Bay with faded exterior paint and a few interior rooms that need a refresh after drywall repair. The exterior job is weather-dependent and should be planned carefully, while the interior work can often move faster once the walls are repaired and primed.",
+      },
+      {
+        type: 'cta',
+        text: 'If you are planning an interior or exterior paint project in Palm Bay, Right Away Services LLC can help with prep, repairs, and clean professional painting work.',
+      },
+    ],
+    metaTitle: 'Interior vs Exterior Painting in Florida Weather | Right Away Services LLC',
+    metaDescription:
+      'Learn the difference between interior and exterior painting in Florida weather, including humidity, prep work, drying time, and weather planning.',
+  },
+  {
+    slug: 'common-door-problems-in-florida-homes',
+    title: 'Common Door Problems in Florida Homes',
+    excerpt:
+      'Sticky doors, warped frames, loose hinges, and bad latches are common in Florida. Here is why they happen and when to repair them.',
+    date: '2026-05-27',
+    category: 'Home Repairs',
+    readTime: '6 min read',
+    relatedServices: ['door-and-window-repairs', 'home-repairs', 'handyman-services'],
+    relatedAreas: ['palm-bay-fl', 'melbourne-fl', 'west-melbourne-fl'],
+    content: [
+      {
+        type: 'paragraph',
+        text: "Florida homes are hard on doors. Humidity, heat, and settling can all lead to problems that show up as sticking, squeaking, dragging, or failing to latch properly. In Palm Bay and around Brevard County, this is one of the most common handyman calls we see.",
+      },
+      {
+        type: 'paragraph',
+        text: "Some door problems are simple adjustments. Others point to frame movement, worn hardware, or moisture damage. Knowing the difference helps you decide whether you need a quick repair or a more involved fix.",
+      },
+      {
+        type: 'heading',
+        text: 'Most Common Door Problems',
+      },
+      {
+        type: 'list',
+        items: [
+          'Doors that stick because of seasonal expansion',
+          'Loose hinges that cause sagging',
+          'Frames that are out of square after settling',
+          'Latch plates that no longer line up',
+          'Split or damaged trim around the door opening',
+          'Exterior doors with worn weatherstripping',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'Why Florida Makes It Worse',
+      },
+      {
+        type: 'paragraph',
+        text: "Humidity causes wood to expand and contract. That means a door may seem fine for months and then suddenly start dragging in the summer. Exterior doors also take more abuse from heat, rain, and salt air, so the hardware and seals wear down faster than they would in a drier state.",
+      },
+      {
+        type: 'paragraph',
+        text: "A practical example: a bedroom door in a Palm Bay home that barely latches can usually be adjusted before it becomes a bigger repair. But if the frame is swollen or damaged, the fix may require trimming, shimming, or hardware replacement.",
+      },
+      {
+        type: 'cta',
+        text: 'Need door repairs in Palm Bay or Melbourne? Right Away Services LLC handles sticking doors, broken hardware, and frame adjustments for Florida homes.',
+      },
+    ],
+    metaTitle: 'Common Door Problems in Florida Homes | Right Away Services LLC',
+    metaDescription:
+      'Learn the most common door problems in Florida homes, including sticky doors, warped frames, loose hinges, and latch issues.',
+  },
+  {
+    slug: 'what-handyman-jobs-can-be-done-in-one-visit',
+    title: 'What Handyman Jobs Can Be Done in One Visit?',
+    excerpt:
+      'The best handyman visits bundle small repairs together. Here is what Palm Bay homeowners can usually get done in a single appointment.',
+    date: '2026-06-03',
+    category: 'Homeowner Tips',
+    readTime: '6 min read',
+    relatedServices: ['handyman-services', 'home-repairs', 'fixture-installation', 'ceiling-fan-installation'],
+    relatedAreas: ['palm-bay-fl', 'melbourne-fl', 'rockledge-fl'],
+    content: [
+      {
+        type: 'paragraph',
+        text: "One of the biggest advantages of hiring a handyman is the ability to combine several small jobs into one visit. Instead of scheduling five different appointments, Palm Bay homeowners can often get a full list of minor repairs handled in a single trip.",
+      },
+      {
+        type: 'paragraph',
+        text: "That is especially useful when the jobs are all inside the same home and do not require specialty trade licensing. The more organized the list is, the more likely it is that the handyman can move efficiently from one task to the next.",
+      },
+      {
+        type: 'heading',
+        text: 'Good One-Visit Jobs',
+      },
+      {
+        type: 'list',
+        items: [
+          'Drywall patching and small wall repairs',
+          'Ceiling fan replacement on existing wiring',
+          'Fixture swaps and hardware installs',
+          'Door adjustments and latch fixes',
+          'Painting touch-ups after small repairs',
+          'Furniture assembly and wall-mount work',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'What Makes One Visit Efficient',
+      },
+      {
+        type: 'list',
+        items: [
+          'Have a clear list of all tasks before the appointment',
+          'Share photos so materials can be prepared in advance',
+          'Group jobs by room when possible',
+          'Make sure the work area is accessible',
+          'Confirm if any items need to be purchased beforehand',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: "For example, a Palm Bay homeowner might ask for a drywall patch, a ceiling fan replacement, and two door adjustments during the same visit. That is exactly the kind of bundled work that saves time and gives the home a more finished, updated feel by the end of the appointment.",
+      },
+      {
+        type: 'cta',
+        text: 'Have a list of small repairs in Palm Bay or Melbourne? Right Away Services LLC can often handle multiple handyman jobs in one efficient visit.',
+      },
+    ],
+    metaTitle: 'What Handyman Jobs Can Be Done in One Visit? | Right Away Services LLC',
+    metaDescription:
+      'See which handyman jobs can usually be completed in one visit in Palm Bay, including drywall, fans, fixtures, doors, and small home repairs.',
+  },
+  {
+    slug: 'best-repairs-for-senior-home-safety-brevard-county',
+    title: 'Best Repairs for Senior Home Safety in Brevard County',
+    excerpt:
+      'Small repairs can make a home safer and easier to use. These are the upgrades and fixes that matter most for seniors in Brevard County.',
+    date: '2026-06-10',
+    category: 'Home Safety',
+    readTime: '7 min read',
+    relatedServices: ['handyman-services', 'home-repairs', 'fixture-installation', 'door-and-window-repairs'],
+    relatedAreas: ['palm-bay-fl', 'melbourne-fl', 'indialantic-fl'],
+    content: [
+      {
+        type: 'paragraph',
+        text: "A safe home is easier to enjoy, and many of the most helpful changes are small repairs rather than major remodels. For seniors living in Brevard County, improving safety often means removing trip hazards, fixing broken hardware, and making everyday tasks easier to manage.",
+      },
+      {
+        type: 'paragraph',
+        text: "These repairs are practical, affordable, and can often be completed by a handyman in one or two visits. The goal is not to make the house feel medical — it is to make the home more comfortable, functional, and easier to move through.",
+      },
+      {
+        type: 'heading',
+        text: 'High-Value Safety Repairs',
+      },
+      {
+        type: 'list',
+        items: [
+          'Repair loose handrails and grab bars',
+          'Fix sticking doors and hard-to-use handles',
+          'Replace dim or broken lighting fixtures',
+          'Patch damaged flooring or threshold transitions',
+          'Improve bathroom hardware and support points',
+          'Handle small trip hazards and loose trim',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'Why These Repairs Matter',
+      },
+      {
+        type: 'paragraph',
+        text: "A loose handrail or a door that sticks may seem minor, but those issues increase frustration and can create fall risk. Likewise, poor lighting, cracked drywall, or loose transition strips can make navigation harder. In a Palm Bay or Melbourne home, these are often easy wins that improve day-to-day safety quickly.",
+      },
+      {
+        type: 'paragraph',
+        text: "For example, if a hallway light is dim and the bathroom door sticks, a few small handyman repairs can significantly improve how safely and easily the home is used. The benefits are immediate and usually cost far less than a remodel.",
+      },
+      {
+        type: 'cta',
+        text: 'Need safety-focused home repairs in Brevard County? Right Away Services LLC can help with the small fixes that make a home safer and easier to live in.',
+      },
+    ],
+    metaTitle: 'Best Repairs for Senior Home Safety in Brevard County | Right Away Services LLC',
+    metaDescription:
+      'See the best home repairs for senior safety in Brevard County, including lighting, grab bars, door fixes, handrails, and trip-hazard repairs.',
+  },
+  {
+    slug: 'punch-list-repairs-before-home-inspection-melbourne-fl',
+    title: 'Punch List Repairs Before a Home Inspection in Melbourne, FL',
+    excerpt:
+      'A good punch list helps you prepare for a home inspection with fewer surprises. Focus on the repairs buyers and inspectors are most likely to notice.',
+    date: '2026-06-17',
+    category: 'Inspection Prep',
+    readTime: '6 min read',
+    relatedServices: ['home-repairs', 'drywall-repair', 'painting-services', 'door-and-window-repairs'],
+    relatedAreas: ['melbourne-fl', 'west-melbourne-fl', 'palm-bay-fl'],
+    content: [
+      {
+        type: 'paragraph',
+        text: "Home inspections are easier when the obvious repair items are already handled. In Melbourne, FL, buyers and inspectors tend to focus on visible problems first: damaged drywall, door issues, missing hardware, caulk failures, and signs of moisture or wear.",
+      },
+      {
+        type: 'paragraph',
+        text: "A punch list keeps the work organized and prevents last-minute panic. Instead of trying to guess what an inspector might flag, you can walk the home, spot the common issues, and fix them before the inspection date.",
+      },
+      {
+        type: 'heading',
+        text: 'Best Punch List Items to Fix First',
+      },
+      {
+        type: 'list',
+        items: [
+          'Patch visible drywall holes and cracks',
+          'Fix doors that stick, drag, or will not latch',
+          'Replace loose or dated fixtures and hardware',
+          'Touch up paint where walls look worn or damaged',
+          'Check caulk around sinks, tubs, and windows',
+          'Correct minor trim, baseboard, or finish issues',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'What Inspectors Commonly Notice',
+      },
+      {
+        type: 'paragraph',
+        text: "Inspectors are trained to look at function and condition. In a Melbourne home, that often means doors, walls, water-related wear, and visible maintenance issues. If the house already shows care and attention, the inspection tends to feel less intimidating and more manageable.",
+      },
+      {
+        type: 'paragraph',
+        text: "A real-world example: a living room with patched and painted wall damage, working ceiling fans, and fully latching doors creates a much better first impression than a room with open patches and obvious maintenance issues. The difference is easy to see and often easy to fix.",
+      },
+      {
+        type: 'cta',
+        text: 'Preparing for a home inspection in Melbourne or nearby Brevard County? Right Away Services LLC can handle the punch-list repairs that help your home show better and inspect cleaner.',
+      },
+    ],
+    metaTitle: 'Punch List Repairs Before a Home Inspection in Melbourne, FL | Right Away Services LLC',
+    metaDescription:
+      'Get your Melbourne, FL home inspection-ready with a punch list of the most important repairs, including drywall, doors, fixtures, paint, and caulk.',
+  },
+  {
     slug: 'small-home-repairs-palm-bay-shouldnt-ignore',
     title: "Top Small Home Repairs Palm Bay Homeowners Shouldn't Ignore",
     excerpt:
