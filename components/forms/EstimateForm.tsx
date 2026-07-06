@@ -37,19 +37,45 @@ export function EstimateForm({ compact = false }: EstimateFormProps) {
     e.preventDefault()
     setStatus('submitting')
     try {
-      // Replace with your Formspree endpoint or server action
-      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('Missing EmailJS configuration')
+      }
+
+      const selectedService = services.find((item) => item.slug === form.service)?.name || 'Other / Not Sure'
+
+      const res = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(form),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          service_id: serviceId,
+          template_id: templateId,
+          user_id: publicKey,
+          template_params: {
+            name: form.name,
+            phone: form.phone,
+            email: form.email || 'Not provided',
+            city: form.city || 'Not provided',
+            service: selectedService,
+            message: form.message || 'No additional details provided',
+            reply_to: form.email || 'rightawayservices2010@gmail.com',
+          },
+        }),
       })
+
       if (res.ok) {
         setStatus('success')
         setForm(initialState)
       } else {
+        const errorText = await res.text().catch(() => '')
+        console.error('EmailJS request failed', res.status, errorText)
         setStatus('error')
       }
-    } catch {
+    } catch (error) {
+      console.error('EmailJS submission failed', error)
       setStatus('error')
     }
   }

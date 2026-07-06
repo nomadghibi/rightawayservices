@@ -51,10 +51,43 @@ Update these placeholders in `lib/seo/metadata.ts`:
 | `hello@rightawayservices.com` | Real email address |
 | `https://rightawayservices.com` | Live domain (already correct if using this domain) |
 
-Update form submission in `components/forms/EstimateForm.tsx`:
+Set these environment variables for EmailJS:
 
-- Replace `https://formspree.io/f/YOUR_FORM_ID` with your actual Formspree endpoint
-- Or swap the fetch for a Next.js server action using Resend or similar
+```bash
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+The contact form in `components/forms/EstimateForm.tsx` posts directly to the EmailJS API.
+Make sure your EmailJS template uses these variables:
+
+- `name`
+- `phone`
+- `email`
+- `city`
+- `service`
+- `message`
+- `reply_to`
+
+Recommended subject:
+
+```text
+New Estimate Request from {{name}} - Right Away Services LLC
+```
+
+Recommended template body:
+
+```html
+<h2>New Contact Form Submission</h2>
+<p><strong>Name:</strong> {{name}}</p>
+<p><strong>Phone:</strong> {{phone}}</p>
+<p><strong>Email:</strong> {{email}}</p>
+<p><strong>City:</strong> {{city}}</p>
+<p><strong>Service Needed:</strong> {{service}}</p>
+<p><strong>Message:</strong></p>
+<p>{{message}}</p>
+```
 
 Add real photos to `public/images/` and update image references in pages.
 
