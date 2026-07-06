@@ -20,6 +20,228 @@ export interface BlogSection {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'how-much-does-drywall-repair-cost-in-palm-bay-fl',
+    title: 'How Much Does Drywall Repair Cost in Palm Bay, FL?',
+    excerpt:
+      'Drywall repair pricing depends on the size of the damage, texture matching, and whether water caused the problem. Here is what Palm Bay homeowners should expect.',
+    date: '2026-04-12',
+    category: 'Cost Guide',
+    readTime: '6 min read',
+    relatedServices: ['drywall-repair', 'home-repairs', 'painting-services'],
+    relatedAreas: ['palm-bay-fl', 'melbourne-fl', 'west-melbourne-fl'],
+    content: [
+      {
+        type: 'paragraph',
+        text: "Drywall repair is one of the most common handyman jobs in Palm Bay because small issues show up everywhere: picture holes from old wall decor, dents from moving furniture, cracked seams from settling, and water stains after a Florida rainstorm. The honest answer on cost is that it depends on how much wall needs repair, how visible the damage is, and whether the finish has to blend into existing texture and paint.",
+      },
+      {
+        type: 'paragraph',
+        text: "For a simple small hole or nail pop, many homeowners can expect a lower-cost repair. Once the damage becomes larger, textured, or tied to moisture, the price climbs because the job takes more time and usually requires sanding, priming, and careful blending.",
+      },
+      {
+        type: 'heading',
+        text: 'Typical Drywall Repair Cost Ranges',
+      },
+      {
+        type: 'list',
+        items: [
+          'Small nail holes, anchor holes, and minor dents: often the lowest-cost repairs',
+          'Medium patches and seam cracks: usually more time because of sanding and blending',
+          'Large holes or damaged sections: higher cost due to replacement materials and labor',
+          'Water-damaged drywall: often costs more because the cause of the damage has to be addressed first',
+          'Texture matching and paint touch-up: can add time and increase the total estimate',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'What Drives the Price Up in Palm Bay Homes',
+      },
+      {
+        type: 'paragraph',
+        text: "Florida homes often have orange peel or knockdown texture, and matching that finish correctly is part of what makes a repair look professional. If a Palm Bay homeowner has a hole in a smooth hallway wall, that is usually simpler than repairing a damaged patch in a textured living room ceiling. Water damage also changes the job completely, because the drywall may need to be cut out and replaced instead of just patched.",
+      },
+      {
+        type: 'paragraph',
+        text: "A common local example is a bedroom wall after a TV mount is removed. If the damage is limited to a few anchor points, the repair is straightforward. If the wall was stressed, cracked, or patched poorly before, the work takes longer and the estimate reflects that.",
+      },
+      {
+        type: 'heading',
+        text: 'How to Keep the Repair Cost Down',
+      },
+      {
+        type: 'list',
+        items: [
+          'Bundle multiple small repairs into one visit',
+          'Tell the handyman if the wall has texture before scheduling',
+          'Share photos so the estimate can be more accurate',
+          'Fix water leaks before repairing damaged drywall',
+          'Ask whether priming or painting is included',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: "If you are comparing quotes in Palm Bay, make sure you are comparing the same scope of work. One estimate may include patching only, while another may include sanding, primer, and a paint-ready finish. The cheapest number is not always the best value if you still have to repaint the area yourself.",
+      },
+      {
+        type: 'cta',
+        text: 'Need a drywall repair estimate in Palm Bay or nearby Brevard County communities? Right Away Services LLC can assess the damage, explain the repair steps, and give you a clear price before work begins.',
+      },
+    ],
+    metaTitle: 'How Much Does Drywall Repair Cost in Palm Bay, FL? | Right Away Services LLC',
+    metaDescription:
+      'Learn what drywall repair costs in Palm Bay, FL and what affects pricing for holes, cracks, texture matching, and water damage.',
+  },
+  {
+    slug: 'handyman-vs-electrician-to-install-ceiling-fan',
+    title: 'Do I Need a Handyman or Electrician to Install a Ceiling Fan?',
+    excerpt:
+      'A ceiling fan replacement is often a handyman job, but some situations call for an electrician. Here is how Palm Bay homeowners can tell the difference.',
+    date: '2026-04-19',
+    category: 'Homeowner Questions',
+    readTime: '6 min read',
+    relatedServices: ['ceiling-fan-installation', 'fixture-installation', 'handyman-services'],
+    relatedAreas: ['palm-bay-fl', 'melbourne-fl', 'indialantic-fl'],
+    content: [
+      {
+        type: 'paragraph',
+        text: "If you bought a new ceiling fan and are wondering who should install it, the answer depends on what is already in place. In many Palm Bay homes, a handyman can handle a standard fan replacement when there is an existing fan-rated ceiling box and the wiring is already there. That is the simplest and most common type of install.",
+      },
+      {
+        type: 'paragraph',
+        text: "If the room only has a basic light fixture, if the box is not fan-rated, or if new wiring has to be run, the job may cross into electrician territory. That distinction matters because fan installation is not just about hanging hardware — it is about safety, support, and making sure the fixture can handle the movement of a spinning fan.",
+      },
+      {
+        type: 'heading',
+        text: 'When a Handyman Can Usually Handle It',
+      },
+      {
+        type: 'list',
+        items: [
+          'Replacing an old ceiling fan with a new one',
+          'Installing a fan on an existing fan-rated box',
+          'Swapping out a standard fan with a similar model',
+          'Balancing the fan and correcting wobble after install',
+          'Setting up remote controls or wall-switch compatibility',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'When You Need an Electrician',
+      },
+      {
+        type: 'list',
+        items: [
+          'There is no existing ceiling box where the fan will go',
+          'The box is not rated to support a fan',
+          'New wiring or a new switch leg has to be run',
+          'The circuit appears overloaded or outdated',
+          'You want a completely new electrical location for the fixture',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: "A good local example is a Palm Bay bedroom where the homeowner wants to replace an old fan that already worked for years. That is usually straightforward. By contrast, a Melbourne bonus room with only a center light and no fan support may require electrical work before the fan can be safely installed.",
+      },
+      {
+        type: 'heading',
+        text: 'What to Check Before You Buy the Fan',
+      },
+      {
+        type: 'list',
+        items: [
+          'Is the ceiling box fan-rated?',
+          'Does the fan need a light kit?',
+          'Will you use a wall switch or remote?',
+          'Is the room indoor or outdoor?',
+          'Do you want the old fixture removed and disposed of?',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: "If you are unsure, take a photo of the existing fixture, the ceiling box, and the breaker panel label. That usually helps determine whether a handyman can handle it or whether an electrician should be involved first.",
+      },
+      {
+        type: 'cta',
+        text: 'Need ceiling fan installation in Palm Bay, Melbourne, or nearby communities? Right Away Services LLC can inspect the setup, confirm whether the job is appropriate for a handyman, and install the fan correctly.',
+      },
+    ],
+    metaTitle: 'Do I Need a Handyman or Electrician to Install a Ceiling Fan? | Right Away Services LLC',
+    metaDescription:
+      'Learn when a handyman can install a ceiling fan and when you need an electrician for a fan-rated box, new wiring, or electrical upgrades.',
+  },
+  {
+    slug: 'best-home-repairs-before-selling-house-palm-bay',
+    title: 'Best Home Repairs Before Selling a House in Palm Bay',
+    excerpt:
+      'Small repairs can make a big difference when you list a home in Palm Bay. Focus on the fixes buyers notice first and the ones that help a listing show better.',
+    date: '2026-04-28',
+    category: 'Home Selling Prep',
+    readTime: '7 min read',
+    relatedServices: ['home-repairs', 'drywall-repair', 'painting-services', 'handyman-services'],
+    relatedAreas: ['palm-bay-fl', 'melbourne-fl', 'west-melbourne-fl'],
+    content: [
+      {
+        type: 'paragraph',
+        text: "If you are selling a house in Palm Bay, the goal is not to remodel everything. It is to make the home feel well cared for, move-in ready, and easy for buyers to picture themselves living in. The best pre-sale repairs are usually the visible, practical fixes that show up during a walkthrough or inspection.",
+      },
+      {
+        type: 'paragraph',
+        text: "Buyers notice details fast. A sticking door, a cracked wall patch, or a bathroom that looks tired can affect how they feel about the whole home. In Florida, humid weather can also leave its mark on paint, caulk, drywall, and fixtures, so a focused repair list goes a long way.",
+      },
+      {
+        type: 'heading',
+        text: 'Highest-Value Repairs Before Listing',
+      },
+      {
+        type: 'list',
+        items: [
+          'Patch drywall holes, dents, and old wall-mount damage',
+          'Paint touch-ups where walls look worn or mismatched',
+          'Fix doors that stick, squeak, or do not latch properly',
+          'Replace old or damaged light fixtures and ceiling fans',
+          'Refresh caulk in kitchens, bathrooms, and around windows',
+          'Repair loose trim, baseboards, and visible hardware problems',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'What Buyers Notice in Palm Bay Homes',
+      },
+      {
+        type: 'paragraph',
+        text: "A Palm Bay buyer walking through a home will notice whether the house feels cared for. They may not say it out loud, but they register every scuffed wall, loose door handle, and outdated fixture. Even one or two obvious repair issues can make them assume there are more hidden problems.",
+      },
+      {
+        type: 'paragraph',
+        text: "A practical example: a living room with clean paint, patched nail holes, and a working ceiling fan feels ready. The same room with patched walls that were never painted, a wobbly fan, and a door that drags on the frame feels like a project. Those impressions matter when buyers are comparing similar homes in the same price range.",
+      },
+      {
+        type: 'heading',
+        text: 'Repairs Worth Doing and Repairs to Skip',
+      },
+      {
+        type: 'list',
+        items: [
+          'Worth doing: cosmetic repairs, door adjustments, fixture replacements, and drywall patches',
+          'Worth doing: anything a buyer will see during the first walkthrough',
+          'Worth skipping: major renovations that will not return their cost before the sale',
+          'Worth skipping: highly personal upgrades that do not improve broad buyer appeal',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: "The smartest pre-listing approach is usually a short repair checklist and a single handyman visit that handles as much of it as possible. That keeps the house presentable without turning the project into a full remodel.",
+      },
+      {
+        type: 'cta',
+        text: 'Selling a house in Palm Bay or nearby Brevard County? Right Away Services LLC can handle the punch-list repairs that help your home show better and feel more move-in ready.',
+      },
+    ],
+    metaTitle: 'Best Home Repairs Before Selling a House in Palm Bay | Right Away Services LLC',
+    metaDescription:
+      'See the best home repairs to make before listing a house in Palm Bay, FL, including drywall, paint, fixtures, doors, and pre-sale punch-list work.',
+  },
+  {
     slug: 'small-home-repairs-palm-bay-shouldnt-ignore',
     title: "Top Small Home Repairs Palm Bay Homeowners Shouldn't Ignore",
     excerpt:
