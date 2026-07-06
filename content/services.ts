@@ -69,9 +69,9 @@ export const services: Service[] = [
       },
     ],
     relatedServices: ['home-repairs', 'fixture-installation', 'property-maintenance'],
-    metaTitle: 'Handyman Services in Palm Bay & Melbourne, FL | Right Away Services LLC',
+    metaTitle: 'Handyman Palm Bay FL | Right Away Services LLC',
     metaDescription:
-      'Right Away Services LLC provides professional handyman services across Palm Bay, Melbourne, and Florida\'s Space Coast. Call today for fast, reliable home repair help.',
+      'Need a handyman in Palm Bay, FL? Right Away Services LLC provides professional handyman services across Palm Bay, Melbourne, and Florida\'s Space Coast.',
   },
   {
     slug: 'home-repairs',
@@ -177,9 +177,9 @@ export const services: Service[] = [
       },
     ],
     relatedServices: ['home-repairs', 'painting-services', 'handyman-services'],
-    metaTitle: 'Drywall Repair in Palm Bay & Melbourne, FL | Right Away Services LLC',
+    metaTitle: 'Drywall Repair Palm Bay FL | Right Away Services LLC',
     metaDescription:
-      'Expert drywall patching and repair in Palm Bay, Melbourne, and the Space Coast. Right Away Services LLC fixes holes, cracks, and water damage — seamlessly.',
+      'Drywall repair in Palm Bay, FL for holes, cracks, and water damage. Right Away Services LLC serves Palm Bay, Melbourne, and the Space Coast.',
   },
   {
     slug: 'painting-services',
@@ -239,9 +239,9 @@ export const services: Service[] = [
       },
     ],
     relatedServices: ['drywall-repair', 'home-repairs', 'property-maintenance'],
-    metaTitle: 'Painting Services in Palm Bay & Melbourne, FL | Right Away Services LLC',
+    metaTitle: 'Painting Services Palm Bay FL | Right Away Services LLC',
     metaDescription:
-      'Interior and exterior painting services in Palm Bay, Melbourne, and the Space Coast. Right Away Services LLC handles full repaints, cabinet painting, touch-ups, and more.',
+      'Painting services in Palm Bay, FL for interiors, exteriors, cabinets, and touch-ups. Right Away Services LLC serves Palm Bay, Melbourne, and the Space Coast.',
   },
   {
     slug: 'door-and-window-repairs',
@@ -395,9 +395,9 @@ export const services: Service[] = [
       },
     ],
     relatedServices: ['fixture-installation', 'handyman-services', 'home-repairs'],
-    metaTitle: 'Ceiling Fan Installation in Palm Bay & Melbourne, FL | Right Away Services LLC',
+    metaTitle: 'Ceiling Fan Installation Palm Bay FL | Right Away Services LLC',
     metaDescription:
-      'Professional ceiling fan installation and replacement in Palm Bay, Melbourne, and the Space Coast. Safe, clean installs — no ladder rental required.',
+      'Ceiling fan installation in Palm Bay, FL for safe, clean installs and replacements. Right Away Services LLC serves Palm Bay, Melbourne, and the Space Coast.',
   },
   {
     slug: 'furniture-assembly',

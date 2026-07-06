@@ -40,6 +40,16 @@ export default function ServicePage({ params }: Props) {
   const relatedServices = getRelatedServices(service.relatedServices)
   const priorityAreas = serviceAreas.filter((area) => priorityAreaSlugs.includes(area.slug))
   const heroImage = getServiceImage(service.slug)
+  const heroHeadline =
+    service.slug === 'handyman-services'
+      ? 'Handyman Palm Bay FL'
+      : service.slug === 'drywall-repair'
+        ? 'Drywall Repair Palm Bay FL'
+        : service.slug === 'painting-services'
+          ? 'Painting Services Palm Bay FL'
+          : service.slug === 'ceiling-fan-installation'
+            ? 'Ceiling Fan Installation Palm Bay FL'
+            : service.name
 
   const breadcrumbs = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -66,7 +76,7 @@ export default function ServicePage({ params }: Props) {
               <li className="text-white" aria-current="page">{service.name}</li>
             </ol>
           </nav>
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4">{service.name}</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4">{heroHeadline}</h1>
           <p className="text-blue-200 text-lg max-w-2xl mb-6">{service.tagline}</p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
