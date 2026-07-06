@@ -51,15 +51,12 @@ Update these placeholders in `lib/seo/metadata.ts`:
 | `hello@rightawayservices.com` | Real email address |
 | `https://rightawayservices.com` | Live domain (already correct if using this domain) |
 
-Set these environment variables for EmailJS:
+The contact form in `components/forms/EstimateForm.tsx` now posts directly to EmailJS using these IDs:
 
-```bash
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
-```
+- Service ID: `service_a6thti8`
+- Template ID: `template_p9th8gb`
+- Public Key: `9WXKK8L_FzYxHq0A2`
 
-The contact form in `components/forms/EstimateForm.tsx` posts directly to the EmailJS API.
 Make sure your EmailJS template uses these variables:
 
 - `name`

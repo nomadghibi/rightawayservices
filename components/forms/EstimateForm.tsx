@@ -3,6 +3,12 @@
 import { useState } from 'react'
 import { services } from '@/content/services'
 
+const emailjsConfig = {
+  serviceId: 'service_a6thti8',
+  templateId: 'template_p9th8gb',
+  publicKey: '9WXKK8L_FzYxHq0A2',
+}
+
 interface FormState {
   name: string
   phone: string
@@ -37,23 +43,15 @@ export function EstimateForm({ compact = false }: EstimateFormProps) {
     e.preventDefault()
     setStatus('submitting')
     try {
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-
-      if (!serviceId || !templateId || !publicKey) {
-        throw new Error('Missing EmailJS configuration')
-      }
-
       const selectedService = services.find((item) => item.slug === form.service)?.name || 'Other / Not Sure'
 
       const res = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          service_id: serviceId,
-          template_id: templateId,
-          user_id: publicKey,
+          service_id: emailjsConfig.serviceId,
+          template_id: emailjsConfig.templateId,
+          user_id: emailjsConfig.publicKey,
           template_params: {
             name: form.name,
             phone: form.phone,
