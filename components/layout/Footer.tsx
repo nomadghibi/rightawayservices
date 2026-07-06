@@ -192,7 +192,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-4 text-center text-xs text-blue-400">
-          Designed by:{' '}
+          Website design by:{' '}
           <a
             href="https://reliablewebstudio.com"
             target="_blank"
