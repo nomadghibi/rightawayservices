@@ -20,7 +20,8 @@ export const siteConfig = {
   description:
     'Right Away Services LLC is a licensed and insured handyman company in Palm Bay, FL with 26 years of experience. 5.0-star rated on Angi. Serving homeowners, landlords, and property managers across Florida\'s Space Coast.',
   social: {
-    facebook: '',
+    facebook: 'https://www.facebook.com/profile.php?id=61591783619296',
+    x: 'https://x.com/rightawayservic',
     instagram: '',
     google: '',
   },

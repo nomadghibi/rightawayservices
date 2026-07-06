@@ -5,6 +5,26 @@ import { serviceAreas } from '@/content/serviceAreas'
 
 const primaryServices = services.slice(0, 5)
 const primaryAreas = serviceAreas.slice(0, 6)
+const socialLinks = [
+  {
+    label: 'Facebook',
+    href: siteConfig.social.facebook,
+    icon: (
+      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.1 5.66 21.26 10.44 22v-7.03H7.9v-2.9h2.54V9.86c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56v1.87h2.77l-.44 2.9h-2.33V22C18.34 21.26 22 17.1 22 12.07z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'X',
+    href: siteConfig.social.x,
+    icon: (
+      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18.9 2H22l-6.98 7.96L23.2 22h-6.9l-5.4-7.03L4.7 22H1.6l7.48-8.53L0 2h7.06l4.88 6.48L18.9 2zm-1.21 18h1.72L6.12 3.9H4.28L17.69 20z" />
+      </svg>
+    ),
+  },
+]
 
 export function Footer() {
   return (
@@ -52,6 +72,25 @@ export function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>Mon – Sun: 8:00 AM – 8:00 PM</span>
+              </div>
+            </div>
+            <div className="mt-6">
+              <p className="text-xs uppercase tracking-wider text-blue-300 mb-3">Follow us</p>
+              <div className="flex items-center gap-3">
+                {socialLinks
+                  .filter((social) => social.href)
+                  .map((social) => (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition-colors hover:bg-white hover:text-navy"
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
               </div>
             </div>
           </div>
