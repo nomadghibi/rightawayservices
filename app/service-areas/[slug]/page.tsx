@@ -12,6 +12,8 @@ import { ServiceCard } from '@/components/ui/ServiceCard'
 import { AreaCard } from '@/components/ui/AreaCard'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { CTABand } from '@/components/sections/CTABand'
+import { PageHeroImage } from '@/components/sections/PageHeroImage'
+import { pageImages } from '@/content/pageMedia'
 
 interface Props {
   params: { slug: string }
@@ -52,7 +54,8 @@ export default function ServiceAreaPage({ params }: Props) {
 
       {/* Hero */}
       <section className="bg-navy text-white py-14 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+          <div>
           <nav aria-label="Breadcrumb" className="text-sm text-blue-300 mb-4">
             <ol className="flex items-center gap-2 flex-wrap">
               <li><Link href="/" className="hover:text-white">Home</Link></li>
@@ -83,6 +86,8 @@ export default function ServiceAreaPage({ params }: Props) {
               Request Estimate
             </Link>
           </div>
+          </div>
+          <PageHeroImage {...pageImages.serviceAreas} priority caption={`${area.name}, ${area.state}`} />
         </div>
       </section>
 

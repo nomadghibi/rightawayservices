@@ -9,10 +9,12 @@ import { AreaCard } from '@/components/ui/AreaCard'
 import { Testimonials } from '@/components/sections/Testimonials'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { CTABand } from '@/components/sections/CTABand'
+import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { TrustBadges } from '@/components/ui/TrustBadges'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { buildFAQSchema } from '@/lib/schema/faq'
 import { highIntentHandymanLinks, localTrustSignals, priorityAreaSlugs } from '@/content/localSeo'
+import { pageImages } from '@/content/pageMedia'
 
 export const metadata: Metadata = buildMetadata({
   title: `Handyman Services in Palm Bay & Melbourne, FL | ${siteConfig.name}`,
@@ -54,7 +56,7 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="bg-navy text-white py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-[1.08fr_0.92fr] items-center">
           <div className="max-w-3xl">
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
               Palm Bay · Melbourne · Space Coast, FL
@@ -86,6 +88,11 @@ export default function HomePage() {
             </div>
             <TrustBadges />
           </div>
+          <PageHeroImage
+            {...pageImages.home}
+            priority
+            caption="Local handyman service"
+          />
         </div>
       </section>
 

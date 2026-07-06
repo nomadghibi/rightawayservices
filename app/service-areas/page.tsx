@@ -3,8 +3,10 @@ import Link from 'next/link'
 import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 import { serviceAreas } from '@/content/serviceAreas'
 import { highIntentHandymanLinks, priorityAreaSlugs } from '@/content/localSeo'
+import { pageImages } from '@/content/pageMedia'
 import { AreaCard } from '@/components/ui/AreaCard'
 import { CTABand } from '@/components/sections/CTABand'
+import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
 
@@ -28,7 +30,8 @@ export default function ServiceAreasPage() {
       />
 
       <section className="bg-navy text-white py-14 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+          <div>
           <nav aria-label="Breadcrumb" className="text-sm text-blue-300 mb-4">
             <ol className="flex items-center gap-2">
               <li><a href="/" className="hover:text-white">Home</a></li>
@@ -41,6 +44,8 @@ export default function ServiceAreasPage() {
             Right Away Services LLC serves homeowners, landlords, and property managers throughout Brevard County,
             Florida. Click your community below to learn more about our services in your area.
           </p>
+          </div>
+          <PageHeroImage {...pageImages.serviceAreas} priority caption="Local coverage across Brevard County" />
         </div>
       </section>
 

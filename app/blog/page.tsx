@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 import { blogPosts, formatDate } from '@/content/blogPosts'
 import { CTABand } from '@/components/sections/CTABand'
+import { PageHeroImage } from '@/components/sections/PageHeroImage'
+import { pageImages } from '@/content/pageMedia'
 
 export const metadata: Metadata = buildMetadata({
   title: `Handyman & Home Repair Blog — Space Coast, FL | ${siteConfig.name}`,
@@ -15,7 +17,8 @@ export default function BlogIndexPage() {
   return (
     <>
       <section className="bg-navy text-white py-14 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+          <div>
           <nav aria-label="Breadcrumb" className="text-sm text-blue-300 mb-4">
             <ol className="flex items-center gap-2">
               <li><Link href="/" className="hover:text-white">Home</Link></li>
@@ -28,6 +31,8 @@ export default function BlogIndexPage() {
             Practical guides for Space Coast homeowners — from small repairs to Florida-specific maintenance
             advice from Right Away Services LLC.
           </p>
+          </div>
+          <PageHeroImage {...pageImages.blog} priority caption="Home repair tips and guides" />
         </div>
       </section>
 

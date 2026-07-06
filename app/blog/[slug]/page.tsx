@@ -7,6 +7,8 @@ import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { CTABand } from '@/components/sections/CTABand'
+import { PageHeroImage } from '@/components/sections/PageHeroImage'
+import { pageImages } from '@/content/pageMedia'
 
 interface Props {
   params: { slug: string }
@@ -43,7 +45,8 @@ export default function BlogPostPage({ params }: Props) {
       <SchemaScript schema={breadcrumbs} />
 
       <section className="bg-navy text-white py-14 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+          <div>
           <nav aria-label="Breadcrumb" className="text-sm text-blue-300 mb-4">
             <ol className="flex items-center gap-2 flex-wrap">
               <li><Link href="/" className="hover:text-white">Home</Link></li>
@@ -63,6 +66,8 @@ export default function BlogPostPage({ params }: Props) {
           <time className="text-blue-300 text-sm" dateTime={post.date}>
             Published {formatDate(post.date)}
           </time>
+          </div>
+          <PageHeroImage {...pageImages.blog} priority caption={post.category} />
         </div>
       </section>
 

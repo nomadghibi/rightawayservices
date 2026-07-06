@@ -4,6 +4,8 @@ import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 import { faqs } from '@/content/faqs'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { CTABand } from '@/components/sections/CTABand'
+import { PageHeroImage } from '@/components/sections/PageHeroImage'
+import { pageImages } from '@/content/pageMedia'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { buildFAQSchema } from '@/lib/schema/faq'
 import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
@@ -27,7 +29,8 @@ export default function FAQPage() {
       />
 
       <section className="bg-navy text-white py-14 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+          <div>
           <nav aria-label="Breadcrumb" className="text-sm text-blue-300 mb-4">
             <ol className="flex items-center gap-2">
               <li><Link href="/" className="hover:text-white">Home</Link></li>
@@ -42,6 +45,8 @@ export default function FAQPage() {
             Answers to common questions about handyman services, pricing, service areas, and how Right Away
             Services LLC works.
           </p>
+          </div>
+          <PageHeroImage {...pageImages.faq} priority caption="Project planning and answers" />
         </div>
       </section>
 

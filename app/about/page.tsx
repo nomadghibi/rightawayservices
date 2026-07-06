@@ -2,7 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 import { CTABand } from '@/components/sections/CTABand'
+import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { TrustBadgesLight } from '@/components/ui/TrustBadges'
+import { pageImages } from '@/content/pageMedia'
 
 export const metadata: Metadata = buildMetadata({
   title: `About Right Away Services LLC | Local Handyman in Palm Bay & Melbourne, FL`,
@@ -48,7 +50,8 @@ export default function AboutPage() {
   return (
     <>
       <section className="bg-navy text-white py-14 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+          <div>
           <nav aria-label="Breadcrumb" className="text-sm text-blue-300 mb-4">
             <ol className="flex items-center gap-2">
               <li><Link href="/" className="hover:text-white">Home</Link></li>
@@ -61,6 +64,8 @@ export default function AboutPage() {
             A locally owned handyman company built on responsiveness, honest work, and respect for the homeowners
             and property managers we serve across Florida&rsquo;s Space Coast.
           </p>
+          </div>
+          <PageHeroImage {...pageImages.about} priority caption="Local, licensed, and insured" />
         </div>
       </section>
 

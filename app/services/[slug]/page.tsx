@@ -12,6 +12,8 @@ import { SchemaScript } from '@/components/seo/SchemaScript'
 import { ServiceCard } from '@/components/ui/ServiceCard'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { CTABand } from '@/components/sections/CTABand'
+import { PageHeroImage } from '@/components/sections/PageHeroImage'
+import { getServiceImage } from '@/content/pageMedia'
 
 interface Props {
   params: { slug: string }
@@ -37,6 +39,7 @@ export default function ServicePage({ params }: Props) {
 
   const relatedServices = getRelatedServices(service.relatedServices)
   const priorityAreas = serviceAreas.filter((area) => priorityAreaSlugs.includes(area.slug))
+  const heroImage = getServiceImage(service.slug)
 
   const breadcrumbs = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -52,7 +55,8 @@ export default function ServicePage({ params }: Props) {
 
       {/* Hero */}
       <section className="bg-navy text-white py-14 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+          <div>
           <nav aria-label="Breadcrumb" className="text-sm text-blue-300 mb-4">
             <ol className="flex items-center gap-2 flex-wrap">
               <li><Link href="/" className="hover:text-white">Home</Link></li>
@@ -81,6 +85,8 @@ export default function ServicePage({ params }: Props) {
               Request Estimate
             </Link>
           </div>
+          </div>
+          <PageHeroImage {...heroImage} priority caption={service.name} />
         </div>
       </section>
 

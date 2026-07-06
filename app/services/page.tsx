@@ -4,8 +4,10 @@ import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 import { services } from '@/content/services'
 import { serviceAreas } from '@/content/serviceAreas'
 import { highIntentHandymanLinks, priorityAreaSlugs } from '@/content/localSeo'
+import { pageImages } from '@/content/pageMedia'
 import { ServiceCard } from '@/components/ui/ServiceCard'
 import { CTABand } from '@/components/sections/CTABand'
+import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
 
@@ -30,7 +32,8 @@ export default function ServicesPage() {
 
       {/* Header */}
       <section className="bg-navy text-white py-14 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+          <div>
           <nav aria-label="Breadcrumb" className="text-sm text-blue-300 mb-4">
             <ol className="flex items-center gap-2">
               <li><a href="/" className="hover:text-white">Home</a></li>
@@ -43,6 +46,8 @@ export default function ServicesPage() {
             Right Away Services LLC provides professional handyman and home repair services throughout Palm Bay,
             Melbourne, and the Space Coast. Select a service below to learn more.
           </p>
+          </div>
+          <PageHeroImage {...pageImages.services} priority caption="Services for every repair list" />
         </div>
       </section>
 
