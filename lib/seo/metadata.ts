@@ -7,7 +7,7 @@ export const siteConfig = {
   phone: '(321) 557-7426',
   phoneE164: '+13215577426',
   phoneHref: 'tel:+13215577426',
-  email: 'hello@rightawayservices.com',
+  email: 'rightawayservices2010@gmail.com',
   address: {
     street: '540 Londonderry Circle SE',
     city: 'Palm Bay',
