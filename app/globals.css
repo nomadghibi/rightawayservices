@@ -30,4 +30,34 @@
   .prose-local ul {
     @apply list-disc list-inside space-y-2 text-slate-gray mb-4;
   }
+
+  @keyframes float-slow {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  @keyframes shimmer-slow {
+    0%,
+    100% {
+      opacity: 0.45;
+      transform: scale(0.95);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.08);
+    }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 5s ease-in-out infinite;
+  }
+
+  .animate-shimmer-slow {
+    animation: shimmer-slow 4.5s ease-in-out infinite;
+  }
 }
