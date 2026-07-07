@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { siteConfig } from '@/lib/seo/metadata'
 import { services } from '@/content/services'
 import { serviceAreas } from '@/content/serviceAreas'
+import { BrandLogo } from '@/components/layout/BrandLogo'
 
 const primaryServices = services.slice(0, 5)
 const primaryAreas = serviceAreas.slice(0, 6)
@@ -33,13 +34,8 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-accent rounded-md flex items-center justify-center flex-shrink-0">
-                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
-              </div>
-              <span className="font-bold text-white">Right Away Services LLC</span>
+            <div className="mb-4">
+              <BrandLogo compact />
             </div>
             <p className="text-sm text-blue-200 leading-relaxed mb-4">
               Reliable handyman and home repair services for homeowners, landlords, and property managers across Florida&rsquo;s Space Coast.

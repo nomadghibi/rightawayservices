@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { siteConfig } from '@/lib/seo/metadata'
+import { BrandLogo } from '@/components/layout/BrandLogo'
 
 const navLinks = [
   { href: '/services', label: 'Services' },
@@ -21,17 +22,13 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="w-8 h-8 bg-navy rounded-md flex items-center justify-center">
-              <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-            </div>
-            <div className="leading-tight">
-              <span className="font-bold text-navy text-sm block">Right Away Services</span>
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <BrandLogo compact />
+            <div className="leading-tight hidden sm:block">
               <span className="text-xs text-slate-gray block">Palm Bay &amp; Melbourne, FL</span>
+              <span className="text-xs text-slate-gray block">Licensed &amp; Insured</span>
             </div>
-          </Link>
+          </div>
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-6" aria-label="Main navigation">
