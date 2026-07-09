@@ -5,6 +5,8 @@ import { blogPosts, formatDate } from '@/content/blogPosts'
 import { CTABand } from '@/components/sections/CTABand'
 import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { pageImages } from '@/content/pageMedia'
+import { SchemaScript } from '@/components/seo/SchemaScript'
+import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
 
 export const metadata: Metadata = buildMetadata({
   title: `Handyman & Home Repair Blog — Space Coast, FL | ${siteConfig.name}`,
@@ -16,6 +18,13 @@ export const metadata: Metadata = buildMetadata({
 export default function BlogIndexPage() {
   return (
     <>
+      <SchemaScript
+        schema={buildBreadcrumbSchema([
+          { name: 'Home', url: '/' },
+          { name: 'Blog', url: '/blog' },
+        ])}
+      />
+
       <section className="bg-navy text-white py-14 px-4">
         <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
           <div>

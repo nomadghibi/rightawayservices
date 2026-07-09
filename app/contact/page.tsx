@@ -4,6 +4,8 @@ import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 import { EstimateForm } from '@/components/forms/EstimateForm'
 import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { pageImages } from '@/content/pageMedia'
+import { SchemaScript } from '@/components/seo/SchemaScript'
+import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
 
 export const metadata: Metadata = buildMetadata({
   title: `Contact Right Away Services LLC | Request a Free Estimate`,
@@ -15,6 +17,13 @@ export const metadata: Metadata = buildMetadata({
 export default function ContactPage() {
   return (
     <>
+      <SchemaScript
+        schema={buildBreadcrumbSchema([
+          { name: 'Home', url: '/' },
+          { name: 'Contact', url: '/contact' },
+        ])}
+      />
+
       <section className="bg-navy text-white py-14 px-4">
         <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
           <div>

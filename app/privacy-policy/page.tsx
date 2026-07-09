@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
+import { SchemaScript } from '@/components/seo/SchemaScript'
+import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
 
 export const metadata: Metadata = buildMetadata({
   title: `Privacy Policy | ${siteConfig.name}`,
@@ -12,6 +14,13 @@ export const metadata: Metadata = buildMetadata({
 export default function PrivacyPolicyPage() {
   return (
     <>
+      <SchemaScript
+        schema={buildBreadcrumbSchema([
+          { name: 'Home', url: '/' },
+          { name: 'Privacy Policy', url: '/privacy-policy' },
+        ])}
+      />
+
       <section className="bg-navy text-white py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <nav aria-label="Breadcrumb" className="text-sm text-blue-300 mb-4">

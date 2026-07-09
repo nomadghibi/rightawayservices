@@ -5,6 +5,8 @@ import { CTABand } from '@/components/sections/CTABand'
 import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { TrustBadgesLight } from '@/components/ui/TrustBadges'
 import { pageImages } from '@/content/pageMedia'
+import { SchemaScript } from '@/components/seo/SchemaScript'
+import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
 
 export const metadata: Metadata = buildMetadata({
   title: `About Right Away Services LLC | Local Handyman in Palm Bay & Melbourne, FL`,
@@ -49,6 +51,13 @@ const values = [
 export default function AboutPage() {
   return (
     <>
+      <SchemaScript
+        schema={buildBreadcrumbSchema([
+          { name: 'Home', url: '/' },
+          { name: 'About', url: '/about' },
+        ])}
+      />
+
       <section className="bg-navy text-white py-14 px-4">
         <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
           <div>
