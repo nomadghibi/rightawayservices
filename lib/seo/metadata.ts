@@ -26,6 +26,9 @@ export const siteConfig = {
     instagram: '',
     google: '',
   },
+  reviewProfiles: {
+    angi: 'https://www.angi.com/search?query=Right%20Away%20Services%20LLC',
+  },
 }
 
 export function buildMetadata({

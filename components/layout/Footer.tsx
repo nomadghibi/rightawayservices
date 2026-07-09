@@ -89,6 +89,17 @@ export function Footer() {
                   ))}
               </div>
             </div>
+            <div className="mt-5 rounded-lg border border-white/10 bg-white/5 p-4">
+              <p className="text-xs uppercase tracking-wider text-blue-300 mb-2">Reviews</p>
+              <a
+                href={siteConfig.reviewProfiles.angi}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-semibold text-white hover:text-accent transition-colors"
+              >
+                5.0 stars on Angi — find our reviews
+              </a>
+            </div>
           </div>
 
           {/* Services column */}
