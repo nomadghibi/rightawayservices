@@ -242,6 +242,57 @@ export const localIntentFaqs = [
   },
 ]
 
+export const serviceLocalFaqs = [
+  {
+    serviceSlug: 'handyman-services',
+    question: 'Do you offer handyman services in both Palm Bay and Melbourne?',
+    answer:
+      'Yes. Right Away Services LLC provides handyman services in Palm Bay, Melbourne, West Melbourne, and nearby Brevard County communities for homeowners, landlords, property managers, and sellers preparing homes for the market.',
+  },
+  {
+    serviceSlug: 'handyman-services',
+    question: 'What handyman jobs are most common in Palm Bay and Melbourne homes?',
+    answer:
+      'Common local handyman requests include drywall patches, paint touch-ups, ceiling fan replacement, fixture installation, door adjustments, rental turnover punch lists, caulking, trim repairs, and small pre-sale repair lists.',
+  },
+  {
+    serviceSlug: 'drywall-repair',
+    question: 'Do you provide drywall repair in Palm Bay, FL?',
+    answer:
+      'Yes. We handle drywall repair in Palm Bay for holes, cracks, corner damage, wall dents, moisture-related damage, texture matching, and paint-ready patching for homes and rental properties.',
+  },
+  {
+    serviceSlug: 'drywall-repair',
+    question: 'Can you repair drywall damage in Melbourne rental properties?',
+    answer:
+      'Yes. We help Melbourne landlords and property managers with drywall repairs between tenants, including nail holes, wall dents, doorknob damage, texture blending, and prep for repainting.',
+  },
+  {
+    serviceSlug: 'painting-services',
+    question: 'Do you offer painting services in Palm Bay and Melbourne?',
+    answer:
+      'Yes. Right Away Services LLC provides painting services in Palm Bay and Melbourne, including interior painting, exterior refreshes, trim painting, cabinet painting, rental turnover painting, and touch-ups after repairs.',
+  },
+  {
+    serviceSlug: 'painting-services',
+    question: 'What painting work is most common for Florida homes?',
+    answer:
+      'Common Florida painting needs include exterior paint refreshes from sun and humidity exposure, interior repainting after drywall repair, trim and door touch-ups, cabinet painting, and rental property paint refreshes.',
+  },
+  {
+    serviceSlug: 'ceiling-fan-installation',
+    question: 'Do you install ceiling fans in Palm Bay, FL?',
+    answer:
+      'Yes. We install and replace ceiling fans in Palm Bay homes, including bedrooms, living rooms, patios, and rental properties where an existing fan-rated box is ready for installation.',
+  },
+  {
+    serviceSlug: 'ceiling-fan-installation',
+    question: 'Can you replace an old ceiling fan in Melbourne?',
+    answer:
+      'Yes. We replace old ceiling fans in Melbourne homes and rentals, assemble the new fan, mount it securely to the existing fan-rated box, check operation, and help with basic remote or light-kit setup.',
+  },
+]
+
 export const localSearchThemes = [
   'handyman services near me',
   'handyman in Palm Bay FL',

@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { services, getServiceBySlug, getRelatedServices } from '@/content/services'
 import { serviceAreas } from '@/content/serviceAreas'
-import { priorityAreaSlugs } from '@/content/localSeo'
+import { priorityAreaSlugs, serviceLocalFaqs } from '@/content/localSeo'
 import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 import { buildServiceSchema } from '@/lib/schema/service'
 import { buildFAQSchema } from '@/lib/schema/faq'
@@ -39,6 +39,10 @@ export default function ServicePage({ params }: Props) {
 
   const relatedServices = getRelatedServices(service.relatedServices)
   const priorityAreas = serviceAreas.filter((area) => priorityAreaSlugs.includes(area.slug))
+  const serviceFaqs = [
+    ...service.faqs,
+    ...serviceLocalFaqs.filter((faq) => faq.serviceSlug === service.slug),
+  ]
   const heroImage = getServiceImage(service.slug)
   const heroHeadline =
     service.slug === 'handyman-services'
@@ -60,7 +64,7 @@ export default function ServicePage({ params }: Props) {
   return (
     <>
       <SchemaScript schema={buildServiceSchema(service)} />
-      <SchemaScript schema={buildFAQSchema(service.faqs)} />
+      <SchemaScript schema={buildFAQSchema(serviceFaqs)} />
       <SchemaScript schema={breadcrumbs} />
 
       {/* Hero */}
@@ -234,7 +238,7 @@ export default function ServicePage({ params }: Props) {
 
       {/* FAQs */}
       <FAQSection
-        faqs={service.faqs}
+        faqs={serviceFaqs}
         heading={`${service.name} — Frequently Asked Questions`}
       />
 
