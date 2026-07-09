@@ -13,10 +13,10 @@ export function BrandLogo({ href = '/', compact = false }: BrandLogoProps) {
 
   const image = (
     <Image
-      src="/images/branding/right-away-services-logo.png"
+      src="/images/branding/right-away-services-logo.jpg"
       alt="Right Away Services LLC logo"
-      width={1536}
-      height={1024}
+      width={512}
+      height={341}
       priority={false}
       className={compact ? 'h-12 w-auto object-contain' : 'h-16 w-auto object-contain'}
     />

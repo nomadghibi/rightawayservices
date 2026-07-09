@@ -5,6 +5,7 @@ import { blogPosts, getBlogPostBySlug, formatDate } from '@/content/blogPosts'
 import { services } from '@/content/services'
 import { serviceAreas } from '@/content/serviceAreas'
 import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
+import { buildBlogPostingSchema } from '@/lib/schema/article'
 import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { CTABand } from '@/components/sections/CTABand'
@@ -44,6 +45,7 @@ export default function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <SchemaScript schema={buildBlogPostingSchema(post)} />
       <SchemaScript schema={breadcrumbs} />
 
       <section className="bg-navy text-white py-14 px-4">

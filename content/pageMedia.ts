@@ -5,35 +5,35 @@ export interface PageImage {
 
 export const pageImages = {
   home: {
-    src: '/images/rightawayservices/home-hero.png',
+    src: '/images/rightawayservices/home-hero.jpg',
     alt: 'Handyman installing a light fixture in a bright coastal living room',
   },
   services: {
-    src: '/images/rightawayservices/services-hero.png',
+    src: '/images/rightawayservices/services-hero.jpg',
     alt: 'Handyman working on ceiling fans and wall repairs inside a Florida home',
   },
   serviceAreas: {
-    src: '/images/rightawayservices/service-areas-hero.png',
+    src: '/images/rightawayservices/service-areas-hero.jpg',
     alt: 'Handyman van parked in a palm-lined Florida neighborhood',
   },
   about: {
-    src: '/images/rightawayservices/about-hero.png',
+    src: '/images/rightawayservices/about-hero.jpg',
     alt: 'Right Away Services handyman portrait with a coastal home interior behind him',
   },
   contact: {
-    src: '/images/rightawayservices/contact-hero.png',
+    src: '/images/rightawayservices/contact-hero.jpg',
     alt: 'Estimate clipboard, tools, and laptop on a bright kitchen counter',
   },
   faq: {
-    src: '/images/rightawayservices/faq-hero.png',
+    src: '/images/rightawayservices/faq-hero.jpg',
     alt: 'Handyman reviewing project details with a homeowner in a coastal living room',
   },
   blog: {
-    src: '/images/rightawayservices/blog-hero.png',
+    src: '/images/rightawayservices/blog-hero.jpg',
     alt: 'Open laptop with home repair photos, notes, and tools on a worktable',
   },
   serviceDetail: {
-    src: '/images/rightawayservices/service-detail-hero.png',
+    src: '/images/rightawayservices/service-detail-hero.jpg',
     alt: 'Handyman finishing a drywall patch in a bright Florida home',
   },
 } satisfies Record<string, PageImage>

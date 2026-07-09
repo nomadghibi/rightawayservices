@@ -36,6 +36,15 @@ export function buildLocalBusinessSchema() {
       postalCode: siteConfig.address.zip,
       addressCountry: 'US',
     },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 27.9872,
+      longitude: -80.6567,
+    },
+    hasMap:
+      'https://www.google.com/maps/search/?api=1&query=540%20Londonderry%20Circle%20SE%2C%20Palm%20Bay%2C%20FL%2032909',
+    image: `${siteConfig.url}/images/rightawayservices/home-hero.jpg`,
+    logo: `${siteConfig.url}/images/branding/right-away-services-logo.jpg`,
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: siteConfig.phoneE164,

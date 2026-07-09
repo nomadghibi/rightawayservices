@@ -28,6 +28,18 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: `${siteConfig.url}${siteConfig.defaultImage}`,
+        width: 1600,
+        height: 800,
+        alt: 'Right Away Services handyman work in a Florida home',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [`${siteConfig.url}${siteConfig.defaultImage}`],
   },
   robots: {
     index: true,
