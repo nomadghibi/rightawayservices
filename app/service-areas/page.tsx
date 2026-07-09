@@ -9,6 +9,7 @@ import { CTABand } from '@/components/sections/CTABand'
 import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
+import { buildItemListSchema } from '@/lib/schema/itemList'
 
 export const metadata: Metadata = buildMetadata({
   title: `Handyman Service Areas on Florida's Space Coast | ${siteConfig.name}`,
@@ -27,6 +28,16 @@ export default function ServiceAreasPage() {
           { name: 'Home', url: '/' },
           { name: 'Service Areas', url: '/service-areas' },
         ])}
+      />
+      <SchemaScript
+        schema={buildItemListSchema(
+          'Right Away Services handyman service areas',
+          serviceAreas.map((area) => ({
+            name: `${area.name}, ${area.state}`,
+            url: `/service-areas/${area.slug}`,
+            description: area.shortDescription,
+          })),
+        )}
       />
 
       <section className="bg-navy text-white py-14 px-4">

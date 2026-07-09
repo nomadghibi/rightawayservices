@@ -7,6 +7,7 @@ import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { pageImages } from '@/content/pageMedia'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
+import { buildItemListSchema } from '@/lib/schema/itemList'
 
 export const metadata: Metadata = buildMetadata({
   title: `Handyman & Home Repair Blog — Space Coast, FL | ${siteConfig.name}`,
@@ -23,6 +24,16 @@ export default function BlogIndexPage() {
           { name: 'Home', url: '/' },
           { name: 'Blog', url: '/blog' },
         ])}
+      />
+      <SchemaScript
+        schema={buildItemListSchema(
+          'Right Away Services home repair blog posts',
+          blogPosts.map((post) => ({
+            name: post.title,
+            url: `/blog/${post.slug}`,
+            description: post.excerpt,
+          })),
+        )}
       />
 
       <section className="bg-navy text-white py-14 px-4">

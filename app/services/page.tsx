@@ -10,6 +10,7 @@ import { CTABand } from '@/components/sections/CTABand'
 import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
+import { buildItemListSchema } from '@/lib/schema/itemList'
 
 export const metadata: Metadata = buildMetadata({
   title: `Handyman Services in Palm Bay & Melbourne, FL | ${siteConfig.name}`,
@@ -28,6 +29,16 @@ export default function ServicesPage() {
           { name: 'Home', url: '/' },
           { name: 'Services', url: '/services' },
         ])}
+      />
+      <SchemaScript
+        schema={buildItemListSchema(
+          'Right Away Services handyman and home repair services',
+          services.map((service) => ({
+            name: service.name,
+            url: `/services/${service.slug}`,
+            description: service.shortDescription,
+          })),
+        )}
       />
 
       {/* Header */}
