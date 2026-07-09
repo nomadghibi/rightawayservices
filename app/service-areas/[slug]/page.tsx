@@ -14,7 +14,7 @@ import { FAQSection } from '@/components/sections/FAQSection'
 import { CTABand } from '@/components/sections/CTABand'
 import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { pageImages } from '@/content/pageMedia'
-import { localProjectExamples, localRepairScenarios } from '@/content/localSeo'
+import { localCoverageDetails, localProjectExamples, localRepairScenarios } from '@/content/localSeo'
 
 interface Props {
   params: { slug: string }
@@ -42,6 +42,7 @@ export default function ServiceAreaPage({ params }: Props) {
   const nearbyAreas = getNearbyAreas(area.nearbyAreas)
   const areaRepairScenarios = localRepairScenarios.filter((scenario) => scenario.areaSlug === area.slug)
   const areaProjectExamples = localProjectExamples.filter((example) => example.areaSlug === area.slug)
+  const areaCoverageDetails = localCoverageDetails.find((coverage) => coverage.areaSlug === area.slug)
 
   const breadcrumbs = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -193,6 +194,38 @@ export default function ServiceAreaPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {areaCoverageDetails ? (
+        <section className="py-14 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8 items-start">
+              <div>
+                <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+                  Local coverage
+                </p>
+                <h2 className="text-2xl font-bold text-navy mb-4">
+                  {areaCoverageDetails.heading}
+                </h2>
+                <p className="text-slate-gray leading-relaxed mb-4">{areaCoverageDetails.intro}</p>
+                <p className="text-sm text-slate-gray leading-relaxed">{areaCoverageDetails.searchSupport}</p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {areaCoverageDetails.locations.map((location) => (
+                  <div
+                    key={location}
+                    className="flex items-center gap-3 rounded-lg border border-gray-200 bg-off-white p-4"
+                  >
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-service-blue text-sm font-bold text-white">
+                      ✓
+                    </span>
+                    <span className="font-medium text-navy">{location}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="py-14 px-4 bg-off-white">
         <div className="max-w-7xl mx-auto">

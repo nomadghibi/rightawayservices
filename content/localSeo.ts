@@ -172,6 +172,49 @@ export const localProjectExamples = [
   },
 ]
 
+export const localCoverageDetails = [
+  {
+    areaSlug: 'palm-bay-fl',
+    heading: 'Palm Bay neighborhoods and corridors we commonly serve',
+    intro:
+      'Palm Bay is spread out, so local homeowners often search by nearby roads, neighborhoods, and sections of the city. Right Away Services LLC serves homeowners and rental properties across Palm Bay.',
+    locations: [
+      'Bayside Lakes',
+      'Lockmar Estates',
+      'Port Malabar',
+      'Turkey Creek area',
+      'Malabar Road corridor',
+      'Palm Bay Road corridor',
+      'Babcock Street area',
+      'Emerson Drive area',
+      'Jupiter Boulevard area',
+      'Southeast Palm Bay',
+    ],
+    searchSupport:
+      'This supports searches like handyman near Malabar Road, drywall repair near Bayside Lakes, painting services in southeast Palm Bay, and ceiling fan installation near Palm Bay Road.',
+  },
+  {
+    areaSlug: 'melbourne-fl',
+    heading: 'Melbourne neighborhoods and corridors we commonly serve',
+    intro:
+      'Melbourne homeowners, sellers, landlords, and property managers often search for help near a specific neighborhood or main road. Right Away Services LLC serves practical repair needs throughout the Melbourne area.',
+    locations: [
+      'Downtown Melbourne',
+      'Eau Gallie',
+      'Lake Washington area',
+      'Wickham Road corridor',
+      'Croton Road area',
+      'Sarno Road area',
+      'Melbourne Village area',
+      'Babcock Street area',
+      'Florida Tech area',
+      'Melbourne rental properties',
+    ],
+    searchSupport:
+      'This supports searches like handyman near downtown Melbourne, drywall repair near Eau Gallie, painting services near Wickham Road, and rental turnover repairs in Melbourne.',
+  },
+]
+
 export const localSearchThemes = [
   'handyman services near me',
   'handyman in Palm Bay FL',
