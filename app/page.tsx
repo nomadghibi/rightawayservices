@@ -14,7 +14,13 @@ import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { TrustBadges } from '@/components/ui/TrustBadges'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { buildFAQSchema } from '@/lib/schema/faq'
-import { highIntentHandymanLinks, localRepairScenarios, localTrustSignals, priorityAreaSlugs } from '@/content/localSeo'
+import {
+  highIntentHandymanLinks,
+  localProjectExamples,
+  localRepairScenarios,
+  localTrustSignals,
+  priorityAreaSlugs,
+} from '@/content/localSeo'
 import { pageImages } from '@/content/pageMedia'
 
 export const metadata: Metadata = buildMetadata({
@@ -165,6 +171,36 @@ export default function HomePage() {
                     </Link>
                     <Link href={scenario.areaHref} className="text-service-blue hover:underline">
                       View city page
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mb-10">
+            <div className="max-w-3xl mb-5">
+              <h3 className="text-xl font-bold text-navy mb-3">Typical local project examples</h3>
+              <p className="text-sm text-slate-gray leading-relaxed">
+                These examples show the kinds of repair combinations homeowners, landlords, and sellers often
+                request in Palm Bay and Melbourne when they need practical handyman help.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {localProjectExamples.map((example) => (
+                <div key={example.title} className="bg-white border border-gray-200 rounded-lg p-5">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">
+                    {example.areaLabel}
+                  </p>
+                  <h4 className="font-semibold text-navy mb-2">{example.title}</h4>
+                  <p className="text-sm font-medium text-service-blue mb-2">{example.scope}</p>
+                  <p className="text-sm text-slate-gray leading-relaxed mb-4">{example.description}</p>
+                  <div className="flex flex-wrap gap-3 text-sm font-medium">
+                    <Link href={example.serviceHref} className="text-service-blue hover:underline">
+                      Related service
+                    </Link>
+                    <Link href={example.areaHref} className="text-service-blue hover:underline">
+                      City page
                     </Link>
                   </div>
                 </div>

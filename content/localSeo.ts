@@ -109,6 +109,69 @@ export const localRepairScenarios = [
   },
 ]
 
+export const localProjectExamples = [
+  {
+    title: 'Palm Bay drywall and paint touch-up',
+    areaLabel: 'Palm Bay, FL',
+    areaSlug: 'palm-bay-fl',
+    serviceHref: '/services/drywall-repair',
+    areaHref: '/service-areas/palm-bay-fl',
+    scope: 'Drywall repair, texture matching, paint touch-up',
+    description:
+      'A common Palm Bay project type is repairing wall damage from moved furniture, removed shelving, or TV mounts, then blending the patch with existing texture and paint.',
+  },
+  {
+    title: 'Palm Bay ceiling fan replacement',
+    areaLabel: 'Palm Bay, FL',
+    areaSlug: 'palm-bay-fl',
+    serviceHref: '/services/ceiling-fan-installation',
+    areaHref: '/service-areas/palm-bay-fl',
+    scope: 'Fan replacement, balancing, remote setup',
+    description:
+      'Florida homeowners often replace worn ceiling fans before summer heat peaks. We focus on clean installation, proper assembly, balancing, and basic remote setup.',
+  },
+  {
+    title: 'Palm Bay rental turnover punch list',
+    areaLabel: 'Palm Bay, FL',
+    areaSlug: 'palm-bay-fl',
+    serviceHref: '/services/property-maintenance',
+    areaHref: '/service-areas/palm-bay-fl',
+    scope: 'Doors, drywall, fixtures, caulking, paint touch-ups',
+    description:
+      'Landlords and property managers often need several small repairs handled before a new tenant moves in, especially doors, wall patches, fixtures, and final touch-ups.',
+  },
+  {
+    title: 'Melbourne pre-sale repair checklist',
+    areaLabel: 'Melbourne, FL',
+    areaSlug: 'melbourne-fl',
+    serviceHref: '/services/home-repairs',
+    areaHref: '/service-areas/melbourne-fl',
+    scope: 'Punch-list repairs, trim, doors, fixtures, wall patches',
+    description:
+      'Before listing a Melbourne home, sellers often need small visible repairs completed so showings and inspections do not get slowed down by easy punch-list items.',
+  },
+  {
+    title: 'Melbourne drywall and interior painting',
+    areaLabel: 'Melbourne, FL',
+    areaSlug: 'melbourne-fl',
+    serviceHref: '/services/painting-services',
+    areaHref: '/service-areas/melbourne-fl',
+    scope: 'Wall repair, interior painting, trim touch-ups',
+    description:
+      'Moisture, settling, and daily wear can leave walls looking rough. This example combines patching, paint-ready prep, and interior refresh work for Melbourne homes.',
+  },
+  {
+    title: 'Melbourne fixture and hardware updates',
+    areaLabel: 'Melbourne, FL',
+    areaSlug: 'melbourne-fl',
+    serviceHref: '/services/fixture-installation',
+    areaHref: '/service-areas/melbourne-fl',
+    scope: 'Bathroom hardware, mirrors, lights, cabinet pulls',
+    description:
+      'Small fixture and hardware updates can make a home feel cleaner and more current without a full remodel, especially for rentals, move-ins, and pre-sale prep.',
+  },
+]
+
 export const localSearchThemes = [
   'handyman services near me',
   'handyman in Palm Bay FL',

@@ -14,7 +14,7 @@ import { FAQSection } from '@/components/sections/FAQSection'
 import { CTABand } from '@/components/sections/CTABand'
 import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { pageImages } from '@/content/pageMedia'
-import { localRepairScenarios } from '@/content/localSeo'
+import { localProjectExamples, localRepairScenarios } from '@/content/localSeo'
 
 interface Props {
   params: { slug: string }
@@ -41,6 +41,7 @@ export default function ServiceAreaPage({ params }: Props) {
   const areaServices = services.filter((s) => area.relatedServices.includes(s.slug))
   const nearbyAreas = getNearbyAreas(area.nearbyAreas)
   const areaRepairScenarios = localRepairScenarios.filter((scenario) => scenario.areaSlug === area.slug)
+  const areaProjectExamples = localProjectExamples.filter((example) => example.areaSlug === area.slug)
 
   const breadcrumbs = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -243,6 +244,38 @@ export default function ServiceAreaPage({ params }: Props) {
                   <h3 className="font-semibold text-navy mb-2">{scenario.title}</h3>
                   <p className="text-sm text-slate-gray leading-relaxed mb-4">{scenario.description}</p>
                   <Link href={scenario.serviceHref} className="text-service-blue text-sm font-medium hover:underline">
+                    View related service →
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {areaProjectExamples.length > 0 && (
+        <section className="py-14 px-4 bg-off-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="max-w-3xl mb-8">
+              <h2 className="text-2xl font-bold text-navy mb-4">
+                Typical {area.name} Project Examples
+              </h2>
+              <p className="text-slate-gray leading-relaxed">
+                These are common examples of the repair combinations homeowners, landlords, and sellers often
+                need in {area.name}. They help explain the kind of practical handyman work Right Away Services LLC
+                handles across the area.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {areaProjectExamples.map((example) => (
+                <div key={example.title} className="bg-white border border-gray-200 rounded-lg p-5">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">
+                    Example project type
+                  </p>
+                  <h3 className="font-semibold text-navy mb-2">{example.title}</h3>
+                  <p className="text-sm font-medium text-service-blue mb-2">{example.scope}</p>
+                  <p className="text-sm text-slate-gray leading-relaxed mb-4">{example.description}</p>
+                  <Link href={example.serviceHref} className="text-service-blue text-sm font-medium hover:underline">
                     View related service →
                   </Link>
                 </div>
