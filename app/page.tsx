@@ -14,7 +14,7 @@ import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { TrustBadges } from '@/components/ui/TrustBadges'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { buildFAQSchema } from '@/lib/schema/faq'
-import { highIntentHandymanLinks, localTrustSignals, priorityAreaSlugs } from '@/content/localSeo'
+import { highIntentHandymanLinks, localRepairScenarios, localTrustSignals, priorityAreaSlugs } from '@/content/localSeo'
 import { pageImages } from '@/content/pageMedia'
 
 export const metadata: Metadata = buildMetadata({
@@ -150,6 +150,26 @@ export default function HomePage() {
                 <p className="text-sm text-slate-gray leading-relaxed">{signal.description}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mb-10">
+            <h3 className="text-xl font-bold text-navy mb-4">Common local repair searches</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {localRepairScenarios.map((scenario) => (
+                <div key={scenario.title} className="bg-white border border-gray-200 rounded-lg p-5">
+                  <h4 className="font-semibold text-navy mb-2">{scenario.title}</h4>
+                  <p className="text-sm text-slate-gray leading-relaxed mb-4">{scenario.description}</p>
+                  <div className="flex flex-wrap gap-3 text-sm font-medium">
+                    <Link href={scenario.serviceHref} className="text-service-blue hover:underline">
+                      View service
+                    </Link>
+                    <Link href={scenario.areaHref} className="text-service-blue hover:underline">
+                      View city page
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

@@ -14,6 +14,7 @@ import { FAQSection } from '@/components/sections/FAQSection'
 import { CTABand } from '@/components/sections/CTABand'
 import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { pageImages } from '@/content/pageMedia'
+import { localRepairScenarios } from '@/content/localSeo'
 
 interface Props {
   params: { slug: string }
@@ -39,6 +40,7 @@ export default function ServiceAreaPage({ params }: Props) {
 
   const areaServices = services.filter((s) => area.relatedServices.includes(s.slug))
   const nearbyAreas = getNearbyAreas(area.nearbyAreas)
+  const areaRepairScenarios = localRepairScenarios.filter((scenario) => scenario.areaSlug === area.slug)
 
   const breadcrumbs = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -222,6 +224,33 @@ export default function ServiceAreaPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {areaRepairScenarios.length > 0 && (
+        <section className="py-14 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="max-w-3xl mb-8">
+              <h2 className="text-2xl font-bold text-navy mb-4">
+                Common {area.name} Repair Requests
+              </h2>
+              <p className="text-slate-gray leading-relaxed">
+                These are high-demand local repair needs homeowners and landlords search for in {area.name}.
+                Each one links to the matching service page so you can compare the work we handle.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {areaRepairScenarios.map((scenario) => (
+                <div key={scenario.title} className="border border-gray-200 rounded-lg p-5">
+                  <h3 className="font-semibold text-navy mb-2">{scenario.title}</h3>
+                  <p className="text-sm text-slate-gray leading-relaxed mb-4">{scenario.description}</p>
+                  <Link href={scenario.serviceHref} className="text-service-blue text-sm font-medium hover:underline">
+                    View related service →
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Services for this area */}
       {areaServices.length > 0 && (

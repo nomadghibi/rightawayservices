@@ -58,6 +58,57 @@ export const highIntentHandymanLinks = [
   },
 ]
 
+export const localRepairScenarios = [
+  {
+    title: 'Drywall repair in Palm Bay, FL',
+    areaSlug: 'palm-bay-fl',
+    serviceHref: '/services/drywall-repair',
+    areaHref: '/service-areas/palm-bay-fl',
+    description:
+      'Wall patches, nail holes, corner damage, water stains, and texture matching for Palm Bay homes and rentals.',
+  },
+  {
+    title: 'Painting services in Palm Bay, FL',
+    areaSlug: 'palm-bay-fl',
+    serviceHref: '/services/painting-services',
+    areaHref: '/service-areas/palm-bay-fl',
+    description:
+      'Interior repainting, exterior touch-ups, cabinet painting, trim, and rental turnover paint refreshes.',
+  },
+  {
+    title: 'Ceiling fan installation in Palm Bay, FL',
+    areaSlug: 'palm-bay-fl',
+    serviceHref: '/services/ceiling-fan-installation',
+    areaHref: '/service-areas/palm-bay-fl',
+    description:
+      'Fan replacements, fan-light combos, remote setup, balancing, and clean installs on existing fan-rated boxes.',
+  },
+  {
+    title: 'Handyman services in Melbourne, FL',
+    areaSlug: 'melbourne-fl',
+    serviceHref: '/services/handyman-services',
+    areaHref: '/service-areas/melbourne-fl',
+    description:
+      'Small repairs, fixture installs, door adjustments, drywall patches, and punch-list work for Melbourne properties.',
+  },
+  {
+    title: 'Drywall repair in Melbourne, FL',
+    areaSlug: 'melbourne-fl',
+    serviceHref: '/services/drywall-repair',
+    areaHref: '/service-areas/melbourne-fl',
+    description:
+      'Drywall patches, moisture damage repair, texture blending, and paint-ready wall fixes in Melbourne homes.',
+  },
+  {
+    title: 'Painting services in Melbourne, FL',
+    areaSlug: 'melbourne-fl',
+    serviceHref: '/services/painting-services',
+    areaHref: '/service-areas/melbourne-fl',
+    description:
+      'Interior rooms, exterior refreshes, rental turnover painting, trim, doors, cabinets, and touch-up work.',
+  },
+]
+
 export const localSearchThemes = [
   'handyman services near me',
   'handyman in Palm Bay FL',
