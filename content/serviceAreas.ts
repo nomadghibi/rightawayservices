@@ -14,6 +14,7 @@ export interface ServiceArea {
   localContext: string
   relatedServices: string[]
   nearbyAreas: string[]
+  keywordFocus?: string[]
   faqs: AreaFAQ[]
   metaTitle: string
   metaDescription: string
@@ -33,12 +34,19 @@ export const serviceAreas: ServiceArea[] = [
       'Drywall repair in Florida homes affected by humidity',
       'Ceiling fan installation and replacement',
       'Door and window repairs due to seasonal swelling',
+      'Painting services for rooms, trim, and touch-ups',
       'Fixture replacements and installations',
       'Rental property maintenance and turnovers',
       'Pre-sale repair work',
     ],
     localContext:
       'Palm Bay homes range from classic Florida block homes to newer construction, and the humid subtropical climate means regular wear on everything from doors and windows to drywall and paint. Many Palm Bay homeowners are also landlords with rental properties in the area, making reliable property maintenance services especially important.',
+    keywordFocus: [
+      'handyman Palm Bay FL',
+      'drywall repair Palm Bay FL',
+      'painting services Palm Bay FL',
+      'ceiling fan installation Palm Bay FL',
+    ],
     relatedServices: [
       'handyman-services',
       'home-repairs',
@@ -58,10 +66,15 @@ export const serviceAreas: ServiceArea[] = [
         answer:
           'Call us directly or use our online estimate request form. We respond promptly and can typically schedule service within a few business days.',
       },
+      {
+        question: 'Can you handle drywall repair and painting in Palm Bay?',
+        answer:
+          'Yes — we regularly handle drywall patching, texture repair, primer, and paint-ready touch-ups for Palm Bay homeowners and landlords.',
+      },
     ],
-    metaTitle: 'Handyman Services in Palm Bay, FL | Right Away Services LLC',
+    metaTitle: 'Handyman Palm Bay FL | Right Away Services LLC',
     metaDescription:
-      'Local handyman and home repair services in Palm Bay, FL. Right Away Services LLC serves homeowners and landlords throughout Palm Bay with fast, professional help.',
+      'Need a handyman in Palm Bay, FL? Right Away Services LLC provides local home repairs, drywall repair, painting services, and ceiling fan installation in Palm Bay.',
   },
   {
     slug: 'melbourne-fl',
@@ -76,12 +89,19 @@ export const serviceAreas: ServiceArea[] = [
       'Home repairs in older Melbourne neighborhoods',
       'Rental property maintenance and turnover work',
       'Fixture and ceiling fan installation',
+      'Painting services for interior refreshes',
       'Pre-sale repairs and punch-list work',
       'Drywall repair and painting touch-ups',
       'Door and window repairs',
     ],
     localContext:
       'Melbourne\'s mix of older homes near downtown and Eau Gallie, mid-century neighborhoods, and newer subdivisions creates varied repair needs. The city\'s active real estate market also means frequent pre-sale repair demand. With Florida Tech, the healthcare sector, and aerospace industry employment nearby, Melbourne has a high proportion of busy professionals who value having a reliable handyman they can trust.',
+    keywordFocus: [
+      'handyman Melbourne FL',
+      'drywall repair Melbourne FL',
+      'painting services Melbourne FL',
+      'ceiling fan installation Melbourne FL',
+    ],
     relatedServices: [
       'handyman-services',
       'home-repairs',
@@ -101,10 +121,15 @@ export const serviceAreas: ServiceArea[] = [
         answer:
           'Absolutely. We work with residential property managers and individual landlords throughout Melbourne. We\'re comfortable communicating with both property managers and tenants directly.',
       },
+      {
+        question: 'Do you handle painting and drywall repair in Melbourne?',
+        answer:
+          'Yes — we handle drywall patching, texture matching, paint touch-ups, and full room painting projects throughout Melbourne, FL.',
+      },
     ],
-    metaTitle: 'Handyman Services in Melbourne, FL | Right Away Services LLC',
+    metaTitle: 'Handyman Melbourne FL | Right Away Services LLC',
     metaDescription:
-      'Trusted handyman and home repair services in Melbourne, FL. Right Away Services LLC serves homeowners, landlords, and property managers throughout Melbourne.',
+      'Need a handyman in Melbourne, FL? Right Away Services LLC provides local home repairs, drywall repair, painting services, and ceiling fan installation in Melbourne.',
   },
   {
     slug: 'west-melbourne-fl',
