@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { blogPosts, getBlogPostBySlug, formatDate } from '@/content/blogPosts'
 import { services } from '@/content/services'
+import { serviceAreas } from '@/content/serviceAreas'
 import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 import { buildBreadcrumbSchema } from '@/lib/schema/breadcrumbs'
 import { SchemaScript } from '@/components/seo/SchemaScript'
@@ -33,6 +34,7 @@ export default function BlogPostPage({ params }: Props) {
   if (!post) notFound()
 
   const relatedServicePages = services.filter((s) => post.relatedServices.includes(s.slug))
+  const relatedAreaPages = serviceAreas.filter((a) => post.relatedAreas.includes(a.slug))
 
   const breadcrumbs = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -166,6 +168,24 @@ export default function BlogPostPage({ params }: Props) {
                           className="text-service-blue text-sm hover:underline"
                         >
                           {service.name} →
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {relatedAreaPages.length > 0 && (
+                <div className="bg-off-white rounded-xl p-5 border border-gray-200">
+                  <h3 className="font-semibold text-navy mb-3">Related Service Areas</h3>
+                  <ul className="space-y-2">
+                    {relatedAreaPages.map((area) => (
+                      <li key={area.slug}>
+                        <Link
+                          href={`/service-areas/${area.slug}`}
+                          className="text-service-blue text-sm hover:underline"
+                        >
+                          Handyman services in {area.name}, {area.state} →
                         </Link>
                       </li>
                     ))}
