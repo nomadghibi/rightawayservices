@@ -20,7 +20,7 @@ import { pageImages } from '@/content/pageMedia'
 export const metadata: Metadata = buildMetadata({
   title: 'Handyman Palm Bay FL',
   description:
-    'Need a handyman in Palm Bay, FL? Right Away Services LLC provides reliable handyman and home repair services in Palm Bay, Melbourne, and nearby Space Coast communities. Call today for fast, professional service.',
+    'Need a handyman in Palm Bay or Melbourne, FL? Right Away Services LLC handles home repairs, drywall, painting, fans, and maintenance.',
   path: '/',
 })
 
@@ -64,10 +64,10 @@ export default function HomePage() {
               Palm Bay · Melbourne · Space Coast, FL
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-5">
-              Handyman Services in Palm Bay, FL
+              Handyman Services in Palm Bay &amp; Melbourne, FL
             </h1>
             <p className="text-lg text-blue-200 leading-relaxed mb-8 max-w-2xl">
-              Need a handyman in Palm Bay, FL? From small home repairs to installations and rental property
+              Need a handyman in Palm Bay or Melbourne, FL? From small home repairs to installations and rental property
               punch lists, Right Away Services LLC helps homeowners and property managers across Palm Bay,
               Melbourne, and surrounding communities get things done quickly and professionally.
             </p>
