@@ -14,7 +14,7 @@ import { FAQSection } from '@/components/sections/FAQSection'
 import { CTABand } from '@/components/sections/CTABand'
 import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { pageImages } from '@/content/pageMedia'
-import { localCoverageDetails, localProjectExamples, localRepairScenarios } from '@/content/localSeo'
+import { localCoverageDetails, localIntentFaqs, localProjectExamples, localRepairScenarios } from '@/content/localSeo'
 
 interface Props {
   params: { slug: string }
@@ -43,6 +43,7 @@ export default function ServiceAreaPage({ params }: Props) {
   const areaRepairScenarios = localRepairScenarios.filter((scenario) => scenario.areaSlug === area.slug)
   const areaProjectExamples = localProjectExamples.filter((example) => example.areaSlug === area.slug)
   const areaCoverageDetails = localCoverageDetails.find((coverage) => coverage.areaSlug === area.slug)
+  const areaFaqs = [...area.faqs, ...localIntentFaqs.filter((faq) => faq.areaSlug === area.slug)]
 
   const breadcrumbs = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -52,7 +53,7 @@ export default function ServiceAreaPage({ params }: Props) {
 
   return (
     <>
-      <SchemaScript schema={buildFAQSchema(area.faqs)} />
+      <SchemaScript schema={buildFAQSchema(areaFaqs)} />
       <SchemaScript schema={buildServiceAreaSchema(area, areaServices)} />
       <SchemaScript schema={breadcrumbs} />
 
@@ -338,7 +339,7 @@ export default function ServiceAreaPage({ params }: Props) {
       )}
 
       <FAQSection
-        faqs={area.faqs}
+        faqs={areaFaqs}
         heading={`Handyman Services in ${area.name} — FAQ`}
       />
 

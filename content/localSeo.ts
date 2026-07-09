@@ -215,6 +215,33 @@ export const localCoverageDetails = [
   },
 ]
 
+export const localIntentFaqs = [
+  {
+    areaSlug: 'palm-bay-fl',
+    question: 'Who should I call for handyman services in Palm Bay, FL?',
+    answer:
+      'Right Away Services LLC serves Palm Bay homeowners, landlords, and property managers with general handyman work, home repairs, drywall repair, painting touch-ups, ceiling fan installation, fixture installation, and rental turnover punch lists.',
+  },
+  {
+    areaSlug: 'palm-bay-fl',
+    question: 'Do you handle small drywall and painting jobs in Palm Bay?',
+    answer:
+      'Yes. We handle common Palm Bay drywall and painting needs such as patching holes, repairing wall damage, blending texture, touching up paint, repainting rooms, and preparing rental or pre-sale properties.',
+  },
+  {
+    areaSlug: 'melbourne-fl',
+    question: 'Do you provide handyman services in Melbourne, FL?',
+    answer:
+      'Yes. Right Away Services LLC provides handyman services in Melbourne, including home repairs, drywall repair, painting services, fixture installation, ceiling fan installation, and property maintenance for homeowners and landlords.',
+  },
+  {
+    areaSlug: 'melbourne-fl',
+    question: 'Can you help with rental turnover repairs in Melbourne?',
+    answer:
+      'Yes. We help Melbourne landlords and property managers with rental turnover repairs such as drywall patches, paint touch-ups, door adjustments, fixture replacement, hardware installation, caulking, and punch-list work between tenants.',
+  },
+]
+
 export const localSearchThemes = [
   'handyman services near me',
   'handyman in Palm Bay FL',

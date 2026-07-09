@@ -16,6 +16,7 @@ import { SchemaScript } from '@/components/seo/SchemaScript'
 import { buildFAQSchema } from '@/lib/schema/faq'
 import {
   highIntentHandymanLinks,
+  localIntentFaqs,
   localProjectExamples,
   localRepairScenarios,
   localTrustSignals,
@@ -30,7 +31,7 @@ export const metadata: Metadata = buildMetadata({
   path: '/',
 })
 
-const homeFaqs = faqs.slice(0, 6)
+const homeFaqs = [...faqs.slice(0, 6), ...localIntentFaqs]
 const priorityAreas = serviceAreas.filter((area) => priorityAreaSlugs.includes(area.slug))
 
 const whyChooseUs = [
