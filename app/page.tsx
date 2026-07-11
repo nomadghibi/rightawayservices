@@ -38,7 +38,7 @@ const whyChooseUs = [
   {
     icon: '⭐',
     title: '5.0 Stars — 37 Reviews',
-    description: 'Rated 5.0 stars on Angi across 37 verified reviews. Our reputation is built one job at a time.',
+    description: 'Rated 5.0 stars on HomeAdvisor across 37 verified reviews. Our reputation is built one job at a time.',
   },
   {
     icon: '🛡️',

@@ -18,7 +18,7 @@ export const siteConfig = {
   serviceArea: 'Palm Bay, Melbourne, and Florida\'s Space Coast',
   tagline: 'Reliable Handyman Services for the Space Coast',
   description:
-    'Right Away Services LLC is a licensed and insured handyman company in Palm Bay, FL with 26 years of experience. 5.0-star rated on Angi. Serving homeowners, landlords, and property managers across Florida\'s Space Coast.',
+    'Right Away Services LLC is a licensed and insured handyman company in Palm Bay, FL with 26 years of experience. 5.0-star rated on HomeAdvisor. Serving homeowners, landlords, and property managers across Florida\'s Space Coast.',
   defaultImage: '/images/rightawayservices/home-hero.jpg',
   social: {
     facebook: 'https://www.facebook.com/profile.php?id=61591783619296',
@@ -27,7 +27,7 @@ export const siteConfig = {
     google: '',
   },
   reviewProfiles: {
-    angi: 'https://www.angi.com/search?query=Right%20Away%20Services%20LLC',
+    homeAdvisor: 'https://www.homeadvisor.com/rated.RightAwayServices.42561444.html',
   },
 }
 
