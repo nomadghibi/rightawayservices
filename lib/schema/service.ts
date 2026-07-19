@@ -32,20 +32,6 @@ export function buildServiceSchema(service: Service) {
       telephone: siteConfig.phoneE164,
     },
     areaServed: buildAreaServed(),
-    serviceArea: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        latitude: 27.9872,
-        longitude: -80.6567,
-      },
-    },
-    offers: {
-      '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      priceCurrency: 'USD',
-      url: `${siteConfig.url}/contact`,
-    },
     url: `${siteConfig.url}/services/${service.slug}`,
   }
 }

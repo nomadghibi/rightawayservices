@@ -987,6 +987,10 @@ export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug)
 }
 
+const redirectedBlogSlugs = new Set(['florida-humidity-drywall-paint-fixture-problems'])
+
+export const indexableBlogPosts = blogPosts.filter((post) => !redirectedBlogSlugs.has(post.slug))
+
 export function formatDate(dateString: string): string {
   const date = new Date(dateString)
   return date.toLocaleDateString('en-US', {

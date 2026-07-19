@@ -44,6 +44,12 @@ export default function ServicePage({ params }: Props) {
     ...serviceLocalFaqs.filter((faq) => faq.serviceSlug === service.slug),
   ]
   const heroImage = getServiceImage(service.slug)
+  const serviceProcess = service.process ?? [
+    'Tell us what needs attention and share photos when available.',
+    'We review the scope and identify any work that requires a specialty contractor.',
+    'You receive an estimate and scheduling options before work begins.',
+    'Approved work is completed with attention to protection and cleanup.',
+  ]
   const heroHeadline =
     service.slug === 'handyman-services'
       ? 'Handyman Palm Bay FL'
@@ -152,6 +158,25 @@ export default function ServicePage({ params }: Props) {
                   ))}
                 </ul>
               </div>
+
+              <div>
+                <h2 className="text-xl font-bold text-navy mb-4">What to Expect</h2>
+                <ol className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {serviceProcess.map((step, i) => (
+                    <li key={step} className="rounded-lg border border-gray-200 bg-off-white p-4 text-sm text-slate-gray">
+                      <span className="block text-service-blue font-bold mb-2">Step {i + 1}</span>
+                      {step}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              {service.limitations ? (
+                <div className="rounded-lg border border-blue-200 bg-blue-50 p-5">
+                  <h2 className="font-bold text-navy mb-2">Service Scope</h2>
+                  <p className="text-sm text-slate-gray leading-relaxed">{service.limitations}</p>
+                </div>
+              ) : null}
             </div>
 
             {/* Sidebar */}

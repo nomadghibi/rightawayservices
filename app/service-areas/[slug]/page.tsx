@@ -128,25 +128,30 @@ export default function ServiceAreaPage({ params }: Props) {
                 <p className="text-slate-gray leading-relaxed">{area.localContext}</p>
               </div>
 
-              {area.keywordFocus?.length ? (
-                <div className="rounded-xl border border-gray-200 bg-off-white p-5">
-                  <h2 className="text-xl font-bold text-navy mb-3">
-                    Common searches we match in {area.name}
-                  </h2>
-                  <p className="text-slate-gray leading-relaxed mb-4">
-                    These are the types of local searches homeowners use when they need help fast. We built this
-                    page to match the way people actually search for handyman services in {area.name}.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {area.keywordFocus.map((phrase) => (
-                      <span
-                        key={phrase}
-                        className="inline-flex items-center rounded-full bg-white px-3 py-1 text-sm font-medium text-service-blue border border-blue-100"
-                      >
-                        {phrase}
-                      </span>
+              {area.propertyTypes?.length ? (
+                <div>
+                  <h2 className="text-xl font-bold text-navy mb-4">Properties We Help Maintain in {area.name}</h2>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {area.propertyTypes.map((propertyType) => (
+                      <li key={propertyType} className="rounded-lg border border-gray-200 bg-off-white p-4 text-sm text-slate-gray">
+                        {propertyType}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
+                </div>
+              ) : null}
+
+              {area.maintenanceUseCases?.length ? (
+                <div>
+                  <h2 className="text-xl font-bold text-navy mb-4">Property-Maintenance Use Cases</h2>
+                  <ul className="space-y-2">
+                    {area.maintenanceUseCases.map((useCase) => (
+                      <li key={useCase} className="flex items-start gap-2 text-sm text-slate-gray">
+                        <span className="w-1.5 h-1.5 bg-service-blue rounded-full flex-shrink-0 mt-2" aria-hidden="true" />
+                        {useCase}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ) : null}
             </div>

@@ -4,8 +4,10 @@ import { services } from '@/content/services'
 import { serviceAreas } from '@/content/serviceAreas'
 import { BrandLogo } from '@/components/layout/BrandLogo'
 
-const primaryServices = services.slice(0, 5)
-const primaryAreas = serviceAreas.slice(0, 6)
+const primaryServiceSlugs = ['handyman-services', 'drywall-repair', 'door-and-window-repairs', 'property-maintenance', 'rental-property-maintenance', 'vacation-rental-maintenance']
+const primaryAreaSlugs = ['palm-bay-fl', 'melbourne-fl', 'satellite-beach-fl', 'rockledge-fl', 'cocoa-fl', 'cocoa-beach-fl']
+const primaryServices = services.filter((service) => primaryServiceSlugs.includes(service.slug))
+const primaryAreas = serviceAreas.filter((area) => primaryAreaSlugs.includes(area.slug))
 const socialLinks = [
   {
     label: 'Facebook',

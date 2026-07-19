@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { blogPosts, getBlogPostBySlug, formatDate } from '@/content/blogPosts'
+import { indexableBlogPosts, getBlogPostBySlug, formatDate } from '@/content/blogPosts'
 import { services } from '@/content/services'
 import { serviceAreas } from '@/content/serviceAreas'
 import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
@@ -17,7 +17,7 @@ interface Props {
 }
 
 export function generateStaticParams() {
-  return blogPosts.map((p) => ({ slug: p.slug }))
+  return indexableBlogPosts.map((p) => ({ slug: p.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -198,7 +198,7 @@ export default function BlogPostPage({ params }: Props) {
               <div className="bg-off-white rounded-xl p-5 border border-gray-200">
                 <h3 className="font-semibold text-navy mb-2">More Articles</h3>
                 <ul className="space-y-3">
-                  {blogPosts
+                  {indexableBlogPosts
                     .filter((p) => p.slug !== post.slug)
                     .map((p) => (
                       <li key={p.slug}>

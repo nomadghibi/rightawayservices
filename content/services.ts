@@ -14,6 +14,8 @@ export interface Service {
   whoItsFor: string[]
   faqs: ServiceFAQ[]
   relatedServices: string[]
+  process?: string[]
+  limitations?: string
   metaTitle: string
   metaDescription: string
 }
@@ -344,6 +346,8 @@ export const services: Service[] = [
       },
     ],
     relatedServices: ['ceiling-fan-installation', 'handyman-services', 'home-repairs'],
+    limitations:
+      'Fixture work is limited to straightforward replacement or installation using suitable existing connections and mounting locations. New circuits, rewiring, panel work, plumbing alterations, and other licensed-trade work require the appropriate contractor.',
     metaTitle: 'Fixture Installation Palm Bay FL | Right Away Services LLC',
     metaDescription:
       'Fixture installation in Palm Bay and Melbourne, FL for lights, mirrors, shelves, bathroom hardware, cabinet hardware, and more.',
@@ -395,6 +399,8 @@ export const services: Service[] = [
       },
     ],
     relatedServices: ['fixture-installation', 'handyman-services', 'home-repairs'],
+    limitations:
+      'Ceiling fan service is limited to assembly and replacement or installation where a suitable existing fan-rated box and wiring are already present. New wiring, circuit changes, panel work, or correction of unsafe electrical conditions requires a licensed electrician.',
     metaTitle: 'Ceiling Fan Installation Palm Bay FL | Right Away Services LLC',
     metaDescription:
       'Ceiling fan installation in Palm Bay and Melbourne, FL for replacements, fan-light combos, remotes, and clean existing-box installs.',
@@ -459,7 +465,7 @@ export const services: Service[] = [
     shortDescription:
       'Ongoing property maintenance and turnover repairs for landlords and property managers across Palm Bay, Melbourne, and the Space Coast. Keep your properties in top condition.',
     longDescription:
-      'Maintaining rental properties and managed properties is a constant job — small repairs accumulate, tenants report issues, and turnovers need to happen quickly. Right Away Services LLC supports landlords and property managers throughout the Space Coast with reliable, responsive maintenance work. We handle the recurring small repairs, tenant-reported fixes, and turnover punch lists that keep your properties occupied, presentable, and code-compliant. Having a consistent handyman you can call is one of the most valuable assets for anyone managing rental real estate in Palm Bay, Melbourne, or nearby communities.',
+      'Maintaining residential and community properties is a constant job — small repairs accumulate, occupants report issues, and common areas need regular attention. Right Away Services LLC supports homeowners, landlords, property managers, Realtors, and HOA communities throughout the Space Coast with practical handyman-level maintenance. We handle repair lists, fixture and hardware replacement, drywall patches, paint touch-ups, door adjustments, and other routine work that keeps properties presentable and functional. Work requiring a licensed specialty trade is identified and left to the appropriate contractor.',
     commonProblems: [
       'Ongoing repairs between tenants',
       'Tenant-reported maintenance issues needing fast response',
@@ -481,7 +487,7 @@ export const services: Service[] = [
       'Landlords with one or multiple rental units',
       'Property managers serving residential clients',
       'Real estate investors maintaining rental portfolios',
-      'Airbnb and short-term rental hosts',
+      'HOA and condo communities with routine repair lists',
       'Out-of-town property owners needing a local contact',
     ],
     faqs: [
@@ -493,7 +499,7 @@ export const services: Service[] = [
       {
         question: 'How quickly can you respond to tenant maintenance requests?',
         answer:
-          'We prioritize quick responses for property management clients. For non-emergency maintenance, we typically schedule within a few business days. For urgent issues affecting habitability, call us directly and we\'ll do our best to respond same day or next day.',
+          'Scheduling depends on the current workload, property location, and scope of the repair list. Contact us with the details and access requirements, and we will confirm whether the work fits our services and provide the next available scheduling options.',
       },
       {
         question: 'Can you do complete unit turnovers?',
@@ -505,6 +511,124 @@ export const services: Service[] = [
     metaTitle: 'Property Maintenance Palm Bay FL | Right Away Services LLC',
     metaDescription:
       'Property maintenance in Palm Bay and Melbourne, FL for landlords, rental turnovers, tenant repairs, drywall, paint, and fixtures.',
+  },
+  {
+    slug: 'rental-property-maintenance',
+    name: 'Rental Property Maintenance',
+    tagline: 'Practical repair support for landlords, Realtors, and property managers.',
+    shortDescription:
+      'Rental property repairs and turnover punch lists across Palm Bay, Melbourne, Rockledge, and nearby Brevard County communities.',
+    longDescription:
+      'Rental maintenance works best when small issues are documented, grouped, and handled before they disrupt a move-in or inspection. Right Away Services LLC helps landlords, property managers, Realtors, and residential investors complete handyman-level repair lists across the Space Coast. We can address drywall damage, paint touch-ups, sticking doors, loose hardware, fixture replacement, caulking, furniture assembly, and other routine items. We do not replace licensed electricians, plumbers, HVAC contractors, roofers, or structural contractors when a project requires those qualifications.',
+    commonProblems: [
+      'Wall holes, scuffs, and minor drywall damage after move-out',
+      'Doors, locks, handles, and cabinet hardware that need adjustment',
+      'Paint touch-ups and caulking needed before showings or move-in',
+      'Multiple small repairs spread across one rental unit',
+      'Inspection or Realtor punch-list items that need coordination',
+    ],
+    whatWeOffer: [
+      'Rental turnover repair lists',
+      'Drywall patching and paint touch-ups',
+      'Door, trim, and hardware adjustments',
+      'Fixture and accessory replacement within handyman scope',
+      'Caulking and minor finish repairs',
+      'Move-in and pre-listing punch-list work',
+    ],
+    whoItsFor: [
+      'Palm Bay and Melbourne landlords',
+      'Residential property managers',
+      'Realtors preparing rentals for listing',
+      'Out-of-area owners coordinating local repairs',
+      'Investors preparing a unit between occupants',
+    ],
+    process: [
+      'Send the property address, access details, photos, and repair list.',
+      'We review the scope and identify anything that needs a specialty trade.',
+      'You receive an estimate and scheduling options before work begins.',
+      'Approved handyman repairs are completed and the property is left orderly.',
+    ],
+    faqs: [
+      {
+        question: 'Can you complete several rental repairs during one visit?',
+        answer:
+          'Yes. Grouping compatible handyman tasks into one documented punch list is often the most efficient approach. Share photos and details in advance so we can review tools, materials, access, and scope.',
+      },
+      {
+        question: 'Do you coordinate access with tenants or property managers?',
+        answer:
+          'Access arrangements can be discussed during scheduling. The owner or manager remains responsible for providing authorization, entry instructions, and any required occupant notice.',
+      },
+      {
+        question: 'What rental work is outside handyman scope?',
+        answer:
+          'New electrical circuits, substantial plumbing, HVAC work, structural changes, major roofing, and other regulated work should be completed by appropriately licensed contractors.',
+      },
+    ],
+    relatedServices: ['property-maintenance', 'home-repairs', 'drywall-repair', 'painting-services'],
+    metaTitle: 'Rental Property Repairs Palm Bay & Melbourne FL | Right Away Services LLC',
+    metaDescription:
+      'Rental property maintenance in Palm Bay and Melbourne, FL for turnovers, drywall patches, paint touch-ups, doors, hardware, fixtures, and repair lists.',
+  },
+  {
+    slug: 'vacation-rental-maintenance',
+    name: 'Vacation Rental Maintenance',
+    tagline: 'Handyman support for beachside and short-term rental properties.',
+    shortDescription:
+      'Vacation rental handyman services for Satellite Beach, Cocoa Beach, Melbourne Beach, and nearby Space Coast communities.',
+    longDescription:
+      'Vacation rentals need dependable upkeep between guest stays, especially in coastal communities where humidity and salt air can accelerate wear on doors, hardware, paint, and fixtures. Right Away Services LLC helps vacation-rental owners and managers with documented handyman repair lists, furniture assembly, drywall patches, paint touch-ups, door adjustments, hardware replacement, and other routine property needs. Scheduling depends on scope and availability, so owners should provide access details, photos, and turnover deadlines when requesting an estimate.',
+    commonProblems: [
+      'Loose handles, hinges, towel bars, and cabinet hardware',
+      'Sticking doors and worn weatherstripping in coastal properties',
+      'Wall damage and paint touch-ups between guest stays',
+      'Furniture or replacement items that need assembly',
+      'Multiple minor repairs identified during a property walkthrough',
+    ],
+    whatWeOffer: [
+      'Handyman punch-list work between bookings',
+      'Door, hardware, and minor finish repairs',
+      'Drywall patches and painting touch-ups',
+      'Furniture and shelving assembly',
+      'Fixture and accessory replacement within handyman scope',
+      'Documented repair-list coordination with owners or managers',
+    ],
+    whoItsFor: [
+      'Satellite Beach and Cocoa Beach vacation-rental owners',
+      'Short-term rental property managers',
+      'Melbourne Beach and beachside property owners',
+      'Out-of-area owners who need local repair support',
+      'Realtors helping prepare furnished rentals',
+    ],
+    process: [
+      'Share the address, photos, access plan, repair list, and booking constraints.',
+      'We confirm which tasks fit handyman scope and what materials are needed.',
+      'An estimate and available scheduling options are provided for approval.',
+      'Approved repairs are completed with attention to occupied-property access and cleanup.',
+    ],
+    limitations:
+      'This service covers routine handyman repairs and does not include emergency guest support, property management, housekeeping, inspections, or work reserved for licensed specialty contractors.',
+    faqs: [
+      {
+        question: 'Do you provide vacation rental handyman service in Satellite Beach?',
+        answer:
+          'Satellite Beach is within the listed service area. Contact us with the property address, repair list, access details, and booking schedule so we can confirm scope and availability.',
+      },
+      {
+        question: 'Can repairs be grouped between guest stays?',
+        answer:
+          'Yes, when the requested timing is available and the tasks fit handyman scope. Advance photos and a prioritized list make it easier to estimate and plan the visit.',
+      },
+      {
+        question: 'Do you manage or inspect vacation rentals?',
+        answer:
+          'No. We provide requested handyman repairs. Property management, housekeeping, routine inspections, and guest communication remain with the owner or property manager.',
+      },
+    ],
+    relatedServices: ['property-maintenance', 'rental-property-maintenance', 'home-repairs', 'furniture-assembly'],
+    metaTitle: 'Vacation Rental Handyman Satellite Beach FL | Right Away Services LLC',
+    metaDescription:
+      'Vacation rental handyman service in Satellite Beach and Cocoa Beach, FL for repair lists, doors, hardware, drywall, paint touch-ups, fixtures, and furniture.',
   },
   {
     slug: 'bathroom-remodeling',

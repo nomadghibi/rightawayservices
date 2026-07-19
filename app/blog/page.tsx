@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
-import { blogPosts, formatDate } from '@/content/blogPosts'
+import { indexableBlogPosts, formatDate } from '@/content/blogPosts'
 import { CTABand } from '@/components/sections/CTABand'
 import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { pageImages } from '@/content/pageMedia'
@@ -28,7 +28,7 @@ export default function BlogIndexPage() {
       <SchemaScript
         schema={buildItemListSchema(
           'Right Away Services home repair blog posts',
-          blogPosts.map((post) => ({
+          indexableBlogPosts.map((post) => ({
             name: post.title,
             url: `/blog/${post.slug}`,
             description: post.excerpt,
@@ -59,7 +59,7 @@ export default function BlogIndexPage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
+            {indexableBlogPosts.map((post) => (
               <article key={post.slug} className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
                 <div className="bg-off-white h-36 flex items-center justify-center">
                   <div className="text-5xl">🏠</div>

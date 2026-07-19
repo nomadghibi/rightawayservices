@@ -15,6 +15,8 @@ export interface ServiceArea {
   relatedServices: string[]
   nearbyAreas: string[]
   keywordFocus?: string[]
+  propertyTypes?: string[]
+  maintenanceUseCases?: string[]
   faqs: AreaFAQ[]
   metaTitle: string
   metaDescription: string
@@ -323,23 +325,46 @@ export const serviceAreas: ServiceArea[] = [
       'Fixture and hardware work in coastal homes',
       'Drywall repairs and painting touch-ups',
       'Door and window maintenance in salt-air environments',
-      'General home repairs',
+      'Vacation rental and furnished-property repair lists',
+      'General home and condo repairs',
     ],
     localContext:
-      'Satellite Beach has a strong community identity and many long-term residents. Military families rotating through the area often need quick home setup help — furniture assembly, ceiling fans, fixtures — when moving in or out of local rentals.',
+      'Satellite Beach includes single-family neighborhoods, condos, furnished rentals, and beachside properties. Salt air and humidity can accelerate wear on hardware, doors, paint, and fixtures, while rental owners may need several small tasks grouped around a turnover window. Right Away Services LLC handles requested handyman repair lists and refers regulated specialty work to the appropriate contractor.',
+    propertyTypes: [
+      'Single-family coastal homes',
+      'Condos and townhomes',
+      'Furnished and vacation rentals',
+      'Long-term rental properties',
+      'Owner-occupied beachside properties',
+    ],
+    maintenanceUseCases: [
+      'Repair lists between vacation-rental bookings',
+      'Door and hardware wear associated with coastal conditions',
+      'Move-in furniture, fan, and fixture setup within handyman scope',
+      'Drywall patches and paint touch-ups after ordinary wear',
+      'Punch-list support for owners, managers, and Realtors',
+    ],
     relatedServices: [
       'handyman-services',
       'ceiling-fan-installation',
       'fixture-installation',
       'home-repairs',
       'furniture-assembly',
+      'drywall-repair',
+      'property-maintenance',
+      'vacation-rental-maintenance',
     ],
     nearbyAreas: ['indialantic-fl', 'indian-harbour-beach-fl', 'melbourne-fl', 'melbourne-beach-fl'],
     faqs: [
       {
         question: 'Do you work in Satellite Beach?',
         answer:
-          'Yes — Satellite Beach is in our service area. We serve homeowners and renters throughout the community.',
+          'Yes — Satellite Beach is in our listed service area. Contact us with the property address and repair list so we can confirm scope and scheduling availability.',
+      },
+      {
+        question: 'Can you help with Satellite Beach vacation rental repairs?',
+        answer:
+          'We can help owners and managers with requested handyman repair lists such as door adjustments, loose hardware, drywall patches, paint touch-ups, furniture assembly, and suitable fixture replacement. We do not provide property management, housekeeping, inspections, or emergency guest support.',
       },
     ],
     metaTitle: 'Handyman Services in Satellite Beach, FL | Right Away Services LLC',
@@ -394,13 +419,28 @@ export const serviceAreas: ServiceArea[] = [
       'General property maintenance',
     ],
     localContext:
-      'Rockledge\'s mix of historic neighborhoods near the Indian River and newer developments creates diverse repair needs. Older homes often have accumulated maintenance needs that a skilled handyman can address efficiently. The city\'s proximity to Brevard County\'s healthcare sector means many homeowners are medical professionals with demanding schedules who appreciate reliable, on-time service.',
+      'Rockledge has established neighborhoods near the Indian River as well as newer residential communities. That mix creates practical needs ranging from door and trim adjustments in older homes to drywall, fixture, and turnover punch lists in rentals and recently purchased properties.',
+    propertyTypes: [
+      'Established single-family homes',
+      'Newer residential properties',
+      'Rental homes and managed units',
+      'Condos and townhomes',
+      'Homes being prepared for sale or move-in',
+    ],
+    maintenanceUseCases: [
+      'Grouped home repair and maintenance lists',
+      'Rental turnover drywall, paint, door, and hardware work',
+      'Pre-listing and post-inspection punch lists',
+      'Fixture and ceiling fan replacement within handyman scope',
+      'Routine property maintenance for owners and managers',
+    ],
     relatedServices: [
       'handyman-services',
       'home-repairs',
       'drywall-repair',
       'ceiling-fan-installation',
       'property-maintenance',
+      'rental-property-maintenance',
     ],
     nearbyAreas: ['viera-fl', 'suntree-fl', 'melbourne-fl', 'west-melbourne-fl'],
     faqs: [
@@ -409,10 +449,85 @@ export const serviceAreas: ServiceArea[] = [
         answer:
           'Yes — Rockledge is in our service area. We work throughout Rockledge and nearby Brevard County communities.',
       },
+      {
+        question: 'Do you provide rental property maintenance in Rockledge?',
+        answer:
+          'Yes. We handle handyman-level rental repair lists in Rockledge, including drywall patches, paint touch-ups, door adjustments, hardware, caulking, and suitable fixture replacement. Licensed-trade work is outside this service.',
+      },
     ],
     metaTitle: 'Handyman Services in Rockledge, FL | Right Away Services LLC',
     metaDescription:
       'Reliable handyman and home repair services in Rockledge, FL. Right Away Services LLC helps Rockledge homeowners with professional repairs and maintenance.',
+  },
+  {
+    slug: 'cocoa-fl',
+    name: 'Cocoa',
+    state: 'FL',
+    county: 'Brevard County',
+    shortDescription:
+      'Handyman and property-maintenance services in Cocoa, FL for homeowners, landlords, Realtors, and residential property managers.',
+    localIntro:
+      'Cocoa includes established residential areas, properties near the Indian River, rentals, and homes at different stages of repair. Right Away Services LLC provides handyman-level repairs and maintenance for Cocoa property owners who need a clear estimate and a practical way to work through a repair list.',
+    typicalNeeds: [
+      'General home repair punch lists',
+      'Drywall patches and painting touch-ups',
+      'Door, trim, and hardware adjustments',
+      'Rental property maintenance and turnover repairs',
+      'Fixture replacement and furniture assembly within handyman scope',
+    ],
+    localContext:
+      'Cocoa properties range from older homes with accumulated finish repairs to rentals and recently purchased homes that need a move-in punch list. Grouping compatible drywall, door, paint, hardware, and fixture tasks can help owners address several visible issues during one planned visit.',
+    propertyTypes: ['Single-family homes', 'Rental homes and managed units', 'Condos and townhomes', 'Homes being prepared for sale', 'Recently purchased properties'],
+    maintenanceUseCases: ['Landlord and property-manager repair lists', 'Pre-listing and move-in punch lists', 'Drywall, paint, door, and hardware repairs', 'Routine residential maintenance'],
+    relatedServices: ['handyman-services', 'home-repairs', 'drywall-repair', 'property-maintenance', 'rental-property-maintenance'],
+    nearbyAreas: ['rockledge-fl', 'viera-fl', 'suntree-fl', 'cocoa-beach-fl'],
+    faqs: [
+      {
+        question: 'Do you provide handyman services in Cocoa, FL?',
+        answer:
+          'Cocoa is within our listed service area. Send the property address and repair details so we can confirm the work fits our handyman services and discuss scheduling.',
+      },
+      {
+        question: 'Can you handle a Cocoa rental turnover repair list?',
+        answer:
+          'Yes, for handyman-level work such as drywall patches, paint touch-ups, door adjustments, hardware, caulking, and suitable fixture replacement. Specialty-trade work requires the appropriate contractor.',
+      },
+    ],
+    metaTitle: 'Handyman Services in Cocoa, FL | Right Away Services LLC',
+    metaDescription:
+      'Need a handyman in Cocoa, FL? Right Away Services LLC handles home repair lists, drywall, paint touch-ups, doors, hardware, and rental property maintenance.',
+  },
+  {
+    slug: 'cocoa-beach-fl',
+    name: 'Cocoa Beach',
+    state: 'FL',
+    county: 'Brevard County',
+    shortDescription:
+      'Handyman and vacation-rental maintenance in Cocoa Beach, FL for coastal homes, condos, furnished rentals, and managed residential properties.',
+    localIntro:
+      'Cocoa Beach has coastal homes, condos, long-term rentals, and furnished vacation properties where humidity, salt air, frequent occupancy, and ordinary wear can create ongoing repair lists. Right Away Services LLC provides requested handyman repairs for owners and managers who need help with doors, hardware, drywall, paint touch-ups, furniture, and suitable fixture replacement.',
+    typicalNeeds: ['Vacation-rental handyman punch lists', 'Door and hardware adjustments in coastal properties', 'Drywall patches and paint touch-ups', 'Furniture assembly and replacement-item setup', 'Routine condo and residential maintenance'],
+    localContext:
+      'Cocoa Beach properties often combine coastal exposure with frequent use. Owners and managers can provide photos, access details, and a prioritized task list so the requested repairs can be reviewed for handyman scope before scheduling.',
+    propertyTypes: ['Beachside single-family homes', 'Condos and townhomes', 'Vacation and furnished rentals', 'Long-term rental properties', 'Owner-occupied coastal residences'],
+    maintenanceUseCases: ['Repair lists between bookings or occupants', 'Coastal door, hinge, handle, and hardware wear', 'Wall patches and paint touch-ups', 'Furniture assembly and accessory installation', 'Owner and property-manager punch lists'],
+    relatedServices: ['handyman-services', 'home-repairs', 'property-maintenance', 'vacation-rental-maintenance', 'furniture-assembly', 'door-and-window-repairs'],
+    nearbyAreas: ['cocoa-fl', 'rockledge-fl', 'satellite-beach-fl'],
+    faqs: [
+      {
+        question: 'Do you offer vacation rental handyman services in Cocoa Beach?',
+        answer:
+          'Cocoa Beach is within our listed service area. We can review requested handyman repair lists for furnished and vacation properties. Availability depends on scope, access, and scheduling.',
+      },
+      {
+        question: 'Do you provide property management or guest support?',
+        answer:
+          'No. We provide approved handyman repairs. Property management, housekeeping, routine inspections, and guest communication remain with the owner or manager.',
+      },
+    ],
+    metaTitle: 'Cocoa Beach Vacation Rental Handyman | Right Away Services LLC',
+    metaDescription:
+      'Cocoa Beach handyman service for vacation rentals, condos, and coastal homes. Repair lists, doors, hardware, drywall, paint touch-ups, and furniture assembly.',
   },
   {
     slug: 'viera-fl',
