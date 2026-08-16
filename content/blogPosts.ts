@@ -13,12 +13,131 @@ export interface BlogPost {
 }
 
 export interface BlogSection {
-  type: 'paragraph' | 'heading' | 'list' | 'cta'
+  type: 'paragraph' | 'heading' | 'list' | 'resource' | 'cta'
   text?: string
   items?: string[]
+  href?: string
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: 'prepare-home-hurricane-season-palm-bay-melbourne-fl',
+    title: 'How to Prepare Your Home for Hurricane Season in Palm Bay and Melbourne, FL',
+    excerpt:
+      'A practical hurricane-season home checklist for Palm Bay and Melbourne residents, including repairs to handle early, supplies to organize, and work that should be left to licensed specialists.',
+    date: '2026-08-16',
+    category: 'Hurricane Preparation',
+    readTime: '8 min read',
+    relatedServices: ['handyman-services', 'home-repairs', 'door-and-window-repairs', 'property-maintenance'],
+    relatedAreas: ['palm-bay-fl', 'melbourne-fl', 'west-melbourne-fl', 'satellite-beach-fl'],
+    content: [
+      {
+        type: 'paragraph',
+        text: 'Hurricane preparation is easier and safer when it starts before a storm enters the forecast. Palm Bay and Melbourne homeowners can use the quieter months to inspect doors, windows, exterior hardware, drainage areas, and the small repairs that become harder to manage once watches or warnings are issued.',
+      },
+      {
+        type: 'paragraph',
+        text: 'This checklist focuses on practical property maintenance, not emergency forecasting or structural engineering. Always follow evacuation orders and current instructions from Brevard County Emergency Management and the National Hurricane Center.',
+      },
+      {
+        type: 'heading',
+        text: 'Start With a Walk-Around Inspection',
+      },
+      {
+        type: 'paragraph',
+        text: 'Walk around the home during daylight and make a written repair list. Look for loose exterior items, damaged screens, doors that do not latch correctly, deteriorated caulk, visible water stains, and hardware that has started to rust in Florida humidity. An inspection does not guarantee storm protection, but it can identify routine maintenance that should not be postponed.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Confirm exterior doors close, latch, and lock properly',
+          'Check accessible window frames and existing shutters for loose or missing hardware',
+          'Look for cracked or separated caulk around doors and windows',
+          'Move patio furniture, planters, decorations, grills, and tools to a secure storage location',
+          'Clear safe, ground-level debris from areas around drains and downspout exits',
+          'Photograph rooms, valuables, and the exterior for your household records',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'Handle Small Repairs Before a Storm Is Approaching',
+      },
+      {
+        type: 'paragraph',
+        text: 'The week before a possible storm is not the ideal time to discover that a door will not latch or shutter hardware is missing. Schedule ordinary repairs early, while materials are available and contractors are not responding to urgent calls. A handyman may be able to help with routine door adjustments, minor hardware replacement, accessible caulking, and other non-structural maintenance.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Adjust sticking interior or exterior doors and replace worn non-specialty hardware',
+          'Repair minor drywall damage after the moisture source has been corrected',
+          'Replace damaged weatherstripping where appropriate',
+          'Secure ordinary wall-mounted household items and shelving',
+          'Complete small punch-list repairs before supplies and appointments become limited',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'Know When to Call a Licensed Specialist',
+      },
+      {
+        type: 'paragraph',
+        text: 'Roof damage, structural cracks, electrical changes, panel work, new circuits, gas connections, tree removal near power lines, and engineered opening protection require the appropriate licensed or qualified professional. If there is uncertainty about whether work requires a permit or specialty license, check with the local building department before work begins.',
+      },
+      {
+        type: 'heading',
+        text: 'Prepare Supplies and a Family Plan',
+      },
+      {
+        type: 'list',
+        items: [
+          'Know your evacuation zone and identify more than one route',
+          'Keep medications, documents, pet supplies, flashlights, batteries, water, and shelf-stable food together',
+          'Charge phones and backup batteries before conditions deteriorate',
+          'Store insurance information and home-inventory photographs where they remain accessible',
+          'Sign up for official local emergency alerts and monitor authoritative forecasts',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'Use Generators and Ladders Safely',
+      },
+      {
+        type: 'paragraph',
+        text: 'Never operate a portable generator inside a home, garage, shed, or other enclosed area, and keep it away from doors, windows, and vents according to the manufacturer and official safety guidance. Do not connect a generator directly to household wiring unless a qualified electrician has installed approved transfer equipment. Avoid ladders and exterior repair work during high winds, lightning, heavy rain, or other unsafe conditions.',
+      },
+      {
+        type: 'heading',
+        text: 'After the Storm',
+      },
+      {
+        type: 'paragraph',
+        text: 'Return only when local officials say conditions are safe. Watch for downed power lines, standing water, unstable trees, damaged ceilings, gas odors, and electrical hazards. Photograph damage before cleanup when it is safe to do so, contact your insurer when appropriate, and do not enter an area that appears structurally unsafe.',
+      },
+      {
+        type: 'resource',
+        text: 'Read the official Ready.gov hurricane preparedness guidance',
+        href: 'https://www.ready.gov/hurricanes',
+      },
+      {
+        type: 'resource',
+        text: 'Follow current forecasts from the National Hurricane Center',
+        href: 'https://www.nhc.noaa.gov/',
+      },
+      {
+        type: 'resource',
+        text: 'Review Brevard County emergency information and alerts',
+        href: 'https://www.brevardfl.gov/EmergencyManagement',
+      },
+      {
+        type: 'cta',
+        text: 'Want help completing routine pre-season repairs in Palm Bay, Melbourne, or nearby Space Coast communities? Right Away Services LLC can review your handyman punch list and explain which items are within our scope before storm conditions arrive.',
+      },
+    ],
+    metaTitle: 'Hurricane Season Home Preparation in Palm Bay & Melbourne, FL | Right Away Services LLC',
+    metaDescription:
+      'Prepare your Palm Bay or Melbourne, FL home for hurricane season with this practical checklist for repairs, supplies, safety, and storm readiness.',
+  },
   {
     slug: 'how-much-does-drywall-repair-cost-in-palm-bay-fl',
     title: 'How Much Does Drywall Repair Cost in Palm Bay, FL?',

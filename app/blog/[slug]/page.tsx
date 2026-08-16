@@ -112,6 +112,20 @@ export default function BlogPostPage({ params }: Props) {
                       </ul>
                     )
                   }
+                  if (section.type === 'resource' && section.href) {
+                    return (
+                      <p key={index} className="mb-3">
+                        <a
+                          href={section.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-service-blue font-medium hover:underline"
+                        >
+                          {section.text} →
+                        </a>
+                      </p>
+                    )
+                  }
                   if (section.type === 'cta') {
                     return (
                       <div key={index} className="bg-off-white border border-gray-200 rounded-xl p-6 my-8">
