@@ -36,6 +36,9 @@ export default function BlogPostPage({ params }: Props) {
 
   const relatedServicePages = services.filter((s) => post.relatedServices.includes(s.slug))
   const relatedAreaPages = serviceAreas.filter((a) => post.relatedAreas.includes(a.slug))
+  const sortedBlogPosts = [...indexableBlogPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  )
 
   const breadcrumbs = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -212,7 +215,7 @@ export default function BlogPostPage({ params }: Props) {
               <div className="bg-off-white rounded-xl p-5 border border-gray-200">
                 <h3 className="font-semibold text-navy mb-2">More Articles</h3>
                 <ul className="space-y-3">
-                  {indexableBlogPosts
+                  {sortedBlogPosts
                     .filter((p) => p.slug !== post.slug)
                     .map((p) => (
                       <li key={p.slug}>

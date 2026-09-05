@@ -17,6 +17,10 @@ export const metadata: Metadata = buildMetadata({
 })
 
 export default function BlogIndexPage() {
+  const sortedBlogPosts = [...indexableBlogPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  )
+
   return (
     <>
       <SchemaScript
@@ -28,7 +32,7 @@ export default function BlogIndexPage() {
       <SchemaScript
         schema={buildItemListSchema(
           'Right Away Services home repair blog posts',
-          indexableBlogPosts.map((post) => ({
+          sortedBlogPosts.map((post) => ({
             name: post.title,
             url: `/blog/${post.slug}`,
             description: post.excerpt,
@@ -59,7 +63,7 @@ export default function BlogIndexPage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {indexableBlogPosts.map((post) => (
+            {sortedBlogPosts.map((post) => (
               <article key={post.slug} className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
                 <div className="bg-off-white h-36 flex items-center justify-center">
                   <div className="text-5xl">🏠</div>
