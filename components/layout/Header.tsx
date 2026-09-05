@@ -7,6 +7,7 @@ import { BrandLogo } from '@/components/layout/BrandLogo'
 
 const navLinks = [
   { href: '/services', label: 'Services' },
+  { href: '/projects', label: 'Projects' },
   { href: '/service-areas', label: 'Service Areas' },
   { href: '/about', label: 'About' },
   { href: '/faq', label: 'FAQ' },

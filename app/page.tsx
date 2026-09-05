@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 import { services } from '@/content/services'
@@ -18,6 +19,7 @@ import {
   priorityAreaSlugs,
 } from '@/content/localSeo'
 import { pageImages } from '@/content/pageMedia'
+import { publishedProjects } from '@/content/projects'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Handyman Palm Bay FL',
@@ -37,6 +39,7 @@ const featuredServiceSlugs = [
 const featuredServices = services.filter((service) => featuredServiceSlugs.includes(service.slug))
 const homeFaqs = [...faqs.slice(0, 4), localIntentFaqs[0], localIntentFaqs[2]]
 const priorityAreas = serviceAreas.filter((area) => priorityAreaSlugs.includes(area.slug))
+const featuredProjects = publishedProjects.slice(0, 3)
 
 const whyChooseUs = [
   {
@@ -187,6 +190,56 @@ export default function HomePage() {
                 <p className="text-slate-gray text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between mb-10">
+            <div>
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Before &amp; After</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-3">
+                Recent Handyman Project Examples
+              </h2>
+              <p className="text-slate-gray max-w-2xl">
+                See realistic examples of painting, driveway cleaning, bathroom remodeling, and repair work for Palm
+                Bay, Melbourne, and nearby Brevard County homes.
+              </p>
+            </div>
+            <Link href="/projects" className="text-service-blue font-semibold hover:underline">
+              View all projects →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {featuredProjects.map((project) => {
+              const image = project.images[0]
+
+              return (
+                <Link
+                  key={project.slug}
+                  href={`/projects/${project.slug}`}
+                  className="group overflow-hidden rounded-xl border border-gray-200 bg-white transition-shadow hover:shadow-md"
+                >
+                  {image ? (
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={900}
+                      height={675}
+                      className="aspect-[4/3] w-full object-cover"
+                    />
+                  ) : null}
+                  <div className="p-5">
+                    <h3 className="font-bold text-navy group-hover:text-service-blue transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-slate-gray leading-relaxed mt-2">{project.summary}</p>
+                  </div>
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>

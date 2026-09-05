@@ -45,6 +45,7 @@ export default function ProjectPage({ params }: Props) {
       <SchemaScript
         schema={buildBreadcrumbSchema([
           { name: 'Home', url: '/' },
+          { name: 'Projects', url: '/projects' },
           { name: project.title, url: `/projects/${project.slug}` },
         ])}
       />
@@ -54,6 +55,8 @@ export default function ProjectPage({ params }: Props) {
           <nav aria-label="Breadcrumb" className="text-sm text-blue-300 mb-4">
             <ol className="flex items-center gap-2 flex-wrap">
               <li><Link href="/" className="hover:text-white">Home</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href="/projects" className="hover:text-white">Projects</Link></li>
               <li aria-hidden="true">/</li>
               <li className="text-white" aria-current="page">{project.title}</li>
             </ol>
@@ -65,6 +68,14 @@ export default function ProjectPage({ params }: Props) {
           ) : null}
           <h1 className="text-3xl sm:text-4xl font-bold mb-4">{project.title}</h1>
           <p className="text-blue-200 text-lg">{project.summary}</p>
+          <div className="mt-5 flex flex-wrap gap-2 text-xs font-semibold">
+            <Link href={`/services/${service.slug}`} className="rounded-full bg-white/10 px-3 py-1 text-white hover:bg-white/20">
+              {service.name}
+            </Link>
+            <Link href={`/service-areas/${area.slug}`} className="rounded-full bg-accent/20 px-3 py-1 text-accent hover:bg-accent/30">
+              {area.name}, {area.state}
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -82,16 +93,32 @@ export default function ProjectPage({ params }: Props) {
             </ul>
 
             {project.images.length ? (
-              <div className="grid gap-5 sm:grid-cols-2">
+              <div className="mb-10">
+                <h2 className="text-2xl font-bold text-navy mb-5">Before &amp; After</h2>
+                <div className="grid gap-5">
                 {project.images.map((image) => (
-                  <Image key={image.src} src={image.src} alt={image.alt} width={800} height={600} className="rounded-xl" />
+                  <Image
+                    key={image.src}
+                    src={image.src}
+                    alt={image.alt}
+                    width={1200}
+                    height={900}
+                    className="rounded-xl border border-gray-200"
+                  />
                 ))}
+                </div>
               </div>
             ) : (
               <div className="rounded-xl border border-dashed border-gray-300 bg-off-white p-6 text-sm text-slate-gray">
                 Add original, customer-approved project images and descriptive alt text before publishing.
               </div>
             )}
+
+            <div className="rounded-xl border border-gray-200 bg-off-white p-6 text-sm leading-relaxed text-slate-gray">
+              These project images are realistic visual examples created to show common before-and-after results for
+              local handyman work. For the strongest proof, add original customer-approved photos as new projects when
+              they are available.
+            </div>
           </article>
 
           <aside className="space-y-4">
