@@ -1100,6 +1100,101 @@ export const blogPosts: BlogPost[] = [
     metaDescription:
       'Learn how Palm Bay and Melbourne homeowners can choose a reliable handyman for home repairs, drywall patching, painting touch-ups, and small installs.',
   },
+  {
+    slug: 'ceiling-fan-replacement-cost-palm-bay-melbourne-fl',
+    title: 'Ceiling Fan Replacement Cost in Palm Bay and Melbourne, FL',
+    excerpt:
+      'Wondering what it costs to replace a ceiling fan in Palm Bay or Melbourne? Learn what affects pricing, when a handyman can help, and when an electrician may be needed.',
+    date: '2026-09-05',
+    category: 'Cost Guide',
+    readTime: '6 min read',
+    relatedServices: ['ceiling-fan-installation', 'fixture-installation', 'handyman-services'],
+    relatedAreas: ['palm-bay-fl', 'melbourne-fl', 'west-melbourne-fl', 'indialantic-fl'],
+    content: [
+      {
+        type: 'paragraph',
+        text: 'Ceiling fan replacement is one of the most common handyman requests in Palm Bay and Melbourne because Florida homes rely on airflow almost year-round. A working fan can make bedrooms, patios, living rooms, and rental properties more comfortable without constantly lowering the thermostat.',
+      },
+      {
+        type: 'paragraph',
+        text: 'The cost to replace a ceiling fan depends on the condition of the existing box, the fan size, ceiling height, remote controls, and whether the wiring is already correct. A simple swap is usually much faster than installing a fan in a brand-new location.',
+      },
+      {
+        type: 'heading',
+        text: 'What Affects Ceiling Fan Replacement Cost?',
+      },
+      {
+        type: 'list',
+        items: [
+          'Whether an old fan is already installed in the same location',
+          'Whether the ceiling box is rated to support a moving fan',
+          'Ceiling height and access to the work area',
+          'Fan size, weight, blades, lights, and remote-control features',
+          'Whether old hardware needs to be removed and disposed of',
+          'Whether the fan needs balancing after installation',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'When a Handyman Can Usually Replace the Fan',
+      },
+      {
+        type: 'paragraph',
+        text: 'In many homes, a handyman can replace an existing ceiling fan when the wiring is already present and the box is properly fan-rated. This is common in Palm Bay and Melbourne bedrooms, living rooms, and covered interior spaces where a previous fan was already installed.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Replacing an old fan with a similar new fan',
+          'Installing a fan where a fan-rated support box already exists',
+          'Assembling the fan, blades, light kit, and remote components',
+          'Testing operation and checking for wobble',
+          'Removing the old fixture from the work area',
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'When You May Need an Electrician',
+      },
+      {
+        type: 'paragraph',
+        text: 'Some fan projects require licensed electrical work. If there is no existing ceiling box, the box is not fan-rated, wiring has to be added, a new switch is needed, or the circuit appears unsafe, the job may need an electrician before a fan can be installed properly.',
+      },
+      {
+        type: 'heading',
+        text: 'Local Florida Considerations',
+      },
+      {
+        type: 'paragraph',
+        text: 'Palm Bay and Melbourne homes often use ceiling fans heavily because of heat and humidity. Outdoor-rated fans, covered patio fans, and fans near salty coastal air may need more careful product selection than a basic indoor bedroom fan. Always choose a fan that matches the location where it will be installed.',
+      },
+      {
+        type: 'heading',
+        text: 'How to Prepare Before Scheduling',
+      },
+      {
+        type: 'list',
+        items: [
+          'Take a photo of the existing fan and ceiling area',
+          'Confirm whether the new fan is already purchased',
+          'Keep all hardware, brackets, remotes, and instructions in the box',
+          'Measure ceiling height if the room is tall or vaulted',
+          'Tell the handyman if the fan is for a patio, porch, or damp location',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'Sharing photos before the appointment helps avoid surprises. It also makes it easier to identify whether the job looks like a standard replacement or whether a licensed electrician may need to inspect the wiring or support box first.',
+      },
+      {
+        type: 'cta',
+        text: 'Need ceiling fan replacement in Palm Bay, Melbourne, or nearby Brevard County communities? Right Away Services LLC can review your fan installation request, explain the likely scope, and help with standard replacements when the existing setup is ready for handyman service.',
+      },
+    ],
+    metaTitle: 'Ceiling Fan Replacement Cost Palm Bay & Melbourne FL | Right Away Services LLC',
+    metaDescription:
+      'Learn what affects ceiling fan replacement cost in Palm Bay and Melbourne, FL, when a handyman can help, and when an electrician may be needed.',
+  },
 ]
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {

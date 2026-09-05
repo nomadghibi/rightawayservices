@@ -7,7 +7,7 @@ import { siteConfig } from '@/lib/seo/metadata'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url
-  const contentLastModified = new Date('2026-08-16')
+  const contentLastModified = new Date('2026-09-05')
 
   const corePages: MetadataRoute.Sitemap = [
     { url: base, lastModified: contentLastModified, changeFrequency: 'weekly', priority: 1.0 },
