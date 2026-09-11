@@ -13,7 +13,7 @@ import { buildMetadata, siteConfig } from '@/lib/seo/metadata'
 export const metadata: Metadata = buildMetadata({
   title: `Before & After Handyman Projects | ${siteConfig.name}`,
   description:
-    'See realistic before-and-after handyman project examples for painting, drywall repair, driveway cleaning, and bathroom remodeling in Palm Bay, Melbourne, and nearby Brevard County areas.',
+    'See before-and-after handyman project examples for exterior stucco repair, pressure washing, painting, drywall repair, driveway cleaning, and bathroom remodeling in Palm Bay, Melbourne, and nearby Brevard County areas.',
   path: '/projects',
 })
 
@@ -53,8 +53,8 @@ export default function ProjectsPage() {
             Handyman Project Examples in Palm Bay &amp; Melbourne, FL
           </h1>
           <p className="text-blue-200 text-lg max-w-3xl">
-            See examples of the kind of painting, drywall repair, exterior cleaning, bathroom remodeling, and home
-            repair work Right Away Services LLC handles across the Space Coast.
+            See examples of exterior stucco repair, pressure washing, painting, drywall repair, bathroom remodeling,
+            and home repair work Right Away Services LLC handles across the Space Coast.
           </p>
         </div>
       </section>

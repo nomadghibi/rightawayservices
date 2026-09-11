@@ -115,9 +115,8 @@ export default function ProjectPage({ params }: Props) {
             )}
 
             <div className="rounded-xl border border-gray-200 bg-off-white p-6 text-sm leading-relaxed text-slate-gray">
-              These project images are realistic visual examples created to show common before-and-after results for
-              local handyman work. For the strongest proof, add original customer-approved photos as new projects when
-              they are available.
+              {project.imageNote ??
+                'These project images are realistic visual examples created to show common before-and-after results for local handyman work. For the strongest proof, add original customer-approved photos as new projects when they are available.'}
             </div>
           </article>
 
