@@ -16,6 +16,11 @@ const nextConfig = {
         destination: '/blog/florida-humidity-damage-drywall-doors-paint-fixtures',
         permanent: true,
       },
+      {
+        source: '/projects/exterior-stucco-repair-painting-pressure-washing-palm-bay-fl',
+        destination: '/projects/exterior-stucco-repair-painting-pressure-washing-viera-suntree-fl',
+        permanent: true,
+      },
     ]
   },
 }

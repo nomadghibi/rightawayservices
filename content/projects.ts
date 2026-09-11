@@ -20,14 +20,14 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: 'exterior-stucco-repair-painting-pressure-washing-palm-bay-fl',
-    title: 'Exterior Stucco Repair, Painting & Pressure Washing in Palm Bay, FL',
+    slug: 'exterior-stucco-repair-painting-pressure-washing-viera-suntree-fl',
+    title: 'Exterior Stucco Repair, Painting & Pressure Washing in Viera/Suntree, FL',
     status: 'published',
     serviceSlug: 'painting-services',
-    areaSlug: 'palm-bay-fl',
+    areaSlug: 'suntree-fl',
     date: '2026-09-11',
     summary:
-      'A real exterior project showing pressure washing, stucco crack repair, and fresh paint for exterior walls, the garage door, front door, back door, sidewalk, and pool patio areas on a Palm Bay home.',
+      'A real exterior project in the Viera/Suntree area showing pressure washing, stucco crack repair, and fresh paint for exterior walls, the garage door, front door, back door, sidewalk, and pool patio areas.',
     workPerformed: [
       'Pressure washed exterior surfaces, sidewalk, patio, and prep areas before painting',
       'Repaired visible cracks and damaged spots in the stucco before finish coating',
@@ -38,39 +38,39 @@ export const projects: Project[] = [
     ],
     images: [
       {
-        src: '/images/projects/exterior-stucco-painting-palm-bay-fl/front-exterior-stucco-paint-v2.jpg',
-        alt: 'Palm Bay FL home exterior after stucco repair and fresh exterior wall painting',
+        src: '/images/projects/exterior-stucco-painting-viera-suntree-fl/front-exterior-stucco-paint-v2.jpg',
+        alt: 'Viera Suntree FL home exterior after stucco repair and fresh exterior wall painting',
       },
       {
-        src: '/images/projects/exterior-stucco-painting-palm-bay-fl/sidewalk-pressure-washing-after-v2.jpg',
-        alt: 'Freshly pressure washed and painted sidewalk in front of a Palm Bay FL home',
+        src: '/images/projects/exterior-stucco-painting-viera-suntree-fl/sidewalk-pressure-washing-after-v2.jpg',
+        alt: 'Freshly pressure washed and painted sidewalk in front of a Viera Suntree FL home',
       },
       {
-        src: '/images/projects/exterior-stucco-painting-palm-bay-fl/pool-patio-exterior-paint-v2.jpg',
-        alt: 'Pool patio exterior walls after pressure washing and painting in Palm Bay FL',
+        src: '/images/projects/exterior-stucco-painting-viera-suntree-fl/pool-patio-exterior-paint-v2.jpg',
+        alt: 'Pool patio exterior walls after pressure washing and painting in Viera Suntree FL',
       },
       {
-        src: '/images/projects/exterior-stucco-painting-palm-bay-fl/side-wall-stucco-paint-v2.jpg',
-        alt: 'Side stucco wall after crack repair and exterior painting on a Palm Bay FL home',
+        src: '/images/projects/exterior-stucco-painting-viera-suntree-fl/side-wall-stucco-paint-v2.jpg',
+        alt: 'Side stucco wall after crack repair and exterior painting on a Viera Suntree FL home',
       },
       {
-        src: '/images/projects/exterior-stucco-painting-palm-bay-fl/back-patio-wall-paint-v2.jpg',
+        src: '/images/projects/exterior-stucco-painting-viera-suntree-fl/back-patio-wall-paint-v2.jpg',
         alt: 'Back patio wall and sliding door area after exterior painting and repairs',
       },
       {
-        src: '/images/projects/exterior-stucco-painting-palm-bay-fl/stucco-crack-repair-paint-v2.jpg',
+        src: '/images/projects/exterior-stucco-painting-viera-suntree-fl/stucco-crack-repair-paint-v2.jpg',
         alt: 'Stucco wall repair and exterior paint finish near pool equipment',
       },
       {
-        src: '/images/projects/exterior-stucco-painting-palm-bay-fl/back-door-exterior-paint-v2.jpg',
+        src: '/images/projects/exterior-stucco-painting-viera-suntree-fl/back-door-exterior-paint-v2.jpg',
         alt: 'Back door and exterior stucco wall after painting and repair work',
       },
     ],
     imageNote:
       'These are real project photos provided for the exterior pressure washing, stucco repair, and painting work shown on this page.',
-    metaTitle: 'Exterior Stucco Repair & Painting Palm Bay FL | Right Away Services LLC',
+    metaTitle: 'Exterior Stucco Repair & Painting Viera/Suntree FL | Right Away Services LLC',
     metaDescription:
-      'See a Palm Bay, FL exterior project with pressure washing, stucco crack repair, exterior wall painting, garage door painting, front door painting, and back door painting.',
+      'See a Viera/Suntree, FL exterior project with pressure washing, stucco crack repair, exterior wall painting, garage door painting, front door painting, and back door painting.',
   },
   {
     slug: 'interior-painting-refresh-palm-bay-fl',
