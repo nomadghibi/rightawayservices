@@ -95,18 +95,45 @@ export default function ProjectPage({ params }: Props) {
             {project.images.length ? (
               <div className="mb-10">
                 <h2 className="text-2xl font-bold text-navy mb-5">Before &amp; After</h2>
-                <div className="grid gap-5">
-                {project.images.map((image) => (
-                  <Image
-                    key={image.src}
-                    src={image.src}
-                    alt={image.alt}
-                    width={1200}
-                    height={900}
-                    className="rounded-xl border border-gray-200"
-                  />
-                ))}
-                </div>
+                {project.images.some((image) => image.phase) ? (
+                  (['before', 'after'] as const).map((phase) => {
+                    const phaseImages = project.images.filter((image) => image.phase === phase)
+                    if (!phaseImages.length) return null
+
+                    return (
+                      <div key={phase} className="mb-8 last:mb-0">
+                        <h3 className="text-xl font-semibold text-navy mb-4">
+                          {phase === 'before' ? 'Before Repairs' : 'After Repairs'}
+                        </h3>
+                        <div className="grid gap-5 sm:grid-cols-2">
+                          {phaseImages.map((image) => (
+                            <Image
+                              key={image.src}
+                              src={image.src}
+                              alt={image.alt}
+                              width={1200}
+                              height={900}
+                              className="rounded-xl border border-gray-200"
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    )
+                  })
+                ) : (
+                  <div className="grid gap-5">
+                    {project.images.map((image) => (
+                      <Image
+                        key={image.src}
+                        src={image.src}
+                        alt={image.alt}
+                        width={1200}
+                        height={900}
+                        className="rounded-xl border border-gray-200"
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
             ) : (
               <div className="rounded-xl border border-dashed border-gray-300 bg-off-white p-6 text-sm text-slate-gray">

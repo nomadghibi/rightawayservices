@@ -1,6 +1,7 @@
 export interface ProjectImage {
   src: string
   alt: string
+  phase?: 'before' | 'after'
 }
 
 export interface Project {
@@ -19,6 +20,101 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    slug: 'drywall-repair-repipe-melbourne-fl',
+    title: 'Drywall Repair After Home Repiping in Melbourne, FL',
+    status: 'published',
+    serviceSlug: 'drywall-repair',
+    areaSlug: 'melbourne-fl',
+    date: '2026-09-12',
+    summary:
+      'A real Melbourne, FL drywall repair project completed after home repiping, including repairs to opened walls, ceilings, corners, and plumbing access areas followed by texture matching and paint-ready finishing.',
+    workPerformed: [
+      'Reviewed drywall openings and damaged surfaces created during the home repiping work',
+      'Repaired wall and ceiling openings around plumbing access points',
+      'Rebuilt damaged drywall around the bathroom vanity and other interior areas',
+      'Taped, finished, and blended repaired surfaces with the surrounding texture',
+      'Prepared repaired areas for a consistent paint-ready finish',
+      'Cleaned the work areas after the drywall repairs were completed',
+    ],
+    images: [
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/bathroom-ceiling-repair-after.jpg',
+        alt: 'Repaired textured bathroom ceiling after repiping in Melbourne FL',
+        phase: 'after',
+      },
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/ceiling-corner-repair-after.jpg',
+        alt: 'Finished drywall and ceiling corner repair after repiping in Melbourne FL',
+        phase: 'after',
+      },
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/wall-patch-after.jpg',
+        alt: 'Finished interior wall patch after plumbing repipe work in Melbourne FL',
+        phase: 'after',
+      },
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/ceiling-edge-repair-after.jpg',
+        alt: 'Repaired ceiling edge and textured wall after repiping in Melbourne FL',
+        phase: 'after',
+      },
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/ceiling-patch-after.jpg',
+        alt: 'Completed ceiling patch and paint-ready finish after repiping in Melbourne FL',
+        phase: 'after',
+      },
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/ceiling-repair-after.jpg',
+        alt: 'Finished textured ceiling repair after plumbing access work in Melbourne FL',
+        phase: 'after',
+      },
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/ceiling-corner-finish-after.jpg',
+        alt: 'Completed ceiling corner drywall repair in a Melbourne FL home',
+        phase: 'after',
+      },
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/ceiling-opening-before.jpg',
+        alt: 'Open ceiling access area before drywall repair after repiping in Melbourne FL',
+        phase: 'before',
+      },
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/wall-opening-before.jpg',
+        alt: 'Open wall access area before drywall repair after repiping in Melbourne FL',
+        phase: 'before',
+      },
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/bathroom-wall-opening-before.jpg',
+        alt: 'Bathroom wall opening before drywall repair after repiping in Melbourne FL',
+        phase: 'before',
+      },
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/ceiling-plumbing-opening-before.jpg',
+        alt: 'Ceiling plumbing opening before drywall repair in a Melbourne FL home',
+        phase: 'before',
+      },
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/ceiling-access-before.jpg',
+        alt: 'Ceiling access opening before drywall repair after home repiping in Melbourne FL',
+        phase: 'before',
+      },
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/wall-plumbing-opening-before.jpg',
+        alt: 'Wall plumbing opening before drywall repair after repiping in Melbourne FL',
+        phase: 'before',
+      },
+      {
+        src: '/images/projects/drywall-repair-repipe-melbourne-fl/ceiling-cutouts-before.jpg',
+        alt: 'Multiple ceiling cutouts before drywall repair after repiping in Melbourne FL',
+        phase: 'before',
+      },
+    ],
+    imageNote:
+      'These are real project photos provided for the drywall repair work shown on this page. The openings were made during home repiping and were repaired afterward.',
+    metaTitle: 'Drywall Repair After Repiping Melbourne FL | Right Away Services LLC',
+    metaDescription:
+      'See a real Melbourne, FL drywall repair project completed after home repiping, including wall and ceiling openings, texture matching, and paint-ready finishing.',
+  },
   {
     slug: 'exterior-stucco-repair-painting-pressure-washing-viera-suntree-fl',
     title: 'Exterior Stucco Repair, Painting & Pressure Washing in Viera/Suntree, FL',
