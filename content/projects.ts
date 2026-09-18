@@ -1,7 +1,7 @@
 export interface ProjectImage {
   src: string
   alt: string
-  phase?: 'before' | 'after'
+  phase?: 'before' | 'during' | 'after'
 }
 
 export interface Project {
@@ -20,6 +20,87 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    slug: 'exodus-barbershop-stylist-room-build-out-palm-bay-fl',
+    title: 'Exodus Barbershop Stylist Room Build-Out in Palm Bay, FL',
+    status: 'published',
+    serviceSlug: 'handyman-services',
+    areaSlug: 'palm-bay-fl',
+    date: '2026-09-18',
+    summary:
+      'A real commercial interior project at Exodus Barbershop in Palm Bay, FL. We framed and finished a dedicated room so another stylist could work in a clean, private space inside the shop.',
+    workPerformed: [
+      'Framed new interior walls for a dedicated stylist room',
+      'Created framed openings and installed an interior door and viewing window',
+      'Hung drywall and finished seams, corners, and fastener points',
+      'Applied wall texture for a consistent finished surface',
+      'Installed baseboard, door casing, window trim, and crown molding',
+      'Primed and painted the new room and trim for a clean professional finish',
+      'Prepared the completed room for use by an additional stylist',
+    ],
+    images: [
+      {
+        src: '/images/projects/exodus-barbershop-build-out-palm-bay-fl/wall-framing-before.jpg',
+        alt: 'New stylist room wall framing at Exodus Barbershop in Palm Bay FL',
+        phase: 'before',
+      },
+      {
+        src: '/images/projects/exodus-barbershop-build-out-palm-bay-fl/door-window-framing-before.jpg',
+        alt: 'Door and window openings framed for a new barbershop stylist room in Palm Bay FL',
+        phase: 'before',
+      },
+      {
+        src: '/images/projects/exodus-barbershop-build-out-palm-bay-fl/window-drywall-during.jpg',
+        alt: 'Drywall installed around the new interior window during the Exodus Barbershop build-out',
+        phase: 'during',
+      },
+      {
+        src: '/images/projects/exodus-barbershop-build-out-palm-bay-fl/door-installation-during.jpg',
+        alt: 'Interior door installation during a Palm Bay barbershop room build-out',
+        phase: 'during',
+      },
+      {
+        src: '/images/projects/exodus-barbershop-build-out-palm-bay-fl/drywall-finishing-during.jpg',
+        alt: 'Drywall seams and fasteners being finished on a new stylist room in Palm Bay FL',
+        phase: 'during',
+      },
+      {
+        src: '/images/projects/exodus-barbershop-build-out-palm-bay-fl/window-wall-drywall-during.jpg',
+        alt: 'Interior viewing window surrounded by newly finished drywall at Exodus Barbershop',
+        phase: 'during',
+      },
+      {
+        src: '/images/projects/exodus-barbershop-build-out-palm-bay-fl/textured-door-wall-during.jpg',
+        alt: 'Textured drywall and installed door during the Exodus Barbershop room project',
+        phase: 'during',
+      },
+      {
+        src: '/images/projects/exodus-barbershop-build-out-palm-bay-fl/textured-window-door-during.jpg',
+        alt: 'Textured walls with door and window trim in progress at a Palm Bay barbershop',
+        phase: 'during',
+      },
+      {
+        src: '/images/projects/exodus-barbershop-build-out-palm-bay-fl/finished-door-wall-after.jpg',
+        alt: 'Finished painted wall, trim, and door in the new Exodus Barbershop stylist room',
+        phase: 'after',
+      },
+      {
+        src: '/images/projects/exodus-barbershop-build-out-palm-bay-fl/finished-room-corner-after.jpg',
+        alt: 'Completed painted stylist room with baseboard and crown molding in Palm Bay FL',
+        phase: 'after',
+      },
+      {
+        src: '/images/projects/exodus-barbershop-build-out-palm-bay-fl/finished-window-wall-after.jpg',
+        alt: 'Completed interior window wall and trim in the Exodus Barbershop stylist room',
+        phase: 'after',
+      },
+    ],
+    imageNote:
+      'These are real project photos provided for the Exodus Barbershop stylist room build-out shown on this page.',
+    metaTitle: 'Barbershop Stylist Room Build-Out Palm Bay FL | Right Away Services LLC',
+    metaDescription:
+      'See a real Palm Bay, FL barbershop room build-out with framing, door and window installation, drywall, texture, trim, and interior painting.',
+  },
   {
     slug: 'drywall-repair-repipe-melbourne-fl',
     title: 'Drywall Repair After Home Repiping in Melbourne, FL',

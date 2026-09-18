@@ -38,6 +38,7 @@ export default function ProjectPage({ params }: Props) {
   const service = getServiceBySlug(project.serviceSlug)
   const area = getServiceAreaBySlug(project.areaSlug)
   if (!service || !area) notFound()
+  const hasConstructionProgress = project.images.some((image) => image.phase === 'during')
 
   return (
     <>
@@ -96,14 +97,18 @@ export default function ProjectPage({ params }: Props) {
               <div className="mb-10">
                 <h2 className="text-2xl font-bold text-navy mb-5">Before &amp; After</h2>
                 {project.images.some((image) => image.phase) ? (
-                  (['before', 'after'] as const).map((phase) => {
+                  (['before', 'during', 'after'] as const).map((phase) => {
                     const phaseImages = project.images.filter((image) => image.phase === phase)
                     if (!phaseImages.length) return null
 
                     return (
                       <div key={phase} className="mb-8 last:mb-0">
                         <h3 className="text-xl font-semibold text-navy mb-4">
-                          {phase === 'before' ? 'Before Repairs' : 'After Repairs'}
+                          {phase === 'before'
+                            ? hasConstructionProgress ? 'Before Construction' : 'Before Repairs'
+                            : phase === 'during'
+                              ? 'During Construction'
+                              : hasConstructionProgress ? 'After Completion' : 'After Repairs'}
                         </h3>
                         <div className="grid gap-5 sm:grid-cols-2">
                           {phaseImages.map((image) => (
