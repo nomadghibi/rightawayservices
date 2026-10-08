@@ -476,7 +476,9 @@ export default function ServiceAreaPage({ params }: Props) {
           <div className="max-w-7xl mx-auto">
             <div className="rounded-xl border border-service-blue/20 bg-blue-50 p-6 md:flex md:items-center md:justify-between md:gap-8">
               <div className="max-w-3xl">
-                <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Melbourne homeowner guide</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">
+                  {area.relatedResource.eyebrow ?? `${area.name} homeowner guide`}
+                </p>
                 <h2 className="text-xl font-bold text-navy mb-2">{area.relatedResource.title}</h2>
                 <p className="text-sm text-slate-gray leading-relaxed">{area.relatedResource.description}</p>
               </div>

@@ -33,6 +33,7 @@ export interface ServiceArea {
     href: string
     title: string
     description: string
+    eyebrow?: string
   }
   faqs: AreaFAQ[]
   metaTitle: string
@@ -46,12 +47,11 @@ export const serviceAreas: ServiceArea[] = [
     state: 'FL',
     county: 'Brevard County',
     shortDescription:
-      'Reliable handyman and home repair services throughout Palm Bay, FL. Right Away Services LLC is your local Space Coast handyman.',
+      'Dependable drywall repairs, painting, door adjustments, and home maintenance in Palm Bay, FL. Contact Right Away Services for a free estimate.',
     localIntro:
-      'Palm Bay is one of Florida\'s largest cities by area, home to established neighborhoods, newer developments, and a growing population of homeowners who need dependable local help. Right Away Services LLC provides handyman and home repair services throughout Palm Bay — from the well-established areas near Malabar Road to the newer developments in the southeast. Whether your home needs a quick repair, a ceiling fan replaced, or a full punch list tackled, we\'re here to help Palm Bay homeowners get things done.',
+      'Right Away Services LLC helps Palm Bay homeowners, landlords, and property managers with dependable home repairs, drywall patching, interior painting, door adjustments, and property maintenance. Based in Palm Bay, we bring more than 26 years of hands-on experience to projects ranging from small repairs to larger home improvement work. We serve communities including Bayside Lakes, Lockmar Estates, Port Malabar, and surrounding neighborhoods. Contact us to discuss your project and request a free estimate.',
     typicalNeeds: [
       'Drywall repair in Florida homes affected by humidity',
-      'Ceiling fan installation and replacement',
       'Door and window repairs due to seasonal swelling',
       'Painting services for rooms, trim, and touch-ups',
       'Fixture replacements and installations',
@@ -64,36 +64,93 @@ export const serviceAreas: ServiceArea[] = [
       'handyman Palm Bay FL',
       'drywall repair Palm Bay FL',
       'painting services Palm Bay FL',
-      'ceiling fan installation Palm Bay FL',
     ],
     relatedServices: [
       'handyman-services',
       'home-repairs',
       'drywall-repair',
-      'ceiling-fan-installation',
+      'painting-services',
       'property-maintenance',
     ],
     nearbyAreas: ['melbourne-fl', 'malabar-fl', 'grant-valkaria-fl', 'west-melbourne-fl'],
-    faqs: [
+    trustSignals: [
+      'Palm Bay-based local handyman company',
+      'More than 26 years of hands-on experience',
+      'Free estimates for clearly defined repair projects',
+    ],
+    featuredServices: [
       {
-        question: 'Do you serve all parts of Palm Bay?',
-        answer:
-          'Yes — we serve Palm Bay broadly, including neighborhoods near Malabar Road, Palm Bay Road, Babcock Street, and surrounding areas. If you\'re unsure whether your address falls in our service area, give us a call and we\'ll confirm.',
+        title: 'Drywall Repair in Palm Bay',
+        description:
+          'We repair wall and ceiling holes, dents, cracks, damaged corners, and plumbing-access openings. The work can include patching, taping, finishing, texture blending, and preparation for primer or paint so the repaired area fits the surrounding surface.',
+        links: [{ href: '/services/drywall-repair', label: 'Explore drywall repair' }],
       },
       {
-        question: 'How do I request handyman service in Palm Bay?',
-        answer:
-          'Call us directly or use our online estimate request form. We respond promptly and can typically schedule service within a few business days.',
+        title: 'Interior & Exterior Painting',
+        description:
+          'Painting work can refresh a room, finish repaired drywall, protect exterior surfaces, or prepare a property for sale or a new tenant. We handle appropriate surface preparation, interior and exterior painting, trim refreshes, and targeted touch-ups.',
+        links: [{ href: '/services/painting-services', label: 'Explore painting services' }],
       },
       {
-        question: 'Can you handle drywall repair and painting in Palm Bay?',
-        answer:
-          'Yes — we regularly handle drywall patching, texture repair, primer, and paint-ready touch-ups for Palm Bay homeowners and landlords.',
+        title: 'Door Adjustments & Repairs',
+        description:
+          'Florida humidity and everyday use can cause doors to stick, drag, squeak, or stop latching correctly. We inspect alignment, hinges, handles, trim, and other hardware, then complete practical adjustments or repairs within normal handyman scope.',
+        links: [{ href: '/services/door-and-window-repairs', label: 'Explore door and window repairs' }],
+      },
+      {
+        title: 'General Home Repairs',
+        description:
+          'Homeowners can combine compatible small repairs into one organized list, including drywall patches, trim repairs, hardware replacement, furniture assembly, caulking, and other routine maintenance. Share photos and details so we can review the full scope before scheduling.',
+        links: [
+          { href: '/services/home-repairs', label: 'Explore home repairs' },
+          { href: '/services/handyman-services', label: 'Explore handyman services' },
+        ],
+      },
+      {
+        title: 'Rental Property Maintenance',
+        description:
+          'Palm Bay landlords and property managers can request tenant-turnover punch lists, cosmetic repairs, door adjustments, drywall patches, paint touch-ups, trim work, and other approved maintenance that helps prepare a property for its next occupant.',
+        links: [{ href: '/services/property-maintenance', label: 'Explore property maintenance' }],
       },
     ],
-    metaTitle: 'Handyman Palm Bay FL | Right Away Services LLC',
+    nearbyProjectSlugs: ['exodus-barbershop-stylist-room-build-out-palm-bay-fl'],
+    relatedResource: {
+      href: 'https://www.homeadvisor.com/rated.RightAwayServices.42561444.html',
+      eyebrow: 'Verified customer reviews',
+      title: 'See What Right Away Services Customers Say',
+      description:
+        'Read the company\'s verified HomeAdvisor reviews and learn why local customers choose Right Away Services for repair, maintenance, and improvement projects.',
+    },
+    faqs: [
+      {
+        question: 'What areas of Palm Bay do you serve?',
+        answer:
+          'We serve Palm Bay broadly, including Bayside Lakes, Lockmar Estates, Port Malabar, and neighborhoods near Malabar Road, Palm Bay Road, and Babcock Street. Contact us with your address so we can confirm coverage.',
+      },
+      {
+        question: 'Do you handle multiple small repairs in one visit?',
+        answer:
+          'Yes. Compatible jobs such as drywall patches, trim repairs, hardware replacement, door adjustments, and routine maintenance can often be grouped into one organized visit. Send the complete list and photos when requesting an estimate.',
+      },
+      {
+        question: 'Can you repair drywall and paint afterward?',
+        answer:
+          'Yes. Depending on the agreed scope, we can patch and finish damaged drywall, allow the repair materials to dry properly, prepare the surface, and complete primer or painting work for a consistent finish.',
+      },
+      {
+        question: 'Do you offer free estimates?',
+        answer:
+          'Yes. Share a description of the work, the Palm Bay property address, and clear photos when possible. We will review the request, ask any needed questions, and explain whether an in-person assessment is required.',
+      },
+      {
+        question: 'Can you help with rental property maintenance?',
+        answer:
+          'Yes. We help Palm Bay landlords and property managers with approved turnover and punch-list work such as drywall patches, paint touch-ups, door adjustments, trim repairs, hardware replacement, and other routine maintenance.',
+      },
+    ],
+    metaTitle: 'Handyman Palm Bay FL | Home Repairs',
     metaDescription:
-      'Need a handyman in Palm Bay, FL? Right Away Services LLC provides local home repairs, drywall repair, painting services, and ceiling fan installation in Palm Bay.',
+      'Need a reliable handyman in Palm Bay, FL? Right Away Services offers drywall repairs, painting, door adjustments and home maintenance. Free estimates.',
   },
   {
     slug: 'melbourne-fl',

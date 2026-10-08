@@ -175,9 +175,9 @@ export const localProjectExamples = [
 export const localCoverageDetails = [
   {
     areaSlug: 'palm-bay-fl',
-    heading: 'Palm Bay neighborhoods and corridors we commonly serve',
+    heading: 'Handyman Services Throughout Palm Bay',
     intro:
-      'Palm Bay is spread out, so local homeowners often search by nearby roads, neighborhoods, and sections of the city. Right Away Services LLC serves homeowners and rental properties across Palm Bay.',
+      'We provide handyman and home maintenance services throughout Palm Bay, including established neighborhoods, growing residential communities, and rental properties. Contact us with your address and repair list so we can confirm service coverage.',
     locations: [
       'Bayside Lakes',
       'Lockmar Estates',
@@ -191,7 +191,7 @@ export const localCoverageDetails = [
       'Southeast Palm Bay',
     ],
     searchSupport:
-      'This supports searches like handyman near Malabar Road, drywall repair near Bayside Lakes, painting services in southeast Palm Bay, and ceiling fan installation near Palm Bay Road.',
+      'Right Away Services is based in Palm Bay and serves customers across the city, from Bayside Lakes and Port Malabar to neighborhoods near major roads such as Malabar Road and Babcock Street.',
   },
   {
     areaSlug: 'melbourne-fl',
