@@ -29,6 +29,11 @@ export interface ServiceArea {
   trustSignals?: string[]
   featuredServices?: AreaFeaturedService[]
   nearbyProjectSlugs?: string[]
+  relatedResource?: {
+    href: string
+    title: string
+    description: string
+  }
   faqs: AreaFAQ[]
   metaTitle: string
   metaDescription: string
@@ -96,9 +101,9 @@ export const serviceAreas: ServiceArea[] = [
     state: 'FL',
     county: 'Brevard County',
     shortDescription:
-      'Professional handyman and home repair services in Melbourne, FL. Serving homeowners, landlords, and property managers throughout the Melbourne area.',
+      'Drywall repair, door adjustments, painting touch-ups, fixture replacement, and dependable home repairs in Melbourne, FL. Call for a free estimate.',
     localIntro:
-      'Melbourne is the commercial and cultural hub of Brevard County\'s southern half, home to diverse neighborhoods ranging from historic Eau Gallie to waterfront properties and established suburban communities. Right Away Services LLC provides handyman services throughout Melbourne, helping homeowners, landlords, and property managers keep their properties in good shape. From quick fixture installs to rental turnover work, we\'re the local team Melbourne residents call when they need reliable help.',
+      'Right Away Services LLC helps Melbourne homeowners, landlords, and property managers with everyday home repairs, drywall patching, door adjustments, painting touch-ups, fixture replacement, and rental property maintenance. With more than 26 years of hands-on experience, we serve Downtown Melbourne, Eau Gallie, the Lake Washington area, and surrounding communities. Whether you need one repair or have a list of projects around your home, contact us for a free estimate.',
     typicalNeeds: [
       'Home repairs in older Melbourne neighborhoods',
       'Rental property maintenance and turnover work',
@@ -124,6 +129,50 @@ export const serviceAreas: ServiceArea[] = [
       'fixture-installation',
     ],
     nearbyAreas: ['palm-bay-fl', 'west-melbourne-fl', 'indialantic-fl', 'satellite-beach-fl', 'melbourne-beach-fl'],
+    trustSignals: [
+      'More than 26 years of hands-on repair experience',
+      'Free estimates for clearly defined handyman projects',
+      'Local service for homeowners, landlords, and property managers',
+    ],
+    featuredServices: [
+      {
+        title: 'Drywall Repair in Melbourne',
+        description:
+          'We patch wall and ceiling openings, repair damaged corners, finish plumbing-access cuts, and blend texture so repaired areas are ready for paint. This includes drywall work after whole-home repiping as well as everyday holes, cracks, dents, and water-damaged sections once the moisture source has been corrected.',
+        links: [{ href: '/services/drywall-repair', label: 'Explore drywall repair' }],
+      },
+      {
+        title: 'Door & Window Repairs',
+        description:
+          'Sticking doors, loose hinges, worn handles, damaged trim, and minor alignment problems can make a home frustrating to use. We inspect the issue, make practical adjustments, replace appropriate hardware, and complete finish repairs that fall within normal handyman scope.',
+        links: [{ href: '/services/door-and-window-repairs', label: 'Explore door and window repairs' }],
+      },
+      {
+        title: 'Painting & Interior Touch-Ups',
+        description:
+          'Interior painting and touch-up work can finish a drywall repair, refresh worn trim, or make a room feel clean again. We prepare repaired surfaces, address minor wall defects, and paint rooms or targeted areas for a consistent, professional result.',
+        links: [{ href: '/services/painting-services', label: 'Explore painting services' }],
+      },
+      {
+        title: 'Rental Property Maintenance',
+        description:
+          'Melbourne landlords and property managers can combine tenant-turnover punch lists into one organized visit. Common requests include drywall patches, door adjustments, hardware replacement, caulking, minor finish repairs, and paint touch-ups between occupants.',
+        links: [{ href: '/services/property-maintenance', label: 'Explore property maintenance' }],
+      },
+      {
+        title: 'General Handyman Services',
+        description:
+          'A visit can often cover several compatible small jobs, including fixture replacement, furniture assembly, hardware installation, trim repairs, and routine home maintenance. Share the complete list when requesting an estimate so we can confirm scope and plan the visit efficiently.',
+        links: [{ href: '/services/handyman-services', label: 'Explore handyman services' }],
+      },
+    ],
+    nearbyProjectSlugs: ['drywall-repair-repipe-melbourne-fl'],
+    relatedResource: {
+      href: '/blog/punch-list-repairs-before-home-inspection-melbourne-fl',
+      title: 'Punch List Repairs Before a Home Inspection in Melbourne, FL',
+      description:
+        'Review the visible drywall, door, fixture, paint, and caulk repairs that are worth addressing before a buyer or inspector walks through your home.',
+    },
     faqs: [
       {
         question: 'Do you serve all Melbourne neighborhoods?',
@@ -141,9 +190,9 @@ export const serviceAreas: ServiceArea[] = [
           'Yes — we handle drywall patching, texture matching, paint touch-ups, and full room painting projects throughout Melbourne, FL.',
       },
     ],
-    metaTitle: 'Handyman Melbourne FL | Right Away Services LLC',
+    metaTitle: 'Handyman Melbourne FL | Home Repairs',
     metaDescription:
-      'Need a handyman in Melbourne, FL? Right Away Services LLC provides local home repairs, drywall repair, painting services, and ceiling fan installation in Melbourne.',
+      'Need a handyman in Melbourne, FL? Right Away Services handles drywall, doors, painting touch-ups, fixtures and home repairs. Request your free estimate.',
   },
   {
     slug: 'west-melbourne-fl',

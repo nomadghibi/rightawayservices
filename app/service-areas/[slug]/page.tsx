@@ -49,6 +49,7 @@ export default function ServiceAreaPage({ params }: Props) {
   const nearbyProjects = (area.nearbyProjectSlugs ?? [])
     .map((slug) => publishedProjects.find((project) => project.slug === slug))
     .filter((project): project is (typeof publishedProjects)[number] => Boolean(project))
+  const allProjectsAreLocal = nearbyProjects.length > 0 && nearbyProjects.every((project) => project.areaSlug === area.slug)
 
   const breadcrumbs = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -317,7 +318,7 @@ export default function ServiceAreaPage({ params }: Props) {
       </section>
       )}
 
-      {areaRepairScenarios.length > 0 && (
+      {areaRepairScenarios.length > 0 && !area.featuredServices?.length && (
         <section className="py-14 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="max-w-3xl mb-8">
@@ -344,7 +345,7 @@ export default function ServiceAreaPage({ params }: Props) {
         </section>
       )}
 
-      {areaProjectExamples.length > 0 && (
+      {areaProjectExamples.length > 0 && !allProjectsAreLocal && (
         <section className="py-14 px-4 bg-off-white">
           <div className="max-w-7xl mx-auto">
             <div className="max-w-3xl mb-8">
@@ -402,28 +403,48 @@ export default function ServiceAreaPage({ params }: Props) {
               <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
                 Real completed work
               </p>
-              <h2 className="text-2xl font-bold text-navy mb-4">Projects Completed Across Brevard County</h2>
+              <h2 className="text-2xl font-bold text-navy mb-4">
+                {allProjectsAreLocal
+                  ? `Recent Handyman Work Completed in ${area.name}, ${area.state}`
+                  : 'Projects Completed Across Brevard County'}
+              </h2>
               <p className="text-slate-gray leading-relaxed">
-                We do not have a documented Rockledge project in this portfolio yet. These are real Right Away
-                Services projects from nearby Brevard County communities, shown with their actual locations.
+                {allProjectsAreLocal
+                  ? `See genuine Right Away Services project photos and details from completed work in ${area.name}.`
+                  : `We do not have a documented ${area.name} project in this portfolio yet. These are real Right Away Services projects from nearby Brevard County communities, shown with their actual locations.`}
               </p>
             </div>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className={`grid gap-6 ${nearbyProjects.length === 1 ? 'max-w-4xl' : 'md:grid-cols-3'}`}>
               {nearbyProjects.map((project) => {
                 const projectArea = getServiceAreaBySlug(project.areaSlug)
-                const image = project.images.find((item) => item.phase === 'after') ?? project.images[0]
+                const beforeImage = project.images.find((item) => item.phase === 'before')
+                const afterImage = project.images.find((item) => item.phase === 'after') ?? project.images[0]
+                const images = allProjectsAreLocal && beforeImage && afterImage
+                  ? [beforeImage, afterImage]
+                  : afterImage
+                    ? [afterImage]
+                    : []
 
                 return (
                   <article key={project.slug} className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
-                    {image ? (
-                      <Link href={`/projects/${project.slug}`} className="block">
-                        <Image
-                          src={image.src}
-                          alt={image.alt}
-                          width={1200}
-                          height={900}
-                          className="aspect-[4/3] w-full object-cover"
-                        />
+                    {images.length ? (
+                      <Link href={`/projects/${project.slug}`} className={`grid ${images.length > 1 ? 'grid-cols-2' : ''}`}>
+                        {images.map((image) => (
+                          <div key={image.src} className="relative">
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              width={1200}
+                              height={900}
+                              className="aspect-[4/3] w-full object-cover"
+                            />
+                            {images.length > 1 ? (
+                              <span className="absolute bottom-2 left-2 rounded bg-navy/85 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+                                {image.phase}
+                              </span>
+                            ) : null}
+                          </div>
+                        ))}
                       </Link>
                     ) : null}
                     <div className="p-5">
@@ -445,6 +466,26 @@ export default function ServiceAreaPage({ params }: Props) {
                   </article>
                 )
               })}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {area.relatedResource ? (
+        <section className="py-12 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="rounded-xl border border-service-blue/20 bg-blue-50 p-6 md:flex md:items-center md:justify-between md:gap-8">
+              <div className="max-w-3xl">
+                <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Melbourne homeowner guide</p>
+                <h2 className="text-xl font-bold text-navy mb-2">{area.relatedResource.title}</h2>
+                <p className="text-sm text-slate-gray leading-relaxed">{area.relatedResource.description}</p>
+              </div>
+              <Link
+                href={area.relatedResource.href}
+                className="mt-5 inline-flex flex-shrink-0 font-semibold text-service-blue hover:underline md:mt-0"
+              >
+                Read the guide →
+              </Link>
             </div>
           </div>
         </section>

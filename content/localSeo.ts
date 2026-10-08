@@ -195,9 +195,9 @@ export const localCoverageDetails = [
   },
   {
     areaSlug: 'melbourne-fl',
-    heading: 'Melbourne neighborhoods and corridors we commonly serve',
+    heading: 'Handyman Services Throughout Melbourne',
     intro:
-      'Melbourne homeowners, sellers, landlords, and property managers often search for help near a specific neighborhood or main road. Right Away Services LLC serves practical repair needs throughout the Melbourne area.',
+      'We provide handyman and home maintenance services throughout Melbourne, from established neighborhoods near Eau Gallie and Downtown Melbourne to residential communities around Lake Washington and Wickham Road. Contact us to confirm service at your address.',
     locations: [
       'Downtown Melbourne',
       'Eau Gallie',
@@ -211,7 +211,7 @@ export const localCoverageDetails = [
       'Melbourne rental properties',
     ],
     searchSupport:
-      'This supports searches like handyman near downtown Melbourne, drywall repair near Eau Gallie, painting services near Wickham Road, and rental turnover repairs in Melbourne.',
+      'Share your address and repair list when requesting an estimate so we can confirm coverage and whether the work fits our handyman services.',
   },
   {
     areaSlug: 'rockledge-fl',
