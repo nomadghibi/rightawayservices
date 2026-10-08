@@ -23,7 +23,7 @@ import { publishedProjects } from '@/content/projects'
 export const metadata: Metadata = buildMetadata({
   title: 'Handyman Palm Bay FL',
   description:
-    'Need a handyman in Palm Bay or Melbourne, FL? Right Away Services LLC handles home repairs, drywall, painting, fans, and maintenance.',
+    'Need a handyman in Palm Bay or Melbourne, FL? Right Away Services LLC handles home repairs, drywall, painting, door repairs, and property maintenance.',
   path: '/',
 })
 
@@ -31,12 +31,21 @@ const featuredServiceSlugs = [
   'handyman-services',
   'drywall-repair',
   'painting-services',
-  'ceiling-fan-installation',
+  'door-and-window-repairs',
   'home-repairs',
   'property-maintenance',
 ]
 const featuredServices = services.filter((service) => featuredServiceSlugs.includes(service.slug))
-const homeFaqs = [...faqs.slice(0, 4), localIntentFaqs[0], localIntentFaqs[2]]
+const homeFaqs = [
+  {
+    ...faqs[0],
+    answer:
+      'We handle drywall patching, door and window repairs, interior and exterior painting, furniture assembly, hardware installation, and ongoing property maintenance. Share your repair list and photos so we can confirm the best next step.',
+  },
+  ...faqs.slice(1, 4),
+  localIntentFaqs[0],
+  localIntentFaqs[3],
+]
 const priorityAreas = serviceAreas.filter((area) => priorityAreaSlugs.includes(area.slug))
 const featuredProjects = publishedProjects.slice(0, 3)
 
@@ -45,21 +54,25 @@ const whyChooseUs = [
     icon: '⭐',
     title: '5.0 Stars — 37 Reviews',
     description: 'Rated 5.0 stars on HomeAdvisor across 37 verified reviews. Our reputation is built one job at a time.',
+    href: siteConfig.reviewProfiles.homeAdvisor,
   },
   {
     icon: '🛡️',
     title: 'Licensed & Insured',
     description: 'Right Away Services LLC is a licensed and insured company. You can hire with confidence.',
+    href: undefined,
   },
   {
     icon: '🔨',
     title: '26 Years of Experience',
     description: 'Over two decades of hands-on experience means we\'ve handled jobs of every size and complexity.',
+    href: undefined,
   },
   {
     icon: '✅',
-    title: 'Free Estimates & Warranties',
-    description: 'We offer free estimates on every project and stand behind our work with a warranty.',
+    title: 'Free Estimates & Clear Scope',
+    description: 'We explain the agreed work, materials, and pricing before the project begins.',
+    href: undefined,
   },
 ]
 
@@ -72,7 +85,6 @@ export default function HomePage() {
       <section className="bg-navy text-white py-20 px-4">
         <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-[1.08fr_0.92fr] items-center">
           <div className="max-w-3xl">
-            <America250Celebration />
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
               Palm Bay · Melbourne · Space Coast, FL
             </p>
@@ -102,6 +114,9 @@ export default function HomePage() {
               </Link>
             </div>
             <TrustBadges />
+            <div className="mt-6">
+              <America250Celebration />
+            </div>
           </div>
           <PageHeroImage
             src="/images/projects/exterior-stucco-painting-viera-suntree-fl/side-wall-stucco-paint-v2.jpg"
@@ -118,8 +133,8 @@ export default function HomePage() {
           <div className="text-center mb-10">
             <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-3">Handyman Services We Provide</h2>
             <p className="text-slate-gray max-w-2xl mx-auto">
-              From quick repairs to ongoing property maintenance, we handle the jobs that keep your home in
-              good shape. Serving Palm Bay, Melbourne, and the Space Coast.
+              From quick repairs to ongoing property maintenance, choose the service that matches your repair
+              list or view all services for additional options.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -188,6 +203,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      <Testimonials />
+
+      {/* Why Choose Us */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-3">
+              Why Space Coast Homeowners Choose Right Away Services
+            </h2>
+            <p className="text-slate-gray max-w-xl mx-auto">
+              Reliable, professional, and genuinely local — that&rsquo;s what we bring to every job.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {whyChooseUs.map((item) => {
+              const content = (
+                <>
+                  <div className="text-3xl mb-3">{item.icon}</div>
+                  <h3 className="font-semibold text-navy mb-2">{item.title}</h3>
+                  <p className="text-slate-gray text-sm leading-relaxed">{item.description}</p>
+                </>
+              )
+
+              return item.href ? (
+                <a
+                  key={item.title}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-white rounded-xl p-6 border border-gray-200 transition hover:-translate-y-1 hover:border-service-blue hover:shadow-md"
+                >
+                  {content}
+                </a>
+              ) : (
+                <div key={item.title} className="bg-white rounded-xl p-6 border border-gray-200">
+                  {content}
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Local coverage */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto grid gap-8 lg:grid-cols-[1fr_1.1fr] items-center">
@@ -197,8 +255,9 @@ export default function HomePage() {
               Your Handyman in Palm Bay, Melbourne, and Brevard County
             </h2>
             <p className="text-slate-gray leading-relaxed mb-6">
-              Based in Palm Bay, we help homeowners, landlords, and property managers with drywall repair,
-              painting, ceiling fan installation, home repairs, and maintenance throughout the Space Coast.
+              Our Palm Bay-based team serves homeowners, landlords, and property managers across southern and
+              central Brevard County. Select your community to see local coverage, common repair needs, and
+              completed work nearby.
             </p>
             <Link href="/service-areas" className="text-service-blue font-semibold hover:underline">
               Explore all service areas →
@@ -220,31 +279,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-3">
-              Why Space Coast Homeowners Choose Right Away Services
-            </h2>
-            <p className="text-slate-gray max-w-xl mx-auto">
-              Reliable, professional, and genuinely local — that&rsquo;s what we bring to every job.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {whyChooseUs.map((item, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 border border-gray-200">
-                <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="font-semibold text-navy mb-2">{item.title}</h3>
-                <p className="text-slate-gray text-sm leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <Testimonials />
 
       <FAQSection
         faqs={homeFaqs}
