@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { MobileActionBar } from '@/components/layout/MobileActionBar'
 import { SchemaScript } from '@/components/seo/SchemaScript'
 import { buildLocalBusinessSchema } from '@/lib/schema/localBusiness'
 import { buildWebsiteSchema } from '@/lib/schema/website'
@@ -54,10 +55,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SchemaScript schema={buildLocalBusinessSchema()} />
         <SchemaScript schema={buildWebsiteSchema()} />
       </head>
-      <body>
+      <body className="pb-[73px] md:pb-0">
         <Header />
         <main>{children}</main>
         <Footer />
+        <MobileActionBar />
       </body>
     </html>
   )
