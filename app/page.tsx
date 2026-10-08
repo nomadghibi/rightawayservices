@@ -143,13 +143,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between mb-10">
             <div>
-              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Before &amp; After</p>
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">Completed Work</p>
               <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-3">
-                Recent Handyman Project Examples
+                Recent Work Across Brevard County
               </h2>
               <p className="text-slate-gray max-w-2xl">
-                See realistic examples of painting, driveway cleaning, bathroom remodeling, and repair work for Palm
-                Bay, Melbourne, and nearby Brevard County homes.
+                Explore real Right Away Services projects completed in Palm Bay, Melbourne, and the Viera/Suntree
+                area. Each project includes original photos and details about the work performed.
               </p>
             </div>
             <Link href="/projects" className="text-service-blue font-semibold hover:underline">
@@ -158,7 +158,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {featuredProjects.map((project) => {
-              const image = project.images[0]
+              const image = project.images.find((item) => item.phase === 'after') ?? project.images[0]
 
               return (
                 <Link
