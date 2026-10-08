@@ -80,9 +80,9 @@ export default function HomePage() {
               Handyman Services in Palm Bay &amp; Melbourne, FL
             </h1>
             <p className="text-lg text-blue-200 leading-relaxed mb-8 max-w-2xl">
-              Need a handyman in Palm Bay or Melbourne, FL? From small home repairs to installations and rental property
-              punch lists, Right Away Services LLC helps homeowners and property managers across Palm Bay,
-              Melbourne, and surrounding communities get things done quickly and professionally.
+              Based in Palm Bay, Right Away Services helps homeowners and property managers with drywall repairs,
+              painting, door adjustments, and maintenance. Bring us one repair or your entire punch list. More than
+              26 years of hands-on experience. Free estimates.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
               <a
