@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { serviceAreas, getServiceAreaBySlug, getNearbyAreas } from '@/content/serviceAreas'
@@ -15,6 +16,7 @@ import { CTABand } from '@/components/sections/CTABand'
 import { PageHeroImage } from '@/components/sections/PageHeroImage'
 import { pageImages } from '@/content/pageMedia'
 import { localCoverageDetails, localIntentFaqs, localProjectExamples, localRepairScenarios } from '@/content/localSeo'
+import { publishedProjects } from '@/content/projects'
 
 interface Props {
   params: { slug: string }
@@ -44,6 +46,9 @@ export default function ServiceAreaPage({ params }: Props) {
   const areaProjectExamples = localProjectExamples.filter((example) => example.areaSlug === area.slug)
   const areaCoverageDetails = localCoverageDetails.find((coverage) => coverage.areaSlug === area.slug)
   const areaFaqs = [...area.faqs, ...localIntentFaqs.filter((faq) => faq.areaSlug === area.slug)]
+  const nearbyProjects = (area.nearbyProjectSlugs ?? [])
+    .map((slug) => publishedProjects.find((project) => project.slug === slug))
+    .filter((project): project is (typeof publishedProjects)[number] => Boolean(project))
 
   const breadcrumbs = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -107,6 +112,19 @@ export default function ServiceAreaPage({ params }: Props) {
                 </h2>
                 <p className="text-slate-gray leading-relaxed">{area.localIntro}</p>
               </div>
+
+              {area.trustSignals?.length ? (
+                <div className="grid gap-3 sm:grid-cols-3" aria-label={`${area.name} service highlights`}>
+                  {area.trustSignals.map((signal) => (
+                    <div key={signal} className="rounded-lg border border-service-blue/20 bg-blue-50 p-4">
+                      <span className="mb-2 flex h-7 w-7 items-center justify-center rounded-full bg-service-blue text-sm font-bold text-white" aria-hidden="true">
+                        ✓
+                      </span>
+                      <p className="text-sm font-semibold leading-relaxed text-navy">{signal}</p>
+                    </div>
+                  ))}
+                </div>
+              ) : null}
 
               <div>
                 <h2 className="text-xl font-bold text-navy mb-4">
@@ -233,6 +251,39 @@ export default function ServiceAreaPage({ params }: Props) {
         </section>
       ) : null}
 
+      {area.featuredServices?.length ? (
+        <section className="py-14 px-4 bg-off-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="max-w-3xl mb-8">
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+                Practical local repairs
+              </p>
+              <h2 className="text-2xl font-bold text-navy mb-4">
+                Popular Handyman &amp; Home Repair Services in {area.name}
+              </h2>
+              <p className="text-slate-gray leading-relaxed">
+                These are some of the most common repair and maintenance requests we review for {area.name}
+                homeowners, landlords, and property managers.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+              {area.featuredServices.map((service) => (
+                <article key={service.title} className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+                  <h3 className="text-xl font-bold text-navy mb-3">{service.title}</h3>
+                  <p className="text-sm text-slate-gray leading-relaxed mb-5">{service.description}</p>
+                  <div className="space-y-2">
+                    {service.links.map((link) => (
+                      <Link key={link.href} href={link.href} className="block text-sm font-semibold text-service-blue hover:underline">
+                        {link.label} →
+                      </Link>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : (
       <section className="py-14 px-4 bg-off-white">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl mb-8">
@@ -241,8 +292,8 @@ export default function ServiceAreaPage({ params }: Props) {
             </h2>
             <p className="text-slate-gray leading-relaxed">
               Homeowners and landlords in {area.name} call Right Away Services LLC for the everyday repair work
-              that keeps Florida properties in good shape. These local service links help match common {area.name}
-              searches with the specific work we handle.
+              that keeps Florida properties in good shape. These local service links match common searches in{' '}
+              {area.name} with the specific work we handle.
             </p>
           </div>
 
@@ -264,6 +315,7 @@ export default function ServiceAreaPage({ params }: Props) {
           </div>
         </div>
       </section>
+      )}
 
       {areaRepairScenarios.length > 0 && (
         <section className="py-14 px-4 bg-white">
@@ -325,7 +377,7 @@ export default function ServiceAreaPage({ params }: Props) {
       )}
 
       {/* Services for this area */}
-      {areaServices.length > 0 && (
+      {areaServices.length > 0 && !area.featuredServices?.length && (
         <section className="py-16 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl font-bold text-navy mb-3">
@@ -342,6 +394,61 @@ export default function ServiceAreaPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {nearbyProjects.length > 0 ? (
+        <section className="py-16 px-4 bg-off-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="max-w-3xl mb-8">
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
+                Real completed work
+              </p>
+              <h2 className="text-2xl font-bold text-navy mb-4">Projects Completed Across Brevard County</h2>
+              <p className="text-slate-gray leading-relaxed">
+                We do not have a documented Rockledge project in this portfolio yet. These are real Right Away
+                Services projects from nearby Brevard County communities, shown with their actual locations.
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {nearbyProjects.map((project) => {
+                const projectArea = getServiceAreaBySlug(project.areaSlug)
+                const image = project.images.find((item) => item.phase === 'after') ?? project.images[0]
+
+                return (
+                  <article key={project.slug} className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+                    {image ? (
+                      <Link href={`/projects/${project.slug}`} className="block">
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          width={1200}
+                          height={900}
+                          className="aspect-[4/3] w-full object-cover"
+                        />
+                      </Link>
+                    ) : null}
+                    <div className="p-5">
+                      {projectArea ? (
+                        <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">
+                          {projectArea.name}, {projectArea.state}
+                        </p>
+                      ) : null}
+                      <h3 className="font-bold text-navy mb-3">
+                        <Link href={`/projects/${project.slug}`} className="hover:underline">
+                          {project.title}
+                        </Link>
+                      </h3>
+                      <p className="text-sm text-slate-gray leading-relaxed mb-4">{project.summary}</p>
+                      <Link href={`/projects/${project.slug}`} className="text-sm font-semibold text-service-blue hover:underline">
+                        View real project →
+                      </Link>
+                    </div>
+                  </article>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <FAQSection
         faqs={areaFaqs}

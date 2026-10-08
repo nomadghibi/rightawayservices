@@ -213,6 +213,22 @@ export const localCoverageDetails = [
     searchSupport:
       'This supports searches like handyman near downtown Melbourne, drywall repair near Eau Gallie, painting services near Wickham Road, and rental turnover repairs in Melbourne.',
   },
+  {
+    areaSlug: 'rockledge-fl',
+    heading: 'Handyman Services Throughout Rockledge',
+    intro:
+      'Right Away Services LLC helps homeowners, landlords, and property managers across Rockledge with practical repair and maintenance lists. Share your property address and requested work so we can confirm service coverage and scope.',
+    locations: [
+      'Barton Boulevard corridor',
+      'Fiske Boulevard area',
+      'Murrell Road area',
+      'Rockledge Drive area',
+      'Established neighborhoods near the Indian River',
+      'Residential areas near U.S. 1',
+    ],
+    searchSupport:
+      'Customers in these areas commonly request drywall patching, door adjustments, painting touch-ups, fixture replacement, rental turnover repairs, and grouped home-maintenance visits.',
+  },
 ]
 
 export const localIntentFaqs = [

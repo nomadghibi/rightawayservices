@@ -643,7 +643,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'cta',
-        text: 'Have a list of small repairs in Palm Bay or Melbourne? Right Away Services LLC can often handle multiple handyman jobs in one efficient visit.',
+        text: 'Have a list of small repairs in Palm Bay, Melbourne, or Rockledge? Right Away Services LLC can often handle multiple compatible handyman jobs in one efficient visit.',
       },
     ],
     metaTitle: 'What Handyman Jobs Can Be Done in One Visit? | Right Away Services LLC',

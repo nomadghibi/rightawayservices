@@ -3,6 +3,15 @@ export interface AreaFAQ {
   answer: string
 }
 
+export interface AreaFeaturedService {
+  title: string
+  description: string
+  links: Array<{
+    href: string
+    label: string
+  }>
+}
+
 export interface ServiceArea {
   slug: string
   name: string
@@ -17,6 +26,9 @@ export interface ServiceArea {
   keywordFocus?: string[]
   propertyTypes?: string[]
   maintenanceUseCases?: string[]
+  trustSignals?: string[]
+  featuredServices?: AreaFeaturedService[]
+  nearbyProjectSlugs?: string[]
   faqs: AreaFAQ[]
   metaTitle: string
   metaDescription: string
@@ -408,9 +420,9 @@ export const serviceAreas: ServiceArea[] = [
     state: 'FL',
     county: 'Brevard County',
     shortDescription:
-      'Handyman and home repair services in Rockledge, FL. Right Away Services LLC serves Rockledge homeowners with reliable local repairs and maintenance.',
+      'Reliable handyman and home repair services in Rockledge, FL, backed by more than 26 years of hands-on experience. Request a free estimate for drywall, doors, painting, fixtures, and property maintenance.',
     localIntro:
-      'Rockledge is one of Brevard County\'s oldest cities, home to established neighborhoods, waterfront properties, and a range of housing styles from historic homes to modern builds. Right Away Services LLC serves Rockledge homeowners with dependable handyman and repair services tailored to properties of every age. Whether you\'re dealing with an older home\'s accumulated wear or a newer build\'s punch-list needs, we handle the work professionally.',
+      'Right Away Services LLC provides dependable handyman and home repair services for homeowners, landlords, and property managers throughout Rockledge, Florida. With more than 26 years of hands-on experience, we help with drywall repair, door adjustments, painting touch-ups, fixture replacement, and general property maintenance. Whether you have one repair or several projects around your property, contact us for a free estimate.',
     typicalNeeds: [
       'Repairs in older Rockledge homes',
       'Drywall and painting repairs',
@@ -434,6 +446,43 @@ export const serviceAreas: ServiceArea[] = [
       'Fixture and ceiling fan replacement within handyman scope',
       'Routine property maintenance for owners and managers',
     ],
+    trustSignals: [
+      'More than 26 years of hands-on experience',
+      'Free estimates for clearly defined repair projects',
+      'Serving homeowners and property professionals across Brevard County',
+    ],
+    featuredServices: [
+      {
+        title: 'Drywall Repair in Rockledge',
+        description:
+          'We patch holes, repair cracks and damaged corners, blend common wall textures, and restore drywall openings left after completed plumbing access. Repairs are prepared for paint so the finished area blends cleanly with the surrounding wall or ceiling.',
+        links: [
+          { href: '/services/drywall-repair', label: 'Explore drywall repair services' },
+        ],
+      },
+      {
+        title: 'Door & Window Repairs',
+        description:
+          'Florida humidity and everyday use can leave doors sticking, hinges loose, latches misaligned, trim damaged, or hardware worn. We evaluate handyman-level adjustments and repairs and explain when a specialty contractor is needed.',
+        links: [
+          { href: '/services/door-and-window-repairs', label: 'Explore door and window repairs' },
+        ],
+      },
+      {
+        title: 'Painting & Property Maintenance',
+        description:
+          'We help with wall touch-ups, trim and door painting, repair-area finishing, rental turnover lists, and pre-sale punch-list work. Grouping related repairs can make a single scheduled visit more useful and efficient.',
+        links: [
+          { href: '/services/painting-services', label: 'Explore painting services' },
+          { href: '/services/property-maintenance', label: 'Explore property maintenance' },
+        ],
+      },
+    ],
+    nearbyProjectSlugs: [
+      'drywall-repair-repipe-melbourne-fl',
+      'exterior-stucco-repair-painting-pressure-washing-viera-suntree-fl',
+      'exodus-barbershop-stylist-room-build-out-palm-bay-fl',
+    ],
     relatedServices: [
       'handyman-services',
       'home-repairs',
@@ -445,9 +494,24 @@ export const serviceAreas: ServiceArea[] = [
     nearbyAreas: ['viera-fl', 'suntree-fl', 'melbourne-fl', 'west-melbourne-fl'],
     faqs: [
       {
-        question: 'Do you serve Rockledge, FL?',
+        question: 'Do you provide handyman services throughout Rockledge, FL?',
         answer:
-          'Yes — Rockledge is in our service area. We work throughout Rockledge and nearby Brevard County communities.',
+          'Yes. We serve Rockledge properties near Barton Boulevard, Fiske Boulevard, Murrell Road, Rockledge Drive, and surrounding areas. Contact us with the property address and repair list so we can confirm scope and scheduling.',
+      },
+      {
+        question: 'Can you handle several small home repairs in one visit?',
+        answer:
+          'Often, yes. Drywall patches, door adjustments, hardware replacement, caulking, paint touch-ups, and other compatible handyman tasks can frequently be grouped into one appointment. Photos and a prioritized list help us estimate the time and materials required.',
+      },
+      {
+        question: 'Do you offer free estimates for drywall, door, and painting repairs?',
+        answer:
+          'Yes. Right Away Services LLC provides free estimates for clearly defined handyman projects in Rockledge. Share photos and a description of the work so we can review the scope and identify anything that may require an in-person assessment.',
+      },
+      {
+        question: 'How soon can I schedule handyman service in Rockledge?',
+        answer:
+          'Scheduling depends on the project scope, materials, and current availability. Contact us with your repair list and preferred timing, and we will provide the next suitable appointment options without promising unavailable same-day service.',
       },
       {
         question: 'Do you provide rental property maintenance in Rockledge?',
@@ -455,9 +519,9 @@ export const serviceAreas: ServiceArea[] = [
           'Yes. We handle handyman-level rental repair lists in Rockledge, including drywall patches, paint touch-ups, door adjustments, hardware, caulking, and suitable fixture replacement. Licensed-trade work is outside this service.',
       },
     ],
-    metaTitle: 'Handyman Services in Rockledge, FL | Right Away Services LLC',
+    metaTitle: 'Handyman Rockledge FL | Home Repairs',
     metaDescription:
-      'Reliable handyman and home repair services in Rockledge, FL. Right Away Services LLC helps Rockledge homeowners with professional repairs and maintenance.',
+      'Need a handyman in Rockledge, FL? Drywall, door repairs, painting touch-ups and home maintenance. Call Right Away Services for a free estimate.',
   },
   {
     slug: 'cocoa-fl',
