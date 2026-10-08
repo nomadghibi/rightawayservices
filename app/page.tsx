@@ -18,7 +18,6 @@ import {
   localIntentFaqs,
   priorityAreaSlugs,
 } from '@/content/localSeo'
-import { pageImages } from '@/content/pageMedia'
 import { publishedProjects } from '@/content/projects'
 
 export const metadata: Metadata = buildMetadata({
@@ -105,9 +104,10 @@ export default function HomePage() {
             <TrustBadges />
           </div>
           <PageHeroImage
-            {...pageImages.home}
+            src="/images/projects/exterior-stucco-painting-viera-suntree-fl/side-wall-stucco-paint-v2.jpg"
+            alt="Freshly painted gray stucco exterior on a completed Right Away Services project in Viera and Suntree, Florida"
             priority
-            caption="Local handyman service"
+            caption="Real exterior painting project"
           />
         </div>
       </section>
