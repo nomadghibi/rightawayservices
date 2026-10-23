@@ -21,69 +21,118 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: 'garage-ceiling-repair-pool-deck-prep-palm-bay-fl',
-    title: 'Garage Ceiling Repair & Pool Deck Preparation in Palm Bay, FL',
+    slug: 'garage-ceiling-leak-repair-melbourne-fl',
+    title: 'Garage Ceiling Leak Repair in Melbourne, FL',
     status: 'published',
     serviceSlug: 'drywall-repair',
-    areaSlug: 'palm-bay-fl',
+    areaSlug: 'melbourne-fl',
     date: '2026-10-16',
     summary:
-      'A real Palm Bay, FL project featuring a textured garage ceiling patch with protected work-zone containment, plus documentation and preparation of the screened pool-deck surface for exterior maintenance.',
+      'A real Melbourne, FL garage ceiling repair completed after a leak damaged the textured surface. The work included containment, patching, finishing, and texture blending for a clean completed repair.',
     workPerformed: [
-      'Reviewed the damaged garage ceiling area and surrounding knockdown texture',
+      'Reviewed the garage ceiling area damaged by the leak',
       'Protected the garage work area with floor covering and plastic containment',
-      'Patched and finished the ceiling repair area',
+      'Patched and finished the damaged ceiling area',
       'Blended the repaired area with the surrounding textured ceiling',
-      'Documented stained, worn, and previously patched areas across the screened pool deck',
-      'Prepared the pool-deck work area for follow-up exterior maintenance',
+      'Cleaned the protected work area after completing the repair',
     ],
     images: [
       {
-        src: '/images/projects/garage-ceiling-pool-deck-palm-bay-fl/pool-deck-before-wide.jpg',
-        alt: 'Screened pool deck before exterior maintenance at a Palm Bay FL home',
+        src: '/images/projects/garage-ceiling-leak-repair-melbourne-fl/garage-ceiling-patch-before.jpg',
+        alt: 'Damaged garage ceiling patch before texture blending in Melbourne FL',
         phase: 'before',
       },
       {
-        src: '/images/projects/garage-ceiling-pool-deck-palm-bay-fl/pool-deck-before-screen-room.jpg',
-        alt: 'Worn screened pool-deck surface before preparation in Palm Bay FL',
-        phase: 'before',
-      },
-      {
-        src: '/images/projects/garage-ceiling-pool-deck-palm-bay-fl/pool-deck-before-house-side.jpg',
-        alt: 'Pool deck beside the house before exterior maintenance in Palm Bay FL',
-        phase: 'before',
-      },
-      {
-        src: '/images/projects/garage-ceiling-pool-deck-palm-bay-fl/pool-deck-before-pool-edge.jpg',
-        alt: 'Pool-edge deck surface and access cover before preparation in Palm Bay FL',
-        phase: 'before',
-      },
-      {
-        src: '/images/projects/garage-ceiling-pool-deck-palm-bay-fl/pool-deck-before-spa-edge.jpg',
-        alt: 'Spa-edge pool deck showing surface wear before maintenance in Palm Bay FL',
-        phase: 'before',
-      },
-      {
-        src: '/images/projects/garage-ceiling-pool-deck-palm-bay-fl/garage-ceiling-patch-during.jpg',
-        alt: 'Garage ceiling patch during drywall repair in Palm Bay FL',
+        src: '/images/projects/garage-ceiling-leak-repair-melbourne-fl/garage-ceiling-containment-during.jpg',
+        alt: 'Plastic containment protecting a Melbourne garage during ceiling leak repair',
         phase: 'during',
       },
       {
-        src: '/images/projects/garage-ceiling-pool-deck-palm-bay-fl/garage-ceiling-containment-during.jpg',
-        alt: 'Plastic containment protecting a Palm Bay garage during ceiling repair',
-        phase: 'during',
-      },
-      {
-        src: '/images/projects/garage-ceiling-pool-deck-palm-bay-fl/garage-ceiling-repair-after.jpg',
-        alt: 'Finished textured garage ceiling repair in Palm Bay FL',
+        src: '/images/projects/garage-ceiling-leak-repair-melbourne-fl/garage-ceiling-repair-after.jpg',
+        alt: 'Finished textured garage ceiling leak repair in Melbourne FL',
         phase: 'after',
       },
     ],
     imageNote:
-      'These are original project photos from the Palm Bay garage ceiling repair and pool-deck preparation work shown on this page. The pool-deck photos document the condition before follow-up exterior maintenance.',
-    metaTitle: 'Garage Ceiling Repair & Pool Deck Prep Palm Bay FL | Right Away Services',
+      'These are original project photos from the Melbourne garage ceiling leak repair shown on this page.',
+    metaTitle: 'Garage Ceiling Leak Repair Melbourne FL | Right Away Services',
     metaDescription:
-      'See a real Palm Bay, FL project with garage ceiling drywall repair, texture blending, protective containment, and screened pool-deck preparation photos.',
+      'See a real Melbourne, FL garage ceiling leak repair with protective containment, drywall patching, finishing, and texture blending.',
+  },
+  {
+    slug: 'pool-deck-preparation-palm-bay-fl',
+    title: 'Screened Pool Deck Maintenance in Palm Bay, FL',
+    status: 'published',
+    serviceSlug: 'property-maintenance',
+    areaSlug: 'palm-bay-fl',
+    date: '2026-10-15',
+    summary:
+      'A real Palm Bay, FL screened pool-deck project showing the surface before and after exterior maintenance. The completed deck has a cleaner, more consistent appearance around the pool, spa edge, house, and screened perimeter.',
+    workPerformed: [
+      'Reviewed the screened pool deck and spa-edge surfaces',
+      'Documented stained and worn areas across the deck',
+      'Checked previous patch locations and pool-edge transitions',
+      'Prepared the pool-deck surface for exterior maintenance',
+      'Completed the deck maintenance for a cleaner, more consistent finish',
+      'Reviewed the pool edge, access covers, drainage channel, and screened perimeter after completion',
+    ],
+    images: [
+      {
+        src: '/images/projects/pool-deck-preparation-palm-bay-fl/pool-deck-before-wide.jpg',
+        alt: 'Screened pool deck before exterior maintenance at a Palm Bay FL home',
+        phase: 'before',
+      },
+      {
+        src: '/images/projects/pool-deck-preparation-palm-bay-fl/pool-deck-before-screen-room.jpg',
+        alt: 'Worn screened pool-deck surface before preparation in Palm Bay FL',
+        phase: 'before',
+      },
+      {
+        src: '/images/projects/pool-deck-preparation-palm-bay-fl/pool-deck-before-house-side.jpg',
+        alt: 'Pool deck beside the house before exterior maintenance in Palm Bay FL',
+        phase: 'before',
+      },
+      {
+        src: '/images/projects/pool-deck-preparation-palm-bay-fl/pool-deck-before-pool-edge.jpg',
+        alt: 'Pool-edge deck surface and access cover before preparation in Palm Bay FL',
+        phase: 'before',
+      },
+      {
+        src: '/images/projects/pool-deck-preparation-palm-bay-fl/pool-deck-before-spa-edge.jpg',
+        alt: 'Spa-edge pool deck showing surface wear before maintenance in Palm Bay FL',
+        phase: 'before',
+      },
+      {
+        src: '/images/projects/pool-deck-preparation-palm-bay-fl/pool-deck-after-pool-edge.jpg',
+        alt: 'Completed pool-edge deck surface after exterior maintenance in Palm Bay FL',
+        phase: 'after',
+      },
+      {
+        src: '/images/projects/pool-deck-preparation-palm-bay-fl/pool-deck-after-access-cover.jpg',
+        alt: 'Completed Palm Bay pool deck around the access cover after maintenance',
+        phase: 'after',
+      },
+      {
+        src: '/images/projects/pool-deck-preparation-palm-bay-fl/pool-deck-after-wide.jpg',
+        alt: 'Wide view of the completed screened pool deck in Palm Bay FL',
+        phase: 'after',
+      },
+      {
+        src: '/images/projects/pool-deck-preparation-palm-bay-fl/pool-deck-after-house-side.jpg',
+        alt: 'Finished pool deck beside the house after exterior maintenance in Palm Bay FL',
+        phase: 'after',
+      },
+      {
+        src: '/images/projects/pool-deck-preparation-palm-bay-fl/pool-deck-after-screen-perimeter.jpg',
+        alt: 'Completed pool-deck edge and stone border along the screened perimeter in Palm Bay FL',
+        phase: 'after',
+      },
+    ],
+    imageNote:
+      'These are original before-and-after photos from the completed Palm Bay screened pool-deck project shown on this page.',
+    metaTitle: 'Pool Deck Maintenance Palm Bay FL | Right Away Services',
+    metaDescription:
+      'See original before-and-after photos from a completed screened pool-deck maintenance project in Palm Bay, FL.',
   },
   {
     slug: 'exodus-barbershop-stylist-room-build-out-palm-bay-fl',

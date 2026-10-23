@@ -21,6 +21,11 @@ const nextConfig = {
         destination: '/projects/exterior-stucco-repair-painting-pressure-washing-viera-suntree-fl',
         permanent: true,
       },
+      {
+        source: '/projects/garage-ceiling-repair-pool-deck-prep-palm-bay-fl',
+        destination: '/projects/garage-ceiling-leak-repair-melbourne-fl',
+        permanent: true,
+      },
     ]
   },
 }
