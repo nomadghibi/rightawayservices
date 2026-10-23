@@ -39,6 +39,7 @@ export default function ProjectPage({ params }: Props) {
   const area = getServiceAreaBySlug(project.areaSlug)
   if (!service || !area) notFound()
   const hasConstructionProgress = project.images.some((image) => image.phase === 'during')
+    || project.phasePlaceholders?.includes('during')
 
   return (
     <>
@@ -99,7 +100,8 @@ export default function ProjectPage({ params }: Props) {
                 {project.images.some((image) => image.phase) ? (
                   (['before', 'during', 'after'] as const).map((phase) => {
                     const phaseImages = project.images.filter((image) => image.phase === phase)
-                    if (!phaseImages.length) return null
+                    const showPlaceholder = phase !== 'before' && project.phasePlaceholders?.includes(phase)
+                    if (!phaseImages.length && !showPlaceholder) return null
 
                     return (
                       <div key={phase} className="mb-8 last:mb-0">
@@ -121,6 +123,18 @@ export default function ProjectPage({ params }: Props) {
                               className="rounded-xl border border-gray-200"
                             />
                           ))}
+                          {showPlaceholder ? (
+                            <div className="flex min-h-56 items-center justify-center rounded-xl border-2 border-dashed border-gray-300 bg-off-white p-8 text-center">
+                              <div>
+                                <p className="font-semibold text-navy">Photo coming soon</p>
+                                <p className="mt-2 text-sm text-slate-gray">
+                                  {phase === 'during'
+                                    ? 'Work-in-progress photos will be added when available.'
+                                    : 'Completion photos will be added when available.'}
+                                </p>
+                              </div>
+                            </div>
+                          ) : null}
                         </div>
                       </div>
                     )

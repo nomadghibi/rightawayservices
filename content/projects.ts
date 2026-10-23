@@ -14,6 +14,7 @@ export interface Project {
   summary: string
   workPerformed: string[]
   images: ProjectImage[]
+  phasePlaceholders?: Array<'during' | 'after'>
   imageNote?: string
   metaTitle: string
   metaDescription: string
@@ -44,17 +45,18 @@ export const projects: Project[] = [
       },
       {
         src: '/images/projects/garage-ceiling-leak-repair-melbourne-fl/garage-ceiling-containment-during.jpg',
-        alt: 'Plastic containment protecting a Melbourne garage during ceiling leak repair',
-        phase: 'during',
+        alt: 'Garage ceiling leak area before repair in Melbourne FL',
+        phase: 'before',
       },
       {
         src: '/images/projects/garage-ceiling-leak-repair-melbourne-fl/garage-ceiling-repair-after.jpg',
-        alt: 'Finished textured garage ceiling leak repair in Melbourne FL',
-        phase: 'after',
+        alt: 'Textured garage ceiling damage before leak repair in Melbourne FL',
+        phase: 'before',
       },
     ],
+    phasePlaceholders: ['during', 'after'],
     imageNote:
-      'These are original project photos from the Melbourne garage ceiling leak repair shown on this page.',
+      'These are original before-work photos from the Melbourne garage ceiling leak repair. Progress and completion photos will be added when available.',
     metaTitle: 'Garage Ceiling Leak Repair Melbourne FL | Right Away Services',
     metaDescription:
       'See a real Melbourne, FL garage ceiling leak repair with protective containment, drywall patching, finishing, and texture blending.',
