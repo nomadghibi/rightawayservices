@@ -105,9 +105,9 @@ export default function ProjectPage({ params }: Props) {
                       <div key={phase} className="mb-8 last:mb-0">
                         <h3 className="text-xl font-semibold text-navy mb-4">
                           {phase === 'before'
-                            ? hasConstructionProgress ? 'Before Construction' : 'Before Repairs'
+                            ? hasConstructionProgress ? 'Before Work' : 'Before Repairs'
                             : phase === 'during'
-                              ? 'During Construction'
+                              ? 'Work in Progress'
                               : hasConstructionProgress ? 'After Completion' : 'After Repairs'}
                         </h3>
                         <div className="grid gap-5 sm:grid-cols-2">
