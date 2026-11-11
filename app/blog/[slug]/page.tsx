@@ -129,6 +129,18 @@ export default function BlogPostPage({ params }: Props) {
                       </p>
                     )
                   }
+                  if (section.type === 'internalLink' && section.href) {
+                    return (
+                      <p key={index} className="mb-5">
+                        <Link
+                          href={section.href}
+                          className="text-service-blue font-medium hover:underline"
+                        >
+                          {section.text} →
+                        </Link>
+                      </p>
+                    )
+                  }
                   if (section.type === 'cta') {
                     return (
                       <div key={index} className="bg-off-white border border-gray-200 rounded-xl p-6 my-8">
